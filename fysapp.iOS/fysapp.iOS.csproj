@@ -115,6 +115,18 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\HomeIcon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\CalenderIcon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TrainingIcon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\MoreIcon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\CalenderIcon.imageset\calendar.png" />
+    <ImageAsset Include="Assets.xcassets\CalenderIcon.imageset\calendar-1.png" />
+    <ImageAsset Include="Assets.xcassets\HomeIcon.imageset\home.png" />
+    <ImageAsset Include="Assets.xcassets\HomeIcon.imageset\home-1.png" />
+    <ImageAsset Include="Assets.xcassets\MoreIcon.imageset\more.png" />
+    <ImageAsset Include="Assets.xcassets\MoreIcon.imageset\more-1.png" />
+    <ImageAsset Include="Assets.xcassets\TrainingIcon.imageset\training.png" />
+    <ImageAsset Include="Assets.xcassets\TrainingIcon.imageset\training-1.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -140,5 +152,11 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\img.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\HomeIcon.imageset\" />
+    <Folder Include="Assets.xcassets\CalenderIcon.imageset\" />
+    <Folder Include="Assets.xcassets\TrainingIcon.imageset\" />
+    <Folder Include="Assets.xcassets\MoreIcon.imageset\" />
   </ItemGroup>
 </Project>

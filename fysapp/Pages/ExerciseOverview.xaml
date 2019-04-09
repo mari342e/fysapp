@@ -1,28 +1,26 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="fysapp.ExerciseOverview">
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="fysapp.Pages.ExerciseOverview">
     <ContentPage.Content>
         <StackLayout Padding="10" BackgroundColor="{StaticResource bgColor}" VerticalOptions="FillAndExpand">
-            <Label  Style="{StaticResource pageTitle}">Øvelser</Label>
-            
-        <ScrollView >
-            <StackLayout>
+            <Label Style="{StaticResource pageTitle}">Øvelser</Label>
+            <ScrollView>
+                <StackLayout>
                     <Frame Style="{StaticResource BasicListFrame}">
-                <Grid ColumnSpacing="15" RowSpacing="0">
-                <Grid.RowDefinitions>                    
-                    <RowDefinition Height="40" />
-                    <RowDefinition Height="60" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Image Source="img.jpeg" Aspect="AspectFill" Grid.RowSpan="2" Grid.Row="0" Grid.Column="0"></Image>
+                        <Grid ColumnSpacing="15" RowSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40" />
+                                <RowDefinition Height="60" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="img.jpeg" Aspect="AspectFill" Grid.RowSpan="2" Grid.Row="0" Grid.Column="0">
+                            </Image>
                             <Label Style="{StaticResource BasicListFrameHeader}" Grid.Row="0" Grid.Column="1">Øvelse 1</Label>
                             <Label Style="{StaticResource BasicListFrameBodyText}" Grid.Row="1" Grid.Column="1">Sideliggende udadrotation i skulderen 1</Label>
-            </Grid>
-            </Frame>
+                        </Grid>
+                    </Frame>
                     <Frame Style="{StaticResource BasicListFrame}">
                         <Grid Style="{StaticResource BasicListFrameGrid}">
                             <Grid.RowDefinitions>
@@ -33,14 +31,14 @@
                                 <ColumnDefinition Width="100" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                            <Image Source="img.jpeg" Style="{StaticResource BasicListFrameBodyImg}" Grid.RowSpan="2" Grid.Row="0" Grid.Column="0"></Image>
+                            <Image Source="img.jpeg" Style="{StaticResource BasicListFrameBodyImg}" Grid.RowSpan="2" Grid.Row="0" Grid.Column="0">
+                            </Image>
                             <Label Style="{StaticResource BasicListFrameHeader}" Grid.Row="0" Grid.Column="1">Øvelse 1</Label>
                             <Label Style="{StaticResource BasicListFrameBodyText}" Grid.Row="1" Grid.Column="1">Sideliggende udadrotation i skulderen 1</Label>
                         </Grid>
                     </Frame>
                 </StackLayout>
-        </ScrollView>
+            </ScrollView>
         </StackLayout>
-
     </ContentPage.Content>
 </ContentPage>
