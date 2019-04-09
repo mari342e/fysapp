@@ -1,0 +1,25 @@
+{
+  "Exercises": [
+    {
+      "UserID": "1",
+      "ExerciseID": "1",
+      "ExerciseTitle": "SIDELIGGENDE UDADROTATION I SKULDEREN",
+      "ImageLinks": [ "img.jpeg", "img.jpeg" ],
+      "Description": [ "Liggende på siden med bøjet hofte og knæ.", "- Nederste arm ligger og støtter på underlaget, hovedet hviler på en pude","- Øverste arm (træningsarmen) er med albuen bøjet 90 grader","- Trænings kile/pude ligger mellem overarm og overkrop - Håndvægt holdes i hånden","- Hånden hvilende på maven - Sæt skulderbladet på plads ved at løfte skulderrundingen let op mod øret, imens skulderen føres let nedad/bagud mod rygsøjlen","- Drej armen opad/udad mens overarmen holdes ind til kroppen","- Sænk hånden/armen langsomt" ],
+      "Repetition": "Lav 3 sæt á 10 gentagelser",
+      "Breaks": "Hold ca. 30 sekunders pause mellem hvert sæt",
+      "Focus": "Undgå at skulderbladet vandrer op mod øret eller frem/tilbage"
+    },
+    {
+      "UserID": "1",
+      "ExerciseID": "2",
+      "ExerciseTitle": "MAVELIGGENDE LØFT MED UDADROTATION",
+      "ImageLinks": [ "img.jpeg", "img.jpeg" ],
+      "Description": [ "- Lig på maven på en briks/et bord med armen hængende ned mod gulvet og skulderen hvilende i 90 graders fremadbøjning ", "- Håndvægt holdes i hånden","- Sæt skulderbladet på plads ved at løfte skulderrundingen let op mod øret, imens skulderen føres let nedad/bagud mod rygsøjlen","- Løft armen med strakt albue op til vandret mens du drejer armen/hånden udad","- Når du når vandret armstilling, roterer du hånden yderligere udad","- Sænk armen langsomt mens den drejes indad til udgangspositionen" ],
+      "Repetition": "Lav 3 sæt á 10 gentagelser",
+      "Breaks": "Hold ca. 30 sekunders pause mellem hvert sæt",
+      "Focus": "Undgå at skulderbladet vandrer op mod øret eller frem/tilbage"
+    }
+  ]
+
+}
