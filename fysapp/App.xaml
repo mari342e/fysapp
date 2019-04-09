@@ -1,5 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="fysapp.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="purple">#534b62</Color>
+            <Color x:Key="red">#b95b5b</Color>
+            <Color x:Key="green">#97b772</Color>
+            <Color x:Key="white">#ffffff</Color>
+            <Color x:Key="bodyText">#707070</Color>
+            <Color x:Key="borderColor">#c4cAd0</Color>
+            <Color x:Key="bgColor">#fafafa</Color>
+            <Style x:Key="btn" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="TextColor" Value="{StaticResource white}" />
+                <Setter Property="BorderRadius" Value="6" />
+                <Setter Property="BackgroundColor" Value="{StaticResource purple}" />
+                <Setter Property="WidthRequest" Value="200" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
