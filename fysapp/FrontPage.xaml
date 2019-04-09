@@ -4,7 +4,7 @@
              x:Class="fysapp.FrontPage">
     
     <ContentPage.Content>
-        <StackLayout BackgroundColor="Gray">
+        <StackLayout BackgroundColor="#FAFAFA">
             <BoxView Color="Silver"
                      CornerRadius="10"
                      WidthRequest="120"
@@ -28,8 +28,7 @@
                     Padding="0"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="FillAndExpand"
-                    OutlineColor="Red"
-                    HasShadow="true"
+                    HasShadow="false"
                     BackgroundColor="Purple"
                     Grid.Row="0"
                     Grid.Column="0">
