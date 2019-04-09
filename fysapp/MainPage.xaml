@@ -1,7 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:fysapp" x:Class="fysapp.MainPage">
-    <StackLayout>
+    <StackLayout VerticalOptions="FillAndExpand">
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout>
+                <Label Text="This is a page title" Style="{StaticResource pageTitle}" />
+                <Label Text="Hello" TextColor="{StaticResource bodyText}" HorizontalOptions="Center"/>
+                <Button Text="This is a button" Style="{StaticResource btn}" Margin="0,50,0,0"/>
+            </StackLayout>
+        </ScrollView>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms Jesper var her!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Frame Padding="0,10,0,10" CornerRadius="0" VerticalOptions="End">
+            <Grid BackgroundColor="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="15" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" BackgroundColor="Transparent" Image="HomeIcon" />
+                <Label Grid.Row="1" Grid.Column="0" Text="Hjem" BackgroundColor="Transparent" TextColor="{StaticResource purple}" FontSize="13" HorizontalOptions="Center" />
+                
+                <Button Grid.Row="0" Grid.Column="1" BackgroundColor="Transparent" Image="CalenderIcon"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="Træningslog" BackgroundColor="Transparent" TextColor="{StaticResource purple}" FontSize="13" HorizontalOptions="Center" />
+               
+                <Button Grid.Row="0" Grid.Column="2" BackgroundColor="Transparent" Image="TrainingIcon"/>
+                <Label Grid.Row="1" Grid.Column="2" Text="Øvelser" BackgroundColor="Transparent" TextColor="{StaticResource purple}" FontSize="13" HorizontalOptions="Center" />
+               
+                <ImageButton Grid.Row="0" Grid.Column="3" BackgroundColor="Transparent" Source="MoreIcon" />
+                <Label Grid.Row="1" Grid.Column="3" Text="Mere" BackgroundColor="Transparent" TextColor="{StaticResource purple}" FontSize="13" HorizontalOptions="Center" />
+            </Grid>
+        </Frame>
     </StackLayout>
 </ContentPage>
