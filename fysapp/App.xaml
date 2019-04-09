@@ -21,6 +21,7 @@
                 <Setter Property="TextColor" Value="{StaticResource purple}" />
                 <Setter Property="FontSize" Value="25" />
                 <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="0,50" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>
