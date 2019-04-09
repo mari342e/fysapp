@@ -130,7 +130,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\fysapp\fysapp.csproj">
-      <Project>{D0CA8604-5330-4C5F-AA00-3DE86B8C5F39}</Project>
+      <Project>{19B951B4-9CCF-4E0F-8943-1CF11DEFC0BB}</Project>
       <Name>fysapp</Name>
     </ProjectReference>
   </ItemGroup>
