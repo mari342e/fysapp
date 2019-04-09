@@ -22,11 +22,32 @@
                 <Setter Property="FontSize" Value="25" />
                 <Setter Property="FontAttributes" Value="Bold" />
             </Style>
+            
+            <!--Style for BasicListButtons-->
             <Style x:Key="BasicListFrame" TargetType="Frame">
                 <Setter Property="BorderColor" Value="{StaticResource borderColor}" />
                 <Setter Property="CornerRadius" Value="6" />
                 <Setter Property="BackgroundColor" Value="{StaticResource white}" />
-                <Setter Property="WidthRequest" Value="*" />
+                <Setter Property="Margin" Value="10" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />     
+            </Style>
+         
+            <Style x:Key="BasicListFrameHeader" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource red}" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+            <Style x:Key="BasicListFrameBodyText" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource bodyText}" />
+                <Setter Property="VerticalOptions" Value="StartAndExpand" />
+            </Style>
+            <Style x:Key="BasicListFrameBodyImg" TargetType="Image">
+                <Setter Property="Aspect" Value="AspectFill" />                
+            </Style>
+            <Style x:Key="BasicListFrameGrid" TargetType="Grid">
+                <Setter Property="ColumnSpacing" Value="15" />
+                <Setter Property="RowSpacing" Value="0" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

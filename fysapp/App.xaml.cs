@@ -9,8 +9,8 @@ namespace fysapp
         public App()
         {
             InitializeComponent();
-            
-            MainPage = new NavigationPage(new ExerciseOverview()); 
+
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()
