@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fysapp.ExerciseOverview">
+    <ContentPage.Content>
+        <StackLayout Padding="10" BackgroundColor="{StaticResource bgColor}" VerticalOptions="FillAndExpand">
+            <Label HeightRequest="100" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="24">Øvelser</Label>
+            
+        <ScrollView >
+            <StackLayout>
+                    <Frame HorizontalOptions="StartAndExpand"  BorderColor="{StaticResource borderColor}" Margin="10" Padding="0" CornerRadius="6" BackgroundColor="{StaticResource white}">
+                <Grid HorizontalOptions="FillAndExpand"  >
+                <Grid.RowDefinitions>                    
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="Test.png" Aspect="AspectFill" Grid.RowSpan="2" Grid.Row="0" Grid.Column="0"></Image>
+                <Label TextColor="{StaticResource red}" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1">Øvelse 1</Label>
+                            <Label TextColor="{StaticResource bodyText}" Grid.Row="1" Grid.Column="1">Sideliggende udadrotation i skulderen 1</Label>
+            </Grid>
+            </Frame>
+                    <Frame HorizontalOptions="StartAndExpand"  BorderColor="Black" Margin="10" Padding="0" CornerRadius="6" >
+                        <Grid HorizontalOptions="FillAndExpand"  >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="60" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="Test.png" Aspect="AspectFill" Grid.RowSpan="2" Grid.Row="0" Grid.Column="0"></Image>
+                            <Label TextColor="Black" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1">Øvelse 1</Label>
+                            <Label TextColor="Purple" Grid.Row="1" Grid.Column="1">Sideliggende udadrotation i skulderen 1</Label>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+        </ScrollView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
