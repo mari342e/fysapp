@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Handler;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,6 +10,8 @@ namespace fysapp
         public App()
         {
             InitializeComponent();
+            var data = new Data();
+           var exercises = data.GetExercises();
 
             MainPage = new NavigationPage(new FrontPage());
         }
