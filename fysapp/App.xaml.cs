@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Handler;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Handler;
 
 namespace fysapp
 {
@@ -11,7 +11,7 @@ namespace fysapp
         {
             InitializeComponent();
             var data = new Data();
-           //var exercises = data.GetExercises();
+           var exercises = data.GetExercises();
             MainPage = new MainPage();
         }
 

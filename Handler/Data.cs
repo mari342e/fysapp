@@ -22,6 +22,22 @@ namespace Handler
 
         //    return exercises;
         //}
-       
+
+        public List<Exercise> GetExercises() {
+            var list = new List<Exercise>();
+            string jsonName = "Exercises.json";
+            var assembly = typeof(Data).GetTypeInfo().Assembly;
+            Stream stream = assembly.GetManifestResourceStream($"{assembly.GetName().Name}.{jsonName}");
+
+            using (var reader = new StreamReader(stream)) {
+                var jsonString = reader.ReadToEnd();
+
+                list = JsonConvert.DeserializeObject<List<Exercise>>(jsonString);
+            }
+
+               
+            return list;
+        }
+
     }
 }

@@ -1,5 +1,5 @@
-{
-  "Exercises": [
+
+  [
     {
       "UserID": "1",
       "ExerciseID": "1",
@@ -22,4 +22,3 @@
     }
   ]
 
-}
