@@ -15,6 +15,7 @@ namespace fysapp.Pages
 		public ExerciseOverview ()
 		{
 			InitializeComponent ();
-		}
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
 	}
 }
