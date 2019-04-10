@@ -10,7 +10,7 @@ namespace fysapp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new FrontPage());
+            MainPage = new NavigationPage(new Pages.Home());
         }
 
         protected override void OnStart()

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="fysapp.Pages.Home">
+    <ContentPage.Content>
+        
+        <StackLayout BackgroundColor="#FAFAFA">
+            <BoxView Color="Silver"
+                     CornerRadius="10"
+                     WidthRequest="120"
+                     HeightRequest="120"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     Margin="0,70,0,50" />
+            
+            <Grid Padding="0" Margin="0" RowSpacing="30" ColumnSpacing="0" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="340" />
+                </Grid.ColumnDefinitions>
+               
+                <Frame
+                    Padding="0"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    HasShadow="false"
+                    CornerRadius="10"
+                    BackgroundColor="{StaticResource purple}"
+                    OutlineColor="{StaticResource borderColor}"
+                    Grid.Row="0"
+                    Grid.Column="0">
+                    
+                    <Image Source="CalendarCard"
+                       HeightRequest="130"
+                       VerticalOptions="EndAndExpand"
+                       HorizontalOptions="End" />
+                </Frame>
+                
+                <Frame
+                    Padding="0"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    HasShadow="false"
+                    CornerRadius="10"
+                    BackgroundColor="{StaticResource green}"
+                    OutlineColor="{StaticResource borderColor}"
+                    Grid.Row="1"
+                    Grid.Column="0">
+                    
+                    <Image Source="TrainingCard"
+                       HeightRequest="130"
+                       VerticalOptions="EndAndExpand"
+                       HorizontalOptions="End" />
+                </Frame>
+                
+                <Frame
+                    Padding="0"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    HasShadow="false"
+                    CornerRadius="10"
+                    BackgroundColor="{StaticResource red}"
+                    OutlineColor="{StaticResource borderColor}"
+                    Grid.Row="2"
+                    Grid.Column="0">
+                    
+                    <Image Source="SurveyCard"
+                       HeightRequest="130"
+                       VerticalOptions="EndAndExpand"
+                       HorizontalOptions="End" />
+                </Frame>
+                
+            </Grid>
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

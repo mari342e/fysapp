@@ -69,7 +69,6 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FrameShadow.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -127,6 +126,12 @@
     <ImageAsset Include="Assets.xcassets\MoreIcon.imageset\more-1.png" />
     <ImageAsset Include="Assets.xcassets\TrainingIcon.imageset\training.png" />
     <ImageAsset Include="Assets.xcassets\TrainingIcon.imageset\training-1.png" />
+    <ImageAsset Include="Assets.xcassets\CalendarCard.imageset\CalendarCard.png" />
+    <ImageAsset Include="Assets.xcassets\CalendarCard.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TrainingCard.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TrainingCard.imageset\TrainingCard.png" />
+    <ImageAsset Include="Assets.xcassets\SurveyCard.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SurveyCard.imageset\SurveyCard.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -158,5 +163,9 @@
     <Folder Include="Assets.xcassets\CalenderIcon.imageset\" />
     <Folder Include="Assets.xcassets\TrainingIcon.imageset\" />
     <Folder Include="Assets.xcassets\MoreIcon.imageset\" />
+    <Folder Include="Assets.xcassets\CalendarCard.imageset\" />
+    <Folder Include="Assets.xcassets\CalendarCard.imageset\" />
+    <Folder Include="Assets.xcassets\TrainingCard.imageset\" />
+    <Folder Include="Assets.xcassets\SurveyCard.imageset\" />
   </ItemGroup>
 </Project>

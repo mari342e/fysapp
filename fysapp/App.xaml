@@ -8,7 +8,7 @@
             <Color x:Key="white">#ffffff</Color>
             <Color x:Key="bodyText">#707070</Color>
             <Color x:Key="borderColor">#c4cAd0</Color>
-            <Color x:Key="bgColor">#fafafa</Color>           
+            <Color x:Key="bgColor">#fafafa</Color>
             <Style x:Key="btn" TargetType="Button">
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="TextColor" Value="{StaticResource white}" />

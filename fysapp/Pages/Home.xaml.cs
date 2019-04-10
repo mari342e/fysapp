@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace fysapp
+namespace fysapp.Pages
 {
-    public partial class FrontPage : ContentPage
+    public partial class Home : ContentPage
     {
-        public FrontPage()
+        public Home()
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
