@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="fysapp.Pages.ExerciseOverview">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="fysapp.NavigationBar"
+             x:Class="fysapp.Pages.ExerciseOverview">
     <ContentPage.Content>
-        <StackLayout Padding="10" BackgroundColor="{StaticResource bgColor}" VerticalOptions="FillAndExpand">
-            <Label Style="{StaticResource pageTitle}">Øvelser</Label>
-            <ScrollView>
+        <StackLayout BackgroundColor="{StaticResource bgColor}" VerticalOptions="FillAndExpand">
+            <ScrollView VerticalOptions="FillAndExpand">
                 <StackLayout>
+                    <Label Style="{StaticResource pageTitle}">Øvelser</Label>
                     <Frame Style="{StaticResource BasicListFrame}">
                         <Grid ColumnSpacing="15" RowSpacing="0">
                             <Grid.RowDefinitions>
@@ -37,6 +40,7 @@
                     </Frame>
                 </StackLayout>
             </ScrollView>
+            <views:NavigationBar />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
