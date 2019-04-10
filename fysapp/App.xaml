@@ -36,7 +36,7 @@
                 <Setter Property="BackgroundColor" Value="{StaticResource white}" />
                 <Setter Property="Margin" Value="10" />
                 <Setter Property="Padding" Value="0" />
-                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
                 <Setter Property="HasShadow" Value="false" />
             </Style>
             <Style x:Key="BasicListFrameHeader" TargetType="Label">
@@ -48,6 +48,7 @@
             <Style x:Key="BasicListFrameBodyText" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource bodyText}" />
                 <Setter Property="VerticalOptions" Value="StartAndExpand" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
             </Style>
             <Style x:Key="BasicListFrameBodyImg" TargetType="Image">
                 <Setter Property="Aspect" Value="AspectFill" />                

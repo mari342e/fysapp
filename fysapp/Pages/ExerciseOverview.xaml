@@ -8,36 +8,34 @@
             <ScrollView VerticalOptions="FillAndExpand">
                 <StackLayout>
                     <Label Style="{StaticResource pageTitle}">Øvelser</Label>
-                    <Frame Style="{StaticResource BasicListFrame}">
-                        <Grid ColumnSpacing="15" RowSpacing="0">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="45" />
-                                <RowDefinition Height="55" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="100" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <Image Source="img.jpeg" Aspect="AspectFill" Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" />
-                            <Label Style="{StaticResource BasicListFrameHeader}" Grid.Row="0" Grid.Column="1">Øvelse 1</Label>
-                            <Label Style="{StaticResource BasicListFrameBodyText}" Grid.Row="1" Grid.Column="1">Sideliggende udadrotation i skulderen</Label>
-                        </Grid>
-                    </Frame>
-                    <Frame Style="{StaticResource BasicListFrame}">
-                        <Grid Style="{StaticResource BasicListFrameGrid}">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="45" />
-                                <RowDefinition Height="55" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="100" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <Image Source="img.jpeg" Style="{StaticResource BasicListFrameBodyImg}" Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" />
-                            <Label Style="{StaticResource BasicListFrameHeader}" Grid.Row="0" Grid.Column="1">Øvelse 1</Label>
-                            <Label Style="{StaticResource BasicListFrameBodyText}" Grid.Row="1" Grid.Column="1">Sideliggende udadrotation i skulderen</Label>
-                        </Grid>
-                    </Frame>
+                    <ListView x:Name="listExerciseOverview" RowHeight="110">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.View>
+                                        <StackLayout>
+                                            <Frame Style="{StaticResource BasicListFrame}" HeightRequest="100">
+                                            <Grid ColumnSpacing="15" RowSpacing="0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="45" />
+                                                    <RowDefinition Height="55" />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="100" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                
+                                                <Image Source="{Binding ImageLinks[0]}" Aspect="AspectFill" Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" />
+                                                    <Label Style="{StaticResource BasicListFrameHeader}" Grid.Row="0" Grid.Column="1" Text="{Binding ExerciseID, StringFormat='Øvelse {0}'}"></Label>
+                                                <Label Style="{StaticResource BasicListFrameBodyText}" Grid.Row="1" Grid.Column="1" Text="{Binding Title}" ></Label>
+                                            </Grid>
+                                        </Frame>
+                                        </StackLayout>
+                                    </ViewCell.View>                                    
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>    
                 </StackLayout>
             </ScrollView>
             <views:NavigationBar />
