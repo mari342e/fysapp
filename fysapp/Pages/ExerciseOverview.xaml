@@ -8,8 +8,8 @@
                     <Frame Style="{StaticResource BasicListFrame}">
                         <Grid ColumnSpacing="15" RowSpacing="0">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="40" />
-                                <RowDefinition Height="60" />
+                                <RowDefinition Height="45" />
+                                <RowDefinition Height="55" />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="100" />
@@ -23,8 +23,8 @@
                     <Frame Style="{StaticResource BasicListFrame}">
                         <Grid Style="{StaticResource BasicListFrameGrid}">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="40" />
-                                <RowDefinition Height="60" />
+                                <RowDefinition Height="45" />
+                                <RowDefinition Height="55" />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="100" />
