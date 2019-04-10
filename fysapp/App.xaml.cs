@@ -1,4 +1,5 @@
-﻿using Handler;
+﻿using fysapp.Pages;
+using Handler;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,7 +14,7 @@ namespace fysapp
             var data = new Data();
            var exercises = data.GetExercises();
 
-            MainPage = new NavigationPage(new FrontPage());
+            MainPage = new NavigationPage(new ExerciseOverview());
         }
 
         protected override void OnStart()
