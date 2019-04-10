@@ -115,11 +115,8 @@
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\HomeIcon.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\CalenderIcon.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\TrainingIcon.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\MoreIcon.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\CalenderIcon.imageset\calendar.png" />
-    <ImageAsset Include="Assets.xcassets\CalenderIcon.imageset\calendar-1.png" />
     <ImageAsset Include="Assets.xcassets\HomeIcon.imageset\home.png" />
     <ImageAsset Include="Assets.xcassets\HomeIcon.imageset\home-1.png" />
     <ImageAsset Include="Assets.xcassets\MoreIcon.imageset\more.png" />
@@ -132,6 +129,9 @@
     <ImageAsset Include="Assets.xcassets\TrainingCard.imageset\TrainingCard.png" />
     <ImageAsset Include="Assets.xcassets\SurveyCard.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SurveyCard.imageset\SurveyCard.png" />
+    <ImageAsset Include="Assets.xcassets\CalendarIcon.imageset\calendar.png" />
+    <ImageAsset Include="Assets.xcassets\CalendarIcon.imageset\calendar-1.png" />
+    <ImageAsset Include="Assets.xcassets\CalendarIcon.imageset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -160,12 +160,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets.xcassets\HomeIcon.imageset\" />
-    <Folder Include="Assets.xcassets\CalenderIcon.imageset\" />
     <Folder Include="Assets.xcassets\TrainingIcon.imageset\" />
     <Folder Include="Assets.xcassets\MoreIcon.imageset\" />
     <Folder Include="Assets.xcassets\CalendarCard.imageset\" />
     <Folder Include="Assets.xcassets\CalendarCard.imageset\" />
     <Folder Include="Assets.xcassets\TrainingCard.imageset\" />
     <Folder Include="Assets.xcassets\SurveyCard.imageset\" />
+    <Folder Include="Assets.xcassets\CalendarIcon.imageset\" />
   </ItemGroup>
 </Project>
