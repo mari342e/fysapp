@@ -12,9 +12,9 @@ namespace fysapp
         {
             InitializeComponent();
             var data = new Data();
-           var exercises = data.GetExercises();
+            var exercises = data.GetExercises();
 
-            MainPage = new NavigationPage(new ExerciseOverview());
+            MainPage = new NavigationPage(new FrontPage());
         }
 
         protected override void OnStart()
