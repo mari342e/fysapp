@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="fysapp.NavigationBar" x:Class="fysapp.Pages.TrainingSession">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource bgColor}">
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout Margin="20,0">
+                    <Label Text="Træningspas" Style="{StaticResource h1Scroll}" />
+                    <Frame Style="{StaticResource basicListFrame}" HeightRequest="70" Padding="10,0,10,10" Margin="0,0,0,20">
+                        <StackLayout>
+                            <Label Text="Før træning" Style="{StaticResource h2}" />
+                            <Label Text="Udfyld et kort spørgeskema inden du går i gang med dagens øvelser" Style="{StaticResource basicListFrameBodyText}" />
+                        </StackLayout>
+                    </Frame>
+                    <ListView x:Name="listExerciseOverview" RowHeight="110" SeparatorVisibility="None" BackgroundColor="{StaticResource bgColor}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.View>
+                                        <StackLayout>
+                                            <Frame Style="{StaticResource basicListFrame}" HeightRequest="90">
+                                                <Grid ColumnSpacing="10" RowSpacing="5">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="35" />
+                                                        <RowDefinition Height="50" />
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="90" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Image Source="{Binding ImageLinks[0]}" Aspect="AspectFill" Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" />
+                                                    <Label Style="{StaticResource h2}" Grid.Row="0" Grid.Column="1" Text="{Binding ExerciseID, StringFormat='Øvelse {0}'}" />
+                                                    <Label Style="{StaticResource basicListFrameBodyText}" Grid.Row="1" Grid.Column="1" Text="{Binding Title}" />
+                                                </Grid>
+                                            </Frame>
+                                        </StackLayout>
+                                    </ViewCell.View>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <Frame Style="{StaticResource basicListFrame}" HeightRequest="70" Padding="10,0,10,10" Margin="0,0,0,20">
+                        <StackLayout>
+                            <Label Text="Efter træning" Style="{StaticResource h2}" />
+                            <Label Text="Udfyld et kort spørgeskema efter dagens øvelser" Style="{StaticResource basicListFrameBodyText}" />
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+            <views:NavigationBar />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
