@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource bgColor}">
             
-            <Label Style="{StaticResource pageTitle}">Mere</Label>
+            <Label Text="Mere" Style="{StaticResource pageTitle}" />
             
             <Grid Padding="0" Margin="20,0,20,20" RowSpacing="20" ColumnSpacing="0" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
                 
@@ -24,6 +24,10 @@
                     BackgroundColor="{StaticResource purple}"
                     Grid.Row="0"
                     Grid.Column="0">
+                    
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoToAbout" NumberOfTapsRequired="1" />
+                    </Frame.GestureRecognizers>
                     
                     <Grid>
                         <Grid.ColumnDefinitions>
