@@ -16,16 +16,16 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <ImageButton Grid.Row="0" Grid.Column="0" Clicked="GoToHomePage" BackgroundColor="Transparent" Source="HomeIcon" />
-                <Label Grid.Row="1" Grid.Column="0" Text="Hjem" BackgroundColor="Transparent" TextColor="{StaticResource purple}" FontSize="13" HorizontalOptions="Center" />
+                <Label Grid.Row="1" Grid.Column="0" Text="Hjem" Clicked="GoToHomePage" BackgroundColor="Transparent" TextColor="{StaticResource purple}" FontSize="13" HorizontalOptions="Center" />
                 
                 <ImageButton Grid.Row="0" Grid.Column="1" Clicked="GoToTrainingLog" BackgroundColor="Transparent" Source="CalendarIcon" />
-                <Label Grid.Row="1" Grid.Column="1" Text="Træningslog" BackgroundColor="Transparent" TextColor="{StaticResource purple}" FontSize="13" HorizontalOptions="Center" />
+                <Label Grid.Row="1" Grid.Column="1" Text="Træningslog" Clicked="GoToHomePage" BackgroundColor="Transparent" TextColor="{StaticResource purple}" FontSize="13" HorizontalOptions="Center" />
                
                 <ImageButton Grid.Row="0" Grid.Column="2" Clicked="GoToExerciseOverview" BackgroundColor="Transparent" Source="TrainingIcon"/>
-                <Label Grid.Row="1" Grid.Column="2" Text="Øvelser" BackgroundColor="Transparent" TextColor="{StaticResource purple}" FontSize="13" HorizontalOptions="Center" />
+                <Label Grid.Row="1" Grid.Column="2" Text="Øvelser" Clicked="GoToHomePage" BackgroundColor="Transparent" TextColor="{StaticResource purple}" FontSize="13" HorizontalOptions="Center" />
                
                 <ImageButton Grid.Row="0" Grid.Column="3" Clicked="GoToMorePage" BackgroundColor="Transparent" Source="MoreIcon" />
-                <Label Grid.Row="1" Grid.Column="3" Text="Mere" BackgroundColor="Transparent" TextColor="{StaticResource purple}" FontSize="13" HorizontalOptions="Center" />
+                <Label Grid.Row="1" Grid.Column="3" Text="Mere" Clicked="GoToHomePage" BackgroundColor="Transparent" TextColor="{StaticResource purple}" FontSize="13" HorizontalOptions="Center" />
             </Grid>
         </Frame>
     </ContentView.Content>
