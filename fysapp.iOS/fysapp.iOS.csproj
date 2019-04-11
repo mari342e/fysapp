@@ -156,6 +156,10 @@
     <ImageAsset Include="Assets.xcassets\TrainingCard.imageset\TrainingCard.png" />
     <ImageAsset Include="Assets.xcassets\SurveyCard.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SurveyCard.imageset\SurveyCard.png" />
+    <ImageAsset Include="Assets.xcassets\CogsCard.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\CogsCard.imageset\cogs.png" />
+    <ImageAsset Include="Assets.xcassets\InfoCard.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\InfoCard.imageset\info.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -191,5 +195,7 @@
     <Folder Include="Assets.xcassets\TrainingCard.imageset\" />
     <Folder Include="Assets.xcassets\SurveyCard.imageset\" />
     <Folder Include="Assets.xcassets\CalendarIcon.imageset\" />
+    <Folder Include="Assets.xcassets\CogsCard.imageset\" />
+    <Folder Include="Assets.xcassets\InfoCard.imageset\" />
   </ItemGroup>
 </Project>
