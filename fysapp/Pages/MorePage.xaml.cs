@@ -17,5 +17,10 @@ namespace fysapp.Pages
         {
             await Navigation.PushAsync(new Pages.AboutPage());
         }
+
+        async void GoToGeneralInfo(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new Pages.GeneralInfo());
+        }
     }
 }
