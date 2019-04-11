@@ -64,26 +64,23 @@
                 <Setter Property="HorizontalOptions" Value="End" />
             </Style>
             
-            <!-- Basic List Buttons -->
-            <Style x:Key="BasicListFrame" TargetType="Frame">
+            <!-- List Button -->
+            <Style x:Key="basicListFrame" TargetType="Frame">
                 <Setter Property="BorderColor" Value="{StaticResource borderColor}" />
-                <Setter Property="CornerRadius" Value="6" />
+                <Setter Property="CornerRadius" Value="10" />
                 <Setter Property="BackgroundColor" Value="{StaticResource white}" />
                 <Setter Property="Padding" Value="0" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
                 <Setter Property="HasShadow" Value="false" />
             </Style>
-            <Style x:Key="BasicListFrameBodyText" TargetType="Label">
+            
+            <!-- Text in List Button -->
+            <Style x:Key="basicListFrameBodyText" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource bodyText}" />
+                <Setter Property="FontSize" Value="13" />
                 <Setter Property="VerticalOptions" Value="StartAndExpand" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-            </Style>
-            <Style x:Key="BasicListFrameBodyImg" TargetType="Image">
-                <Setter Property="Aspect" Value="AspectFill" />                
-            </Style>
-            <Style x:Key="BasicListFrameGrid" TargetType="Grid">
-                <Setter Property="ColumnSpacing" Value="15" />
-                <Setter Property="RowSpacing" Value="0" />
+                <Setter Property="Margin" Value="0,0,10,0" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>
