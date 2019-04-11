@@ -14,7 +14,7 @@ namespace fysapp
             var data = new Data();
             var exercises = data.GetExercises();
 
-            MainPage = new NavigationPage(new FrontPage());
+            MainPage = new NavigationPage(new Pages.Home());
         }
 
         protected override void OnStart()

@@ -28,5 +28,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="ShadowEffect.cs" />
+    <Compile Remove="Test.xaml.cs" />
   </ItemGroup>
 </Project>

@@ -37,6 +37,33 @@
                 <Setter Property="Margin" Value="0,10,0,0" />
             </Style>
             
+            <!-- Card -->
+            <Style x:Key="card" TargetType="Frame">
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                <Setter Property="HasShadow" Value="false" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="OutlineColor" Value="{StaticResource borderColor}" />
+            </Style>
+            
+            <!-- Labels on Cards -->
+            <Style x:Key="cardLabel" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+                <Setter Property="VerticalOptions" Value="End" />
+                <Setter Property="TextColor" Value="{StaticResource white}" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="15,0,0,15" />
+            </Style>
+            
+            <!-- Images in Cards -->
+            <Style x:Key="cardImage" TargetType="Image">
+                <Setter Property="HeightRequest" Value="130" />
+                <Setter Property="VerticalOptions" Value="EndAndExpand" />
+                <Setter Property="HorizontalOptions" Value="End" />
+            </Style>
+            
             <!-- Basic List Buttons -->
             <Style x:Key="BasicListFrame" TargetType="Frame">
                 <Setter Property="BorderColor" Value="{StaticResource borderColor}" />
