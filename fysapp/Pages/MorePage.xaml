@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource bgColor}">
             
-            <Label Text="Mere" Style="{StaticResource pageTitle}" />
+            <Label Text="Mere" Style="{StaticResource h1}" />
             
             <Grid Padding="0" Margin="20,0,20,20" RowSpacing="20" ColumnSpacing="0" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
                 

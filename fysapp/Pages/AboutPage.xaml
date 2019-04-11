@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:views="fysapp.NavigationBar"
-             x:Class="fysapp.Pages.AboutPage">
-     <ContentPage.Content>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="fysapp.NavigationBar" x:Class="fysapp.Pages.AboutPage">
+    <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource bgColor}" VerticalOptions="FillAndExpand">
-            <ScrollView VerticalOptions="FillAndExpand">
-                <StackLayout Margin="20,0">
-                    <Label Style="{StaticResource h1}">Om</Label>
-                    <Label Text="Har du spørgsmål om app’en eller projektet generelt kan du kontakte projektansvarlig Benham Liaghat" TextColor="{StaticResource textColor}" />
-                    <Label Style="{StaticResource h2}">Projektansvarlig</Label>
-                    <Label Text="Benham Liaghat" TextColor="{StaticResource textColor}" />
-                    <Label Text="Fysioterapeut, specialist, MSc. PhD-studerende" TextColor="{StaticResource textColor}" />
-                    <Label Text="Forskningsenheden for muskuloskeletal funktion og fysioterapi, institut for idræt og biomekanik, Syddansk Universitet" TextColor="{StaticResource textColor}" Margin="0,10"/>
-                    <Label Text="Telefon: +45 26 82 68 01" TextColor="{StaticResource textColor}" />
-                    <Label Text="Email: bliaghat@health.sdu.dk" TextColor="{StaticResource textColor}" />
-                </StackLayout>
-            </ScrollView>
+            <StackLayout Margin="20,0" VerticalOptions="FillAndExpand">
+                <Label Style="{StaticResource h1}">Om</Label>
+                <Label TextColor="{StaticResource bodyText}">
+                        Har du spørgsmål om app’en eller projektet generelt kan du kontakte projektansvarlig Benham Liaghat
+                    </Label>
+                <Label Style="{StaticResource h2}">Projektansvarlig</Label>
+                <Label Text="Benham Liaghat" TextColor="{StaticResource bodyText}" />
+                <Label Text="Fysioterapeut, specialist, MSc. PhD-studerende" TextColor="{StaticResource bodyText}" />
+                <Label TextColor="{StaticResource bodyText}" Margin="0,10">
+                        Forskningsenheden for muskuloskeletal funktion og fysioterapi, institut for idræt og biomekanik, Syddansk Universitet
+                    </Label>
+                <Label Text="Telefon: +45 26 82 68 01" TextColor="{StaticResource bodyText}" />
+                <Label Text="Email: bliaghat@health.sdu.dk" TextColor="{StaticResource bodyText}" />
+            </StackLayout>
             <views:NavigationBar />
         </StackLayout>
     </ContentPage.Content>
