@@ -19,7 +19,6 @@ namespace fysapp.Pages
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, false);
             listExerciseOverview.ItemsSource = data.GetExercises();
-
         }
 	}
 }
