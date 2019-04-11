@@ -15,7 +15,7 @@ namespace fysapp.Pages
 
         async void GoToHomePage(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new Pages.Home());
+            await Navigation.PushAsync(new Home());
         }
     }
 }
