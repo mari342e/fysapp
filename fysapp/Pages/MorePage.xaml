@@ -6,8 +6,8 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource bgColor}" VerticalOptions="FillAndExpand">
             <ScrollView VerticalOptions="FillAndExpand">
-                <StackLayout>
-                    <Label Style="{StaticResource pageTitle}">Mere</Label>
+                <StackLayout Margin="50,0">
+                    <Label Style="{StaticResource h1}">Mere</Label>
                 </StackLayout>
             </ScrollView>
             <views:NavigationBar />

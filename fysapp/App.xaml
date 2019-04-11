@@ -20,8 +20,8 @@
                 <Setter Property="WidthRequest" Value="200" />
             </Style>
             
-            <!-- Page Title -->
-            <Style x:Key="pageTitle" TargetType="Label">
+            <!-- Headings -->
+            <Style x:Key="h1" TargetType="Label">
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="TextColor" Value="{StaticResource purple}" />
                 <Setter Property="FontSize" Value="25" />
@@ -29,21 +29,22 @@
                 <Setter Property="Margin" Value="0,70,0,50" />
             </Style>
             
+            <Style x:Key="h2" TargetType="Label">
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="TextColor" Value="{StaticResource red}" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+            </Style>
+            
             <!-- Basic List Buttons -->
             <Style x:Key="BasicListFrame" TargetType="Frame">
                 <Setter Property="BorderColor" Value="{StaticResource borderColor}" />
                 <Setter Property="CornerRadius" Value="6" />
                 <Setter Property="BackgroundColor" Value="{StaticResource white}" />
-                <Setter Property="Margin" Value="10" />
                 <Setter Property="Padding" Value="0" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
                 <Setter Property="HasShadow" Value="false" />
-            </Style>
-            <Style x:Key="BasicListFrameHeader" TargetType="Label">
-                <Setter Property="TextColor" Value="{StaticResource red}" />
-                <Setter Property="VerticalTextAlignment" Value="Center" />
-                <Setter Property="FontAttributes" Value="Bold" />
-                <Setter Property="FontSize" Value="18" />
             </Style>
             <Style x:Key="BasicListFrameBodyText" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource bodyText}" />
