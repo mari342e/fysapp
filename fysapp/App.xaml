@@ -79,7 +79,7 @@
             </Style>
             
             <!-- Basic List Buttons -->
-            <Style x:Key="BasicListFrame" TargetType="Frame">
+            <Style x:Key="basicListFrame" TargetType="Frame">
                 <Setter Property="BorderColor" Value="{StaticResource borderColor}" />
                 <Setter Property="CornerRadius" Value="10" />
                 <Setter Property="BackgroundColor" Value="{StaticResource white}" />

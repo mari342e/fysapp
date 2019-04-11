@@ -1,41 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:views="fysapp.NavigationBar"
-             x:Class="fysapp.Pages.ExerciseOverview">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="fysapp.NavigationBar" x:Class="fysapp.Pages.ExerciseOverview">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="{StaticResource bgColor}" VerticalOptions="FillAndExpand">
+        <StackLayout BackgroundColor="{StaticResource bgColor}">
             <ScrollView VerticalOptions="FillAndExpand">
                 <StackLayout Margin="20,0">
-                    <Label Style="{StaticResource h1}">Øvelser</Label>
-                    <ListView x:Name="listExerciseOverview" RowHeight="120" SeparatorVisibility="None" BackgroundColor="{StaticResource bgColor}">
+                    <Label Text="Øvelser" Style="{StaticResource h1Scroll}"  />
+                    <ListView x:Name="listExerciseOverview" RowHeight="110" SeparatorVisibility="None" BackgroundColor="{StaticResource bgColor}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <ViewCell >
+                                <ViewCell>
                                     <ViewCell.View>
                                         <StackLayout>
-                                            <Frame Style="{StaticResource BasicListFrame}" HeightRequest="100">
-                                                <Grid ColumnSpacing="15" RowSpacing="0">
+                                            <Frame Style="{StaticResource basicListFrame}" HeightRequest="90">
+                                                <Grid ColumnSpacing="10" RowSpacing="5">
                                                     <Grid.RowDefinitions>
                                                         <RowDefinition Height="35" />
-                                                        <RowDefinition Height="65" />
+                                                        <RowDefinition Height="50" />
                                                     </Grid.RowDefinitions>
                                                     <Grid.ColumnDefinitions>
-                                                        <ColumnDefinition Width="100" />
+                                                        <ColumnDefinition Width="90" />
                                                         <ColumnDefinition Width="*" />
                                                     </Grid.ColumnDefinitions>
-                                                    
                                                     <Image Source="{Binding ImageLinks[0]}" Aspect="AspectFill" Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" />
-                                                    <Label Style="{StaticResource h2}" Grid.Row="0" Grid.Column="1" Text="{Binding ExerciseID, StringFormat='Øvelse {0}'}"></Label>
-                                                    <Label Style="{StaticResource BasicListFrameBodyText}" Grid.Row="1" Grid.Column="1" Text="{Binding Title}" ></Label>
+                                                    <Label Style="{StaticResource h2}" Grid.Row="0" Grid.Column="1" Text="{Binding ExerciseID, StringFormat='Øvelse {0}'}" />
+                                                    <Label Style="{StaticResource basicListFrameBodyText}" Grid.Row="1" Grid.Column="1" Text="{Binding Title}" />
                                                 </Grid>
                                             </Frame>
                                         </StackLayout>
-                                    </ViewCell.View>                                    
+                                    </ViewCell.View>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
-                    </ListView>    
+                    </ListView>
                 </StackLayout>
             </ScrollView>
             <views:NavigationBar />
