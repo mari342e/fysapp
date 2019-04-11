@@ -12,5 +12,10 @@ namespace fysapp.Pages
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
         }
+
+        async void GoToTrainingSession(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new TrainingSession());
+        }
     }
 }

@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:views="fysapp.NavigationBar"
-             x:Class="fysapp.Pages.TrainingLog">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="fysapp.NavigationBar" x:Class="fysapp.Pages.TrainingLog">
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource bgColor}" VerticalOptions="FillAndExpand">
-            <ScrollView VerticalOptions="FillAndExpand">
-                <StackLayout Margin="20,0">
-                    <Label Style="{StaticResource h1}">Træningslog</Label>
-                </StackLayout>
-            </ScrollView>
+            <StackLayout Margin="20,0" VerticalOptions="FillAndExpand">
+                <Label Style="{StaticResource h1}">Træningslog</Label>
+                <Frame Style="{StaticResource basicListFrame}" HeightRequest="70" Padding="10,0,10,10" Margin="0,0,0,20">
+                    <Label Text="Træningspas 1" Style="{StaticResource h2}" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoToTrainingSession" NumberOfTapsRequired="1" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame Style="{StaticResource basicListFrame}" HeightRequest="70" Padding="10,0,10,10" Margin="0,0,0,20">
+                    <Label Text="Træningspas 2" Style="{StaticResource h2}" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoToTrainingSession" NumberOfTapsRequired="1" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame Style="{StaticResource basicListFrame}" HeightRequest="70" Padding="10,0,10,10" Margin="0,0,0,20">
+                    <Label Text="Træningspas 3" Style="{StaticResource h2}" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoToTrainingSession" NumberOfTapsRequired="1" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </StackLayout>
             <views:NavigationBar />
         </StackLayout>
     </ContentPage.Content>
