@@ -10,6 +10,7 @@ namespace fysapp.Pages
         public AboutPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }
