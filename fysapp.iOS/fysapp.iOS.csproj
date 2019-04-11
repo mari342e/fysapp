@@ -114,24 +114,42 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\HomeIcon.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\TrainingIcon.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\MoreIcon.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\HomeIcon.imageset\home.png" />
-    <ImageAsset Include="Assets.xcassets\HomeIcon.imageset\home-1.png" />
-    <ImageAsset Include="Assets.xcassets\MoreIcon.imageset\more.png" />
-    <ImageAsset Include="Assets.xcassets\MoreIcon.imageset\more-1.png" />
-    <ImageAsset Include="Assets.xcassets\TrainingIcon.imageset\training.png" />
-    <ImageAsset Include="Assets.xcassets\TrainingIcon.imageset\training-1.png" />
-    <ImageAsset Include="Assets.xcassets\CalendarCard.imageset\CalendarCard.png" />
-    <ImageAsset Include="Assets.xcassets\CalendarCard.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\TrainingCard.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\TrainingCard.imageset\TrainingCard.png" />
-    <ImageAsset Include="Assets.xcassets\SurveyCard.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\SurveyCard.imageset\SurveyCard.png" />
-    <ImageAsset Include="Assets.xcassets\CalendarIcon.imageset\calendar.png" />
-    <ImageAsset Include="Assets.xcassets\CalendarIcon.imageset\calendar-1.png" />
-    <ImageAsset Include="Assets.xcassets\CalendarIcon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\HomeIcon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\TrainingIcon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\MoreIcon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\HomeIcon.imageset\home.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\HomeIcon.imageset\home-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\MoreIcon.imageset\more.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\MoreIcon.imageset\more-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\TrainingIcon.imageset\training.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\TrainingIcon.imageset\training-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\CalendarIcon.imageset\calendar.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\CalendarIcon.imageset\calendar-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\CalendarIcon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
