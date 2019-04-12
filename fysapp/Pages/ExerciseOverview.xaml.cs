@@ -13,12 +13,26 @@ namespace fysapp.Pages
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ExerciseOverview : ContentPage
 	{
-		public ExerciseOverview ()
+        Data data = new Data();
+        public ExerciseOverview ()
 		{
-            var data = new Data();
+            
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, false);
             listExerciseOverview.ItemsSource = data.GetExercises();
+            
         }
-	}
+        private async void ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var exerciseDescriptionPage = new ExerciseDescription();
+
+            var exercise = listExerciseOverview.SelectedItem;            
+            exerciseDescriptionPage.BindingContext = exercise;
+            await Navigation.PushAsync(exerciseDescriptionPage);
+
+            //Dette er nødvendigt for at skjule selected baggrundsfarve.
+            //this.listExerciseOverview.selec.Clear();
+            
+        }
+    }
 }

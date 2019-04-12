@@ -1,6 +1,6 @@
 ﻿[
   {
-    "UserID": "1",
+    "UserGroupID": "1",
     "ExerciseID": "1",
     "Title": "Sideliggende udadrotation i skulderen",
     "ImageLinks": [ "img.jpeg", "img.jpeg" ],
@@ -10,7 +10,7 @@
     "Focus": "Undgå at skulderbladet vandrer op mod øret eller frem/tilbage"
   },
   {
-    "UserID": "1",
+    "UserGroupID": "1",
     "ExerciseID": "2",
     "Title": "Maveliggende løft med udadrotation",
     "ImageLinks": [ "img.jpeg", "img.jpeg" ],
@@ -20,7 +20,7 @@
     "Focus": "Undgå at skulderbladet vandrer op mod øret eller frem/tilbage"
   },
   {
-    "UserID": "1",
+    "UserGroupID": "1",
     "ExerciseID": "3",
     "Title": "Siddende løft af armen skråt fremad",
     "ImageLinks": [ "img.jpeg", "img.jpeg" ],
@@ -37,7 +37,7 @@
     "Focus": "Kontroller bevægelsen ved at placere modsatte hånd bag på ryggen nedenunder skulderbladet. Fornem at skulderbladet hele tiden flugter med brystkassen’"
   },
   {
-    "UserID": "1",
+    "UserGroupID": "1",
     "ExerciseID": "4",
     "Title": "Maveliggende udadrotation med armed løftet 90˚ og albuen bøjet 90˚",
     "ImageLinks": [ "img.jpeg", "img.jpeg" ],
@@ -47,7 +47,7 @@
     "Focus": "Kontroller bevægelsen ved at placere modsatte hånd bag på ryggen nedenunder skulderbladet. Fornem at skulderbladet nærmer sig fingerspidserne"
   },
   {
-    "UserID": "1",
+    "UserGroupID": "1",
     "ExerciseID": "5",
     "Title": "Rygliggende skub med armen",
     "ImageLinks": [ "img.jpeg", "img.jpeg" ],
