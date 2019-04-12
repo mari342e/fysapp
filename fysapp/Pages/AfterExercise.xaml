@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="fysapp.NavigationBar" x:Class="fysapp.Pages.AfterExercise">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource bgColor}" VerticalOptions="FillAndExpand">
+            <ScrollView  VerticalOptions="FillAndExpand">
+                <StackLayout Margin="20,0">
+                    <Label Text="Efter øvelse" Style="{StaticResource h1}" />
+                    <Label Text="Tid" Style="{StaticResource h2}" XAlign="Center" />
+                    <Label Grid.Row="0" Grid.Column="0" Text="Denne træning tog:" XAlign="Center" Style="{StaticResource h3}" Margin="0,0,0,5" />
+                    <Entry Grid.Row="1" Grid.Column="0" Margin="0,0,0,20" />
+                    <Label Text="Set 1" Style="{StaticResource h2}" XAlign="Center" />
+                    <Grid Padding="0" ColumnSpacing="20" Margin="0,0,0,20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Text="Gentagelser" XAlign="Center" Style="{StaticResource h3}" />
+                        <Entry Grid.Row="1" Grid.Column="0" />
+                        <Label Grid.Row="0" Grid.Column="1" Text="Vægt (kg)" XAlign="Center" Style="{StaticResource h3}" />
+                        <Entry Grid.Row="1" Grid.Column="1" />
+                    </Grid>
+                    <Label Text="Set 2" Style="{StaticResource h2}" XAlign="Center" />
+                    <Grid Padding="0" ColumnSpacing="20" Margin="0,0,0,20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Text="Gentagelser" XAlign="Center" Style="{StaticResource h3}" />
+                        <Entry Grid.Row="1" Grid.Column="0" />
+                        <Label Grid.Row="0" Grid.Column="1" Text="Vægt (kg)" XAlign="Center" Style="{StaticResource h3}" />
+                        <Entry Grid.Row="1" Grid.Column="1" />
+                    </Grid>
+                    <Label Text="Set 3" Style="{StaticResource h2}" XAlign="Center" />
+                    <Grid Padding="0" ColumnSpacing="20" Margin="0,0,0,20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Text="Gentagelser" XAlign="Center" Style="{StaticResource h3}" />
+                        <Entry Grid.Row="1" Grid.Column="0" />
+                        <Label Grid.Row="0" Grid.Column="1" Text="Vægt (kg)" XAlign="Center" Style="{StaticResource h3}" />
+                        <Entry Grid.Row="1" Grid.Column="1" />
+                    </Grid>
+                    <Button Text="Gem" Style="{StaticResource btn}" Margin="0,20" />
+                </StackLayout>
+            </ScrollView>
+            <views:NavigationBar />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
