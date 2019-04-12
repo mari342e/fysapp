@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -150,36 +150,16 @@
     <ImageAsset Include="Assets.xcassets\CalendarIcon.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\CalendarCard.imageset\CalendarCard.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\CalendarCard.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\TrainingCard.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\TrainingCard.imageset\TrainingCard.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\SurveyCard.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\SurveyCard.imageset\SurveyCard.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\CogsCard.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\CogsCard.imageset\cogs.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\InfoCard.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\InfoCard.imageset\info.png">
-      <Visible>false</Visible>
-    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\CalendarCard.imageset\CalendarCard.png" />
+    <ImageAsset Include="Assets.xcassets\CalendarCard.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TrainingCard.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TrainingCard.imageset\TrainingCard.png" />
+    <ImageAsset Include="Assets.xcassets\SurveyCard.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SurveyCard.imageset\SurveyCard.png" />
+    <ImageAsset Include="Assets.xcassets\CogsCard.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\CogsCard.imageset\cogs.png" />
+    <ImageAsset Include="Assets.xcassets\InfoCard.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\InfoCard.imageset\info.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -192,8 +172,8 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.6.0.264807" />
     <PackageReference Include="Xamarin.Essentials" Version="1.0.1" />
-    <PackageReference Include="Xamd.Plugins.Forms.ImageCarousel">
-      <Version>1.0.2</Version>
+    <PackageReference Include="Xamarin.CustomControls.AccordionView">
+      <Version>1.1.6</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
@@ -210,9 +190,15 @@
     <BundleResource Include="Resources\img.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets.xcassets\CalendarIcon.imageset\" />
     <Folder Include="Assets.xcassets\HomeIcon.imageset\" />
-    <Folder Include="Assets.xcassets\MoreIcon.imageset\" />
     <Folder Include="Assets.xcassets\TrainingIcon.imageset\" />
+    <Folder Include="Assets.xcassets\MoreIcon.imageset\" />
+    <Folder Include="Assets.xcassets\CalendarCard.imageset\" />
+    <Folder Include="Assets.xcassets\CalendarCard.imageset\" />
+    <Folder Include="Assets.xcassets\TrainingCard.imageset\" />
+    <Folder Include="Assets.xcassets\SurveyCard.imageset\" />
+    <Folder Include="Assets.xcassets\CalendarIcon.imageset\" />
+    <Folder Include="Assets.xcassets\CogsCard.imageset\" />
+    <Folder Include="Assets.xcassets\InfoCard.imageset\" />
   </ItemGroup>
 </Project>

@@ -3,7 +3,7 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource bgColor}" VerticalOptions="FillAndExpand">
             <StackLayout Margin="20,0" VerticalOptions="FillAndExpand">
-                <Label Style="{StaticResource h1}">Træningslog</Label>
+                <Label Text="Træningslog" Style="{StaticResource h1}" />
                 <Frame Style="{StaticResource basicListFrame}" HeightRequest="70" Padding="10,0,10,10" Margin="0,0,0,20">
                     <Label Text="Træningspas 1" Style="{StaticResource h2}" />
                     <Frame.GestureRecognizers>

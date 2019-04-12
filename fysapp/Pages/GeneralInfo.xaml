@@ -23,8 +23,16 @@
                             Grid.Row="0"
                             Grid.Column="0">
                             
-                            <Label Text="Generelle anbefalinger" Style="{StaticResource h2}" Margin="0" />
+                            <StackLayout>
+                                <Label Text="Generelle anbefalinger" Style="{StaticResource h2}" Margin="0" x:Name="recommendation" />
+                                
+                                <StackLayout>
+                                    <BoxView BackgroundColor="{StaticResource borderColor}" Margin="0,5" HorizontalOptions="FillAndExpand" HeightRequest="1" />
+                                    <Label>Nulla non lorem maximus, consequat tellus consectetur, congue dui. Nulla mollis libero id fermentum eleifend. Nunc vel enim nunc. Donec ultricies ultricies purus et aliquet. Vestibulum lobortis diam et purus luctus, sit amet congue ex.</Label>
+                                </StackLayout>
+                            </StackLayout>
                         </Frame>
+                        
                         
                         <Frame
                             Style="{StaticResource accordion}"
