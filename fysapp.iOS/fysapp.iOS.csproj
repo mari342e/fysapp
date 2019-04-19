@@ -160,6 +160,10 @@
     <ImageAsset Include="Assets.xcassets\CogsCard.imageset\cogs.png" />
     <ImageAsset Include="Assets.xcassets\InfoCard.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\InfoCard.imageset\info.png" />
+    <ImageAsset Include="Assets.xcassets\Back.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Back.imageset\back.png" />
+    <ImageAsset Include="Assets.xcassets\AccordionIcon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AccordionIcon.imageset\accordionIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -200,5 +204,7 @@
     <Folder Include="Assets.xcassets\CalendarIcon.imageset\" />
     <Folder Include="Assets.xcassets\CogsCard.imageset\" />
     <Folder Include="Assets.xcassets\InfoCard.imageset\" />
+    <Folder Include="Assets.xcassets\Back.imageset\" />
+    <Folder Include="Assets.xcassets\AccordionIcon.imageset\" />
   </ItemGroup>
 </Project>

@@ -33,6 +33,10 @@
                 <Setter Property="Margin" Value="0,25,0,50" />
             </Style>
             
+            <Style x:Key="h1Back" BasedOn="{StaticResource h1}" TargetType="Label">
+                <Setter Property="Margin" Value="0,0,0,50" />
+            </Style>
+            
             <Style x:Key="h2" TargetType="Label">
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="TextColor" Value="{StaticResource red}" />
@@ -45,6 +49,23 @@
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="TextColor" Value="{StaticResource bodyText}" />
                 <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+            
+            <!-- Back Button -->
+            <Style x:Key="backBtn" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{StaticResource white}" />
+                <Setter Property="WidthRequest" Value="10" />
+                <Setter Property="HeightRequest" Value="10" />
+                <Setter Property="HasShadow" Value="false" />
+                <Setter Property="CornerRadius" Value="30" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+            </Style>
+            
+            <!-- Back Icon -->
+            <Style x:Key="backIcon" TargetType="Image">
+                <Setter Property="HeightRequest" Value="20" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
             </Style>
             
             <!-- Card -->

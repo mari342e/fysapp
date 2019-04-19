@@ -4,7 +4,16 @@
         <StackLayout BackgroundColor="{StaticResource bgColor}" VerticalOptions="FillAndExpand">
             <ScrollView  VerticalOptions="FillAndExpand">
                 <StackLayout Margin="20,0">
-                    <Label Text="Efter øvelse" Style="{StaticResource h1}" />
+                    <Frame Style="{StaticResource backBtn}">                   
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GoBack" NumberOfTapsRequired="1" />
+                        </Frame.GestureRecognizers>
+                    
+                        <Image Source="Back" Style="{StaticResource backIcon}" />
+                    </Frame>
+                    
+                    <Label Style="{StaticResource h1Back}">Efter øvelse</Label>
+                    
                     <Label Text="Tid" Style="{StaticResource h2}" XAlign="Center" />
                     <Label Grid.Row="0" Grid.Column="0" Text="Denne træning tog:" XAlign="Center" Style="{StaticResource h3}" Margin="0,0,0,5" />
                     <Entry Grid.Row="1" Grid.Column="0" Margin="0,0,0,20" />

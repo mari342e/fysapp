@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="fysapp.NavigationBar" x:Class="fysapp.Pages.GeneralInfo" xmlns:accordion="clr-namespace:Xamarin.CustomControls;assembly=Xamarin.CustomControls.AccordionView">
     <ContentPage.Content>
+        
         <StackLayout BackgroundColor="{StaticResource bgColor}" VerticalOptions="FillAndExpand">
             <StackLayout VerticalOptions="FillAndExpand">
-                
                 <ScrollView VerticalOptions="FillAndExpand">
+                    
                     <StackLayout Margin="20,0">
-                        <Label Style="{StaticResource h1Scroll}">Generel Information</Label>
+                        
+                        <Frame Style="{StaticResource backBtn}">
+                            
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="GoBack" NumberOfTapsRequired="1" />
+                            </Frame.GestureRecognizers>
+                            
+                            <Image Source="Back" Style="{StaticResource backIcon}" />
+                        </Frame>
+                        
+                        <Label Style="{StaticResource h1Back}">Generel Information</Label>
                         
                         <accordion:AccordionView KeepOnlyOneItemOpen="false" Spacing="0">
                             <accordion:AccordionView.Children>
@@ -18,7 +29,7 @@
                                     Grid.Column="0"
                                     Padding="10,0">
                                     
-                                    <accordion:AccordionItemView Text="Generelle anbefalinger" RightImage="arrowRight" Style="{StaticResource accordionHeading}">
+                                    <accordion:AccordionItemView Text="Generelle anbefalinger" RightImage="AccordionIcon" Style="{StaticResource accordionHeading}">
                                         <accordion:AccordionItemView.ItemContent>
                                             <StackLayout>
                                                 <BoxView BackgroundColor="{StaticResource borderColor}" Margin="0,1" HorizontalOptions="FillAndExpand" HeightRequest="1" />
@@ -36,7 +47,7 @@
                                     Grid.Column="0"
                                     Padding="10,0">
                                     
-                                    <accordion:AccordionItemView Text="Formål" RightImage="arrowRight" Style="{StaticResource accordionHeading}">
+                                    <accordion:AccordionItemView Text="Formål" RightImage="AccordionIcon" Style="{StaticResource accordionHeading}">
                                         <accordion:AccordionItemView.ItemContent>
                                             <StackLayout>
                                                 <BoxView BackgroundColor="{StaticResource borderColor}" Margin="0,1" HorizontalOptions="FillAndExpand" HeightRequest="1" />
@@ -54,7 +65,7 @@
                                     Grid.Column="0"
                                     Padding="10,0">
                                     
-                                    <accordion:AccordionItemView Text="Langsomme kontrollerede bevægelser" RightImage="arrowRight" Style="{StaticResource accordionHeading}">
+                                    <accordion:AccordionItemView Text="Langsomme kontrollerede bevægelser" RightImage="AccordionIcon" Style="{StaticResource accordionHeading}">
                                         <accordion:AccordionItemView.ItemContent>
                                             <StackLayout>
                                                 <BoxView BackgroundColor="{StaticResource borderColor}" Margin="0,1" HorizontalOptions="FillAndExpand" HeightRequest="1" />
@@ -72,7 +83,7 @@
                                     Grid.Column="0"
                                     Padding="10,0">
                                     
-                                    <accordion:AccordionItemView Text="Tilpas belastningen undervejs" RightImage="arrowRight" Style="{StaticResource accordionHeading}">
+                                    <accordion:AccordionItemView Text="Tilpas belastningen undervejs" RightImage="AccordionIcon" Style="{StaticResource accordionHeading}">
                                         <accordion:AccordionItemView.ItemContent>
                                             <StackLayout>
                                                 <BoxView BackgroundColor="{StaticResource borderColor}" Margin="0,1" HorizontalOptions="FillAndExpand" HeightRequest="1" />
@@ -90,7 +101,7 @@
                                     Grid.Column="0"
                                     Padding="10,0">
                                     
-                                    <accordion:AccordionItemView Text="Opvarmning" RightImage="arrowRight" Style="{StaticResource accordionHeading}">
+                                    <accordion:AccordionItemView Text="Opvarmning" RightImage="AccordionIcon" Style="{StaticResource accordionHeading}">
                                         <accordion:AccordionItemView.ItemContent>
                                             <StackLayout>
                                                 <BoxView BackgroundColor="{StaticResource borderColor}" Margin="0,1" HorizontalOptions="FillAndExpand" HeightRequest="1" />
@@ -108,7 +119,7 @@
                                     Grid.Column="0"
                                     Padding="10,0">
                                     
-                                    <accordion:AccordionItemView Text="Smerter under træning" RightImage="arrowRight" Style="{StaticResource accordionHeading}">
+                                    <accordion:AccordionItemView Text="Smerter under træning" RightImage="AccordionIcon" Style="{StaticResource accordionHeading}">
                                         <accordion:AccordionItemView.ItemContent>
                                             <StackLayout>
                                                 <BoxView BackgroundColor="{StaticResource borderColor}" Margin="0,1" HorizontalOptions="FillAndExpand" HeightRequest="1" />
@@ -126,7 +137,7 @@
                                     Grid.Column="0"
                                     Padding="10,0">
                                     
-                                    <accordion:AccordionItemView Text="Hvordan virker programmet?" RightImage="arrowRight" Style="{StaticResource accordionHeading}">
+                                    <accordion:AccordionItemView Text="Hvordan virker programmet?" RightImage="AccordionIcon" Style="{StaticResource accordionHeading}">
                                         <accordion:AccordionItemView.ItemContent>
                                             <StackLayout>
                                                 <BoxView BackgroundColor="{StaticResource borderColor}" Margin="0,1" HorizontalOptions="FillAndExpand" HeightRequest="1" />
