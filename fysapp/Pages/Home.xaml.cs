@@ -12,10 +12,5 @@ namespace fysapp.Pages
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
         }
-
-        async void GoToSurvey(object sender, System.EventArgs e)
-        {
-            await Navigation.PushAsync(new Pages.Accordion());
-        }
     }
 }
