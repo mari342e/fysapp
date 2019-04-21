@@ -3,10 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="fysapp.Pages.ExerciseDescription">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="White">
+            <Frame Style="{StaticResource basicListFrame}" >
+                
+            
+            <Label Style="{StaticResource h2}"  Text="{Binding ExerciseID, StringFormat='Øvelse {0}'}" />
+                <Label Style="{StaticResource h2}" Text="{Binding Title}" TextColor="Black"/>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
