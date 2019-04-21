@@ -3,7 +3,17 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource bgColor}" VerticalOptions="FillAndExpand">
             <StackLayout Margin="20,0" VerticalOptions="FillAndExpand">
-                <Label Style="{StaticResource h1}">Om</Label>
+                
+                <Frame Style="{StaticResource backBtn}">                   
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoBack" NumberOfTapsRequired="1" />
+                    </Frame.GestureRecognizers>
+                    
+                    <Image Source="Back" Style="{StaticResource backIcon}" />
+                </Frame>
+                
+                <Label Style="{StaticResource h1Back}">Om</Label>
+                
                 <Label TextColor="{StaticResource bodyText}">
                         Har du spørgsmål om app’en eller projektet generelt kan du kontakte projektansvarlig Benham Liaghat
                     </Label>

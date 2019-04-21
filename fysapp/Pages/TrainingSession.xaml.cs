@@ -15,5 +15,10 @@ namespace fysapp.Pages
             NavigationPage.SetHasNavigationBar(this, false);
             listExerciseOverview.ItemsSource = data.GetExercises();
         }
+
+        async void GoBack(object sender, System.EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
     }
 }

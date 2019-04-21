@@ -5,12 +5,11 @@ using Xamarin.Forms;
 
 namespace fysapp.Pages
 {
-    public partial class Accordion : ContentPage
+    public partial class BeforeTraining : ContentPage
     {
-        public Accordion()
+        public BeforeTraining()
         {
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }
