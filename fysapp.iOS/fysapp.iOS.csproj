@@ -164,6 +164,12 @@
     <ImageAsset Include="Assets.xcassets\Back.imageset\back.png" />
     <ImageAsset Include="Assets.xcassets\AccordionIcon.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\AccordionIcon.imageset\accordionIcon.png" />
+    <ImageAsset Include="Assets.xcassets\Checkmark.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Cross.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Checkmark.imageset\checkmark.png" />
+    <ImageAsset Include="Assets.xcassets\Checkmark.imageset\checkmark-1.png" />
+    <ImageAsset Include="Assets.xcassets\Cross.imageset\cross.png" />
+    <ImageAsset Include="Assets.xcassets\Cross.imageset\cross-1.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -206,5 +212,7 @@
     <Folder Include="Assets.xcassets\InfoCard.imageset\" />
     <Folder Include="Assets.xcassets\Back.imageset\" />
     <Folder Include="Assets.xcassets\AccordionIcon.imageset\" />
+    <Folder Include="Assets.xcassets\Checkmark.imageset\" />
+    <Folder Include="Assets.xcassets\Cross.imageset\" />
   </ItemGroup>
 </Project>
