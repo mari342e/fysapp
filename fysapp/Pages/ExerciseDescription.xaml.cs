@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Handler;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,8 +14,18 @@ namespace fysapp.Pages
     public partial class ExerciseDescription : ContentPage
     {
         public ExerciseDescription()
-        {
+        {            
             InitializeComponent();
+            //var page = this;
+            //var ele = page.BindingContext;
+            //Exercise exercise = ele as Exercise;
+            ////Exercise ele = Exercise(BindingContext);
+            //var descriptionTexts = exercise.Description;
+            //foreach (var item in descriptionTexts)
+            //{
+            //    Label label = new Label { Text = item, TextColor = Color.FromHex("#707070") };
+            //    Description.Children.Add(label);
+            //}
         }
     }
 }

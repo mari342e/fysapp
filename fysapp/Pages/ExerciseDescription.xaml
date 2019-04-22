@@ -1,15 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="fysapp.Pages.ExerciseDescription">
+             x:Class="fysapp.Pages.ExerciseDescription"
+             Title="{Binding ExerciseID, StringFormat='Øvelse {0}'}"
+             >
     <ContentPage.Content>
-        <StackLayout BackgroundColor="White">
-            <Frame Style="{StaticResource basicListFrame}" >
-                
+        <ScrollView VerticalOptions="FillAndExpand" BackgroundColor="White">
+        <StackLayout VerticalOptions="StartAndExpand" BackgroundColor="White">
+                <Image x:Name="Image" Source="{Binding ImageLinks[0]}"></Image>
+            <Frame Style="{StaticResource basicListFrame}" Margin="0, -30, 0, -50" Padding="10,10,10,50" CornerRadius="30" >
+                    <StackLayout>
             
             <Label Style="{StaticResource h2}"  Text="{Binding ExerciseID, StringFormat='Øvelse {0}'}" />
-                <Label Style="{StaticResource h2}" Text="{Binding Title}" TextColor="Black"/>
+                <Label Style="{StaticResource h1}" Text="{Binding Title}" TextColor="Black" Margin="0"/>
+
+                        <Label Style="{StaticResource h2}" Text="Udførelse" />
+                        
+                            <ListView VerticalOptions="Start" SelectionMode="None"  ItemsSource="{Binding Description}" HasUnevenRows="True" SeparatorVisibility="None">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate >
+                                        <ViewCell>
+                                            <Label Text="{Binding ., StringFormat='{0}'}" />
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        
+                        <Label Style="{StaticResource h2}" Text="Gentagelser" ></Label>
+                        <Label TextColor="{StaticResource bodyText}" Text="{Binding Repetition}" ></Label>
+                        <Label TextColor="{StaticResource bodyText}" Text="{Binding Breaks}" ></Label>
+                        <Label Style="{StaticResource h2}" Text="Fokus" ></Label>
+                        <Label TextColor="{StaticResource bodyText}" Text="{Binding Focus}" ></Label>
+                    </StackLayout>
             </Frame>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
