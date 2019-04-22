@@ -15,8 +15,8 @@
                     <Label Style="{StaticResource h1Back}">Efter øvelse</Label>
                     
                     <Label Text="Tid" Style="{StaticResource h2}" XAlign="Center" />
-                    <Label Grid.Row="0" Grid.Column="0" Text="Denne træning tog:" XAlign="Center" Style="{StaticResource h3}" Margin="0,0,0,5" />
-                    <Entry Grid.Row="1" Grid.Column="0" Margin="0,0,0,20" />
+                    <Label Text="Denne træning tog:" XAlign="Center" Style="{StaticResource h3}" />
+                    <Entry Margin="0,0,0,20" />
                     <Label Text="Set 1" Style="{StaticResource h2}" XAlign="Center" />
                     <Grid Padding="0" ColumnSpacing="20" Margin="0,0,0,20">
                         <Grid.RowDefinitions>

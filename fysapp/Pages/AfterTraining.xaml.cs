@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace fysapp.Pages
 {
-    public partial class BeforeTraining : ContentPage
+    public partial class AfterTraining : ContentPage
     {
-        public BeforeTraining()
+        public AfterTraining()
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
@@ -18,6 +18,10 @@ namespace fysapp.Pages
             await Navigation.PopAsync();
         }
 
-        void OnSliderValueChanged(object sender, ValueChangedEventArgs args)         {             double value = args.NewValue;             displayNr.Text = String.Format("{0}", value);         }
+        void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
+        {
+            double value = args.NewValue;
+            displayNr.Text = String.Format("{0}", value);
+        }
     }
 }

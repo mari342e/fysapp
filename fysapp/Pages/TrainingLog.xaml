@@ -10,11 +10,17 @@
                         <TapGestureRecognizer Tapped="GoToTrainingSession" NumberOfTapsRequired="1" />
                     </Frame.GestureRecognizers>
                 </Frame>
+                <Frame Style="{StaticResource checkmark}">
+                    <Image Source="Checkmark" Style="{StaticResource checkmarkIcon}" />
+                </Frame>
                 <Frame Style="{StaticResource basicListFrame}" HeightRequest="70" Padding="10,0,10,10" Margin="0,0,0,20">
                     <Label Text="Træningspas 2" Style="{StaticResource h2}" />
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer Tapped="GoToTrainingSession" NumberOfTapsRequired="1" />
                     </Frame.GestureRecognizers>
+                </Frame>
+                <Frame Style="{StaticResource cross}">
+                    <Image Source="Cross" Style="{StaticResource crossIcon}" />
                 </Frame>
                 <Frame Style="{StaticResource basicListFrame}" HeightRequest="70" Padding="10,0,10,10" Margin="0,0,0,20">
                     <Label Text="Træningspas 3" Style="{StaticResource h2}" />

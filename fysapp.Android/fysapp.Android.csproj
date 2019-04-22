@@ -95,6 +95,8 @@
     <AndroidResource Include="Resources\drawable\HomeIcon.png" />
     <AndroidResource Include="Resources\drawable\MoreIcon.png" />
     <AndroidResource Include="Resources\drawable\TrainingIcon.png" />
+    <AndroidResource Include="Resources\drawable\Checkmark.png" />
+    <AndroidResource Include="Resources\drawable\Cross.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />

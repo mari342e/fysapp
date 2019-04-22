@@ -150,48 +150,26 @@
     <ImageAsset Include="Assets.xcassets\CalendarIcon.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\CalendarCard.imageset\CalendarCard.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\CalendarCard.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\TrainingCard.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\TrainingCard.imageset\TrainingCard.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\SurveyCard.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\SurveyCard.imageset\SurveyCard.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\CogsCard.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\CogsCard.imageset\cogs.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\InfoCard.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\InfoCard.imageset\info.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\Back.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\Back.imageset\back.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AccordionIcon.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AccordionIcon.imageset\accordionIcon.png">
-      <Visible>false</Visible>
-    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\CalendarCard.imageset\CalendarCard.png" />
+    <ImageAsset Include="Assets.xcassets\CalendarCard.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TrainingCard.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TrainingCard.imageset\TrainingCard.png" />
+    <ImageAsset Include="Assets.xcassets\SurveyCard.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SurveyCard.imageset\SurveyCard.png" />
+    <ImageAsset Include="Assets.xcassets\CogsCard.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\CogsCard.imageset\cogs.png" />
+    <ImageAsset Include="Assets.xcassets\InfoCard.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\InfoCard.imageset\info.png" />
+    <ImageAsset Include="Assets.xcassets\Back.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Back.imageset\back.png" />
+    <ImageAsset Include="Assets.xcassets\AccordionIcon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AccordionIcon.imageset\accordionIcon.png" />
+    <ImageAsset Include="Assets.xcassets\Checkmark.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Cross.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Checkmark.imageset\checkmark.png" />
+    <ImageAsset Include="Assets.xcassets\Checkmark.imageset\checkmark-1.png" />
+    <ImageAsset Include="Assets.xcassets\Cross.imageset\cross.png" />
+    <ImageAsset Include="Assets.xcassets\Cross.imageset\cross-1.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -234,5 +212,7 @@
     <Folder Include="Assets.xcassets\InfoCard.imageset\" />
     <Folder Include="Assets.xcassets\Back.imageset\" />
     <Folder Include="Assets.xcassets\AccordionIcon.imageset\" />
+    <Folder Include="Assets.xcassets\Checkmark.imageset\" />
+    <Folder Include="Assets.xcassets\Cross.imageset\" />
   </ItemGroup>
 </Project>
