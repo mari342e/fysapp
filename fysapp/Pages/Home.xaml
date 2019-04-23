@@ -20,7 +20,12 @@
                     
                     <Label Text="Vigtig information" Style="{StaticResource h2}" Margin="20,0" />
                     <Label Margin="20,5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin fermentum arcu quis egestas. Morbi gravida non dolor eget feugiat. Sed nec ipsum vel lacus ultricies gravida. Vestibulum et lacus mi. Fusce ac massa ipsum. Cras at est dapibus, lacinia elit sit amet, dictum nisl. Pellentesque molestie elementum ante sed fringilla. Vestibulum et malesuada ex. Sed elit velit, luctus sit amet commodo sed, dictum eu ligula. </Label>
-                    <Label Text="Læs mere >" TextColor="{StaticResource purple}" FontAttributes="Bold" Margin="20,0,0,20" />
+                    <Label Text="Læs mere >" TextColor="{StaticResource purple}" FontAttributes="Bold" Margin="20,0,0,20">
+                                                            
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ReadMore" NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
                     
                     <Grid Padding="0" Margin="20,0,20,20" RowSpacing="20" ColumnSpacing="0" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
                         
@@ -38,6 +43,10 @@
                             BackgroundColor="{StaticResource purple}"
                             Grid.Row="0"
                             Grid.Column="0">
+                                
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="GoToTrainingLog" NumberOfTapsRequired="1" />
+                            </Frame.GestureRecognizers>
                             
                             <Grid>
                                 <Grid.ColumnDefinitions>
@@ -61,6 +70,10 @@
                             BackgroundColor="{StaticResource green}"
                             Grid.Row="1"
                             Grid.Column="0">
+                                
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="GoToExercises" NumberOfTapsRequired="1" />
+                            </Frame.GestureRecognizers>
                             
                             <Grid>
                                 <Grid.ColumnDefinitions>
