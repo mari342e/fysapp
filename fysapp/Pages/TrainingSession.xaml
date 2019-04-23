@@ -4,22 +4,21 @@
         <StackLayout BackgroundColor="{StaticResource bgColor}">
             <ScrollView VerticalOptions="FillAndExpand">
                 <StackLayout Margin="20,0">
-                    
-                    <Frame Style="{StaticResource backBtn}">                   
+                    <Frame Style="{StaticResource backBtn}">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="GoBack" NumberOfTapsRequired="1" />
                         </Frame.GestureRecognizers>
-                    
                         <Image Source="Back" Style="{StaticResource backIcon}" />
                     </Frame>
-                    
-                    <Label Style="{StaticResource h1Back}">Træningspas</Label>
-                    
+                    <Label Text="Træningspas" Style="{StaticResource h1Back}" />
                     <Frame Style="{StaticResource basicListFrame}" HeightRequest="70" Padding="10,0,10,10" Margin="0,0,0,20">
                         <StackLayout>
                             <Label Text="Før træning" Style="{StaticResource h2}" />
                             <Label Text="Udfyld et kort spørgeskema inden du går i gang med dagens øvelser" Style="{StaticResource basicListFrameBodyText}" />
                         </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GoToBeforeTraining" NumberOfTapsRequired="1" />
+                        </Frame.GestureRecognizers>
                     </Frame>
                     <ListView x:Name="listExerciseOverview" RowHeight="110" SeparatorVisibility="None" BackgroundColor="{StaticResource bgColor}">
                         <ListView.ItemTemplate>
@@ -53,6 +52,9 @@
                             <Label Text="Efter træning" Style="{StaticResource h2}" />
                             <Label Text="Udfyld et kort spørgeskema efter dagens øvelser" Style="{StaticResource basicListFrameBodyText}" />
                         </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GoToAfterTraining" NumberOfTapsRequired="1" />
+                        </Frame.GestureRecognizers>
                     </Frame>
                 </StackLayout>
             </ScrollView>
