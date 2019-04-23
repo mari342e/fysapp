@@ -10,7 +10,7 @@
                         </Frame.GestureRecognizers>
                         <Image Source="Back" Style="{StaticResource backIcon}" />
                     </Frame>
-                    <Label Style="{StaticResource h1Back}">Før træning</Label>
+                    <Label Text="Før træning" Style="{StaticResource h1Back}" />
                     <Label Grid.Row="0" Grid.Column="0" Text="Træner du med en fysioterapeut i dag?" XAlign="Center" Style="{StaticResource h3}" />
                     <Grid Padding="0" ColumnSpacing="20" Margin="0,0,0,20">
                         <Grid.RowDefinitions>

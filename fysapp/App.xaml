@@ -157,11 +157,13 @@
                 <Setter Property="ButtonActiveBackgroundColor" Value="{StaticResource white}" />
                 <Setter Property="TextPosition" Value="Left" />
                 <Setter Property="RotateImages" Value="true" />
+                <Setter Property="FontSize" Value="18" />
             </Style>
             
             <!-- Accordion Content -->
             <Style x:Key="accordionContent" TargetType="Label">
                 <Setter Property="Margin" Value="0,0,0,10" />
+                <Setter Property="TextColor" Value="{StaticResource bodyText}" />
             </Style>
             
             <!-- Basic List Buttons -->

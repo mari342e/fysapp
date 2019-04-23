@@ -17,7 +17,7 @@
                             <Image Source="Back" Style="{StaticResource backIcon}" />
                         </Frame>
                         
-                        <Label Style="{StaticResource h1Back}">Generel Information</Label>
+                        <Label Text="Generel Information" Style="{StaticResource h1Back}" />
                         
                         <accordion:AccordionView KeepOnlyOneItemOpen="false" Spacing="0">
                             <accordion:AccordionView.Children>
@@ -63,13 +63,13 @@
                                     BackgroundColor="{StaticResource white}"
                                     Grid.Row="0"
                                     Grid.Column="0"
-                                    Padding="10,0">
+                                    Padding="10,5,10,10">
                                     
                                     <accordion:AccordionItemView Text="Langsomme kontrollerede bevægelser" RightImage="AccordionIcon" Style="{StaticResource accordionHeading}">
                                         <accordion:AccordionItemView.ItemContent>
                                             <StackLayout>
-                                                <BoxView BackgroundColor="{StaticResource borderColor}" Margin="0,1" HorizontalOptions="FillAndExpand" HeightRequest="1" />
-                                                <Label Style="{StaticResource accordionContent}">Nulla non lorem maximus, consequat tellus consectetur, congue dui. Nulla mollis libero id fermentum eleifend. Nunc vel enim nunc. Donec ultricies ultricies purus et aliquet. Vestibulum lobortis diam et purus luctus, sit amet congue ex.</Label>
+                                                <BoxView BackgroundColor="{StaticResource borderColor}" Margin="0,15,0,0" HorizontalOptions="FillAndExpand" HeightRequest="1" />
+                                                <Label Style="{StaticResource accordionContent}" Margin="0">Nulla non lorem maximus, consequat tellus consectetur, congue dui. Nulla mollis libero id fermentum eleifend. Nunc vel enim nunc. Donec ultricies ultricies purus et aliquet. Vestibulum lobortis diam et purus luctus, sit amet congue ex.</Label>
                                             </StackLayout>
                                         </accordion:AccordionItemView.ItemContent>
                                     </accordion:AccordionItemView>

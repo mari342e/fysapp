@@ -10,7 +10,7 @@
                         </Frame.GestureRecognizers>
                         <Image Source="Back" Style="{StaticResource backIcon}" />
                     </Frame>
-                    <Label Style="{StaticResource h1Back}">Efter træning</Label>
+                    <Label Text="Efter træning" Style="{StaticResource h1Back}" />
                     <Label Grid.Row="0" Grid.Column="0" Text="Smerte efter træning (NRS)" XAlign="Center" Style="{StaticResource h3}" />
                     <Label x:Name="displayNr" Text="{Binding Source={x:Reference slider},Path=Value,StringFormat='{0:F0}'}" XAlign="Center" TextColor="{StaticResource bodyText}" />
                     <Slider x:Name="slider" Maximum="10" ValueChanged="OnSliderValueChanged" />
