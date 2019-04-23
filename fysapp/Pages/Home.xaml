@@ -38,6 +38,10 @@
                             BackgroundColor="{StaticResource purple}"
                             Grid.Row="0"
                             Grid.Column="0">
+                                
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="GoToTrainingLog" NumberOfTapsRequired="1" />
+                            </Frame.GestureRecognizers>
                             
                             <Grid>
                                 <Grid.ColumnDefinitions>
@@ -61,6 +65,10 @@
                             BackgroundColor="{StaticResource green}"
                             Grid.Row="1"
                             Grid.Column="0">
+                                
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="GoToExercises" NumberOfTapsRequired="1" />
+                            </Frame.GestureRecognizers>
                             
                             <Grid>
                                 <Grid.ColumnDefinitions>
