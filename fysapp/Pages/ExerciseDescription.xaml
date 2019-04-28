@@ -1,39 +1,84 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="fysapp.NavigationBar" 
              x:Class="fysapp.Pages.ExerciseDescription"
              Title="{Binding ExerciseID, StringFormat='Øvelse {0}'}"
              >
     <ContentPage.Content>
-        <ScrollView VerticalOptions="FillAndExpand" BackgroundColor="White">
-        <StackLayout VerticalOptions="StartAndExpand" BackgroundColor="White">
-                <Image x:Name="Image" Source="{Binding ImageLinks[0]}"></Image>
-            <Frame Style="{StaticResource basicListFrame}" Margin="0, -30, 0, -50" Padding="10,10,10,50" CornerRadius="30" >
-                    <StackLayout>
-            
-            <Label Style="{StaticResource h2}"  Text="{Binding ExerciseID, StringFormat='Øvelse {0}'}" />
-                <Label Style="{StaticResource h1}" Text="{Binding Title}" TextColor="Black" Margin="0"/>
+        <StackLayout>
 
-                        <Label Style="{StaticResource h2}" Text="Udførelse" />
-                        
-                            <ListView VerticalOptions="Start" SelectionMode="None"  ItemsSource="{Binding Description}" HasUnevenRows="True" SeparatorVisibility="None">
+
+            <ScrollView VerticalOptions="FillAndExpand" BackgroundColor="White">
+                <Grid x:Name="StackBox" VerticalOptions="StartAndExpand" BackgroundColor="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Row="0" Aspect="AspectFill" x:Name="Image" Source="{Binding ImageLinks[0]}"></Image>
+                    <Frame VerticalOptions="Start" Grid.Row="0" Margin="10,10,0,0" Style="{StaticResource backBtn}">
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GoBack" NumberOfTapsRequired="1" />
+                        </Frame.GestureRecognizers>
+
+                        <Image Source="Back" Style="{StaticResource backIcon}" />
+                    </Frame>
+                    <Frame Grid.Row="1" Style="{StaticResource basicListFrame}" Margin="0, -35, 0, -50" Padding="10,10,10,70" CornerRadius="30" >
+                        <StackLayout >
+
+                            <Label Style="{StaticResource h2}"  Text="{Binding ExerciseID, StringFormat='Øvelse {0}'}" />
+                            <Label Style="{StaticResource h1}" Text="{Binding Title}" TextColor="Black" Margin="0"/>
+
+                            <Label Style="{StaticResource h2}" Text="Udførelse" />
+                            <StackLayout x:Name="Description" Margin="0" Padding="0">
+
+                            </StackLayout>
+                            <!--<ListView x:Name="DescriptionListView" VerticalOptions="Start" SelectionMode="None"  ItemsSource="{Binding Description}" HasUnevenRows="True" SeparatorVisibility="None">
                                 <ListView.ItemTemplate>
                                     <DataTemplate >
                                         <ViewCell>
-                                            <Label Text="{Binding ., StringFormat='{0}'}" />
+                                            <Label TextColor="{Binding BodyText}" Text="{Binding ., StringFormat='{0}'}" />
                                         </ViewCell>
                                     </DataTemplate>
                                 </ListView.ItemTemplate>
-                            </ListView>
-                        
-                        <Label Style="{StaticResource h2}" Text="Gentagelser" ></Label>
-                        <Label TextColor="{StaticResource bodyText}" Text="{Binding Repetition}" ></Label>
-                        <Label TextColor="{StaticResource bodyText}" Text="{Binding Breaks}" ></Label>
-                        <Label Style="{StaticResource h2}" Text="Fokus" ></Label>
-                        <Label TextColor="{StaticResource bodyText}" Text="{Binding Focus}" ></Label>
-                    </StackLayout>
-            </Frame>
+                            </ListView>-->
+
+                            <Label Style="{StaticResource h2}" Text="Gentagelser" ></Label>
+                            <Label TextColor="{StaticResource bodyText}" Text="{Binding Repetition}" ></Label>
+                            <Label TextColor="{StaticResource bodyText}" Text="{Binding Breaks}" ></Label>
+                            <Label Style="{StaticResource h2}" Text="Fokus" ></Label>
+                            <Label TextColor="{StaticResource bodyText}" Text="{Binding Focus}" ></Label>
+                        </StackLayout>
+                    </Frame>
+                    <Grid x:Name="Training" Grid.Row="1" Margin="0, -80, 0, 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="75" />
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Frame Padding="10, 5" Opacity="0.7" HorizontalOptions="Start" Margin="20,-35,0,0" VerticalOptions="Center" BackgroundColor="White" CornerRadius="5">
+                            <Label FontSize="18" Grid.Column="0" TextColor="{StaticResource bodyText}" x:Name="Timer" Text="00:00:00"></Label>
+                        </Frame>
+                        <Frame  HorizontalOptions="End" VerticalOptions="Center" Grid.Column="1" BackgroundColor="#534B62" CornerRadius="100" Padding="15" Margin="0,0,20,0">
+                            <Image x:Name="UpdateTrainingImage" WidthRequest="50" HeightRequest="50" Aspect="AspectFit" HorizontalOptions="CenterAndExpand"  Source="Play.png"></Image>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer
+                    Tapped="UpdateTraining"
+                    NumberOfTapsRequired="1" />
+
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </Grid>
+                </Grid>
+            </ScrollView>
+            <views:NavigationBar />
         </StackLayout>
-        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

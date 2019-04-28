@@ -26,5 +26,8 @@ namespace Handler
             Focus = focus;
         }
 
+        public Exercise()
+        {
+        }
     }
 }

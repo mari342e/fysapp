@@ -24,15 +24,19 @@ namespace fysapp.Pages
         }
         private async void ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var exerciseDescriptionPage = new ExerciseDescription();
-
-            var exercise = listExerciseOverview.SelectedItem;            
-            exerciseDescriptionPage.BindingContext = exercise;
+            var selectedExercise = listExerciseOverview.SelectedItem;
+            var exercise = (Exercise)selectedExercise;
+            var exerciseDescriptionPage = new ExerciseDescription(exercise);                  
+           
             await Navigation.PushAsync(exerciseDescriptionPage);
 
             //Dette er nødvendigt for at skjule selected baggrundsfarve.
             //this.listExerciseOverview.selec.Clear();
             
+        }
+        async void GoBack(object sender, System.EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
     }
 }

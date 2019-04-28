@@ -21,7 +21,7 @@
                             <Label Text="Udfyld et kort spørgeskema inden du går i gang med dagens øvelser" Style="{StaticResource basicListFrameBodyText}" />
                         </StackLayout>
                     </Frame>
-                    <ListView x:Name="listExerciseOverview" RowHeight="110" SeparatorVisibility="None" BackgroundColor="{StaticResource bgColor}">
+                    <ListView x:Name="listExerciseOverview" ItemSelected="ExerciseSelected" RowHeight="110" SeparatorVisibility="None" BackgroundColor="{StaticResource bgColor}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
