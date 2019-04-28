@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="fysapp.NavigationBar" x:Class="fysapp.Pages.AboutPage">
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource bgColor}" VerticalOptions="FillAndExpand">
-            <StackLayout Margin="20,0" VerticalOptions="FillAndExpand">
+            <StackLayout Margin="20,45,20,0" VerticalOptions="FillAndExpand">
                 
                 <Frame Style="{StaticResource backBtn}">                   
                     <Frame.GestureRecognizers>
@@ -12,7 +12,7 @@
                     <Image Source="Back" Style="{StaticResource backIcon}" />
                 </Frame>
                 
-                <Label Style="{StaticResource h1Back}">Om</Label>
+                <Label Text="Om" Style="{StaticResource h1Back}" />
                 
                 <Label TextColor="{StaticResource bodyText}">
                         Har du spørgsmål om app’en eller projektet generelt kan du kontakte projektansvarlig Benham Liaghat

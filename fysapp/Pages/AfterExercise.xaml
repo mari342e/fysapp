@@ -12,7 +12,7 @@
                         <Image Source="Back" Style="{StaticResource backIcon}" />
                     </Frame>
                     
-                    <Label Style="{StaticResource h1Back}">Efter øvelse</Label>
+                    <Label Text="Efter øvelse" Style="{StaticResource h1Back}" />
                     
                     <Label Text="Tid" Style="{StaticResource h2}" XAlign="Center" />
                     <Label Text="Denne træning tog:" XAlign="Center" Style="{StaticResource h3}" />

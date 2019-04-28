@@ -29,5 +29,15 @@ namespace fysapp.Pages
 
             await Navigation.PushAsync(exerciseDescriptionPage);
         }
+
+        async void GoToBeforeTraining(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new BeforeTraining());
+        }
+
+        async void GoToAfterTraining(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new AfterTraining());
+        }
     }
 }
