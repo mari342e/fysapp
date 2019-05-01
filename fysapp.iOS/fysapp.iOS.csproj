@@ -210,6 +210,12 @@
     <ImageAsset Include="Assets.xcassets\Cross.imageset\cross-1.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Play.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Play.imageset\Play.png" />
+    <ImageAsset Include="Assets.xcassets\Play.imageset\Play-1.png" />
+    <ImageAsset Include="Assets.xcassets\Square.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Square.imageset\Square.png" />
+    <ImageAsset Include="Assets.xcassets\Square.imageset\Square-1.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -234,9 +240,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Test.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\img.jpeg" />
   </ItemGroup>
   <ItemGroup>
@@ -254,5 +257,7 @@
     <Folder Include="Assets.xcassets\AccordionIcon.imageset\" />
     <Folder Include="Assets.xcassets\Checkmark.imageset\" />
     <Folder Include="Assets.xcassets\Cross.imageset\" />
+    <Folder Include="Assets.xcassets\Play.imageset\" />
+    <Folder Include="Assets.xcassets\Square.imageset\" />
   </ItemGroup>
 </Project>

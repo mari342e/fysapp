@@ -97,6 +97,13 @@
     <AndroidResource Include="Resources\drawable\TrainingIcon.png" />
     <AndroidResource Include="Resources\drawable\Checkmark.png" />
     <AndroidResource Include="Resources\drawable\Cross.png" />
+    <AndroidResource Include="Resources\drawable\SurveyCard.png" />
+    <AndroidResource Include="Resources\drawable\TrainingCard.png" />
+    <AndroidResource Include="Resources\drawable\AccordionIcon.png" />
+    <AndroidResource Include="Resources\drawable\Back.png" />
+    <AndroidResource Include="Resources\drawable\CalendarCard.png" />
+    <AndroidResource Include="Resources\drawable\CogsCard.png" />
+    <AndroidResource Include="Resources\drawable\InfoCard.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
@@ -109,9 +116,6 @@
       <Project>{19B951B4-9CCF-4E0F-8943-1CF11DEFC0BB}</Project>
       <Name>fysapp</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Test.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\img.jpeg" />
