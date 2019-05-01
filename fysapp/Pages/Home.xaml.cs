@@ -15,17 +15,17 @@ namespace fysapp.Pages
 
         async void ReadMore(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new Pages.GeneralInfo());
+            await Navigation.PushAsync(new GeneralInfo());
         }
 
         async void GoToTrainingLog(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new Pages.TrainingLog());
+            await Navigation.PushAsync(new TrainingLog());
         }
 
         async void GoToExercises(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new Pages.ExerciseOverview());
+            await Navigation.PushAsync(new ExerciseOverview());
         }
     }
 }

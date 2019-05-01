@@ -9,8 +9,7 @@
             <Color x:Key="white">#ffffff</Color>
             <Color x:Key="bodyText">#707070</Color>
             <Color x:Key="borderColor">#c4cAd0</Color>
-            <Color x:Key="bgColor">#fafafa</Color>   
-            
+            <Color x:Key="bgColor">#fafafa</Color>
             <!-- Button -->
             <Style x:Key="btn" TargetType="Button">
                 <Setter Property="HorizontalOptions" Value="Center" />
@@ -19,7 +18,6 @@
                 <Setter Property="BackgroundColor" Value="{StaticResource purple}" />
                 <Setter Property="WidthRequest" Value="200" />
             </Style>
-            
             <!-- Headings -->
             <Style x:Key="h1" TargetType="Label">
                 <Setter Property="HorizontalOptions" Value="Center" />
@@ -28,15 +26,12 @@
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="Margin" Value="0,70,0,50" />
             </Style>
-            
             <Style x:Key="h1Scroll" BasedOn="{StaticResource h1}" TargetType="Label">
                 <Setter Property="Margin" Value="0,25,0,50" />
             </Style>
-            
             <Style x:Key="h1Back" BasedOn="{StaticResource h1}" TargetType="Label">
                 <Setter Property="Margin" Value="0,0,0,50" />
             </Style>
-            
             <Style x:Key="h2" TargetType="Label">
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="TextColor" Value="{StaticResource red}" />
@@ -44,14 +39,12 @@
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="Margin" Value="0,10,0,0" />
             </Style>
-            
             <Style x:Key="h3" TargetType="Label">
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="TextColor" Value="{StaticResource bodyText}" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="Margin" Value="0,20,0,5" />
             </Style>
-            
             <!-- Back Button -->
             <Style x:Key="backBtn" TargetType="Frame">
                 <Setter Property="BackgroundColor" Value="{StaticResource white}" />
@@ -61,14 +54,12 @@
                 <Setter Property="CornerRadius" Value="25" />
                 <Setter Property="HorizontalOptions" Value="Start" />
             </Style>
-            
             <!-- Back Icon -->
             <Style x:Key="backIcon" TargetType="Image">
                 <Setter Property="HeightRequest" Value="20" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
                 <Setter Property="VerticalOptions" Value="FillAndExpand" />
             </Style>
-            
             <!-- Checkmark -->
             <Style x:Key="checkmark" TargetType="Frame">
                 <Setter Property="BackgroundColor" Value="{StaticResource white}" />
@@ -80,14 +71,12 @@
                 <Setter Property="HorizontalOptions" Value="End" />
                 <Setter Property="Margin" Value="0,-60,-5,20" />
             </Style>
-            
             <!-- Checkmark Icon -->
             <Style x:Key="checkmarkIcon" TargetType="Image">
                 <Setter Property="HeightRequest" Value="20" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
                 <Setter Property="VerticalOptions" Value="FillAndExpand" />
             </Style>
-            
             <!-- Cross -->
             <Style x:Key="cross" TargetType="Frame">
                 <Setter Property="BackgroundColor" Value="{StaticResource white}" />
@@ -99,14 +88,12 @@
                 <Setter Property="HorizontalOptions" Value="End" />
                 <Setter Property="Margin" Value="0,-60,-5,20" />
             </Style>
-            
             <!-- Cross Icon -->
             <Style x:Key="crossIcon" TargetType="Image">
                 <Setter Property="HeightRequest" Value="20" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
                 <Setter Property="VerticalOptions" Value="FillAndExpand" />
             </Style>
-            
             <!-- Card -->
             <Style x:Key="card" TargetType="Frame">
                 <Setter Property="Padding" Value="0" />
@@ -116,8 +103,7 @@
                 <Setter Property="CornerRadius" Value="10" />
                 <Setter Property="OutlineColor" Value="{StaticResource borderColor}" />
             </Style>
-            
-            <!-- Labels on Cards -->
+            <!-- Card Labels -->
             <Style x:Key="cardLabel" TargetType="Label">
                 <Setter Property="HorizontalOptions" Value="StartAndExpand" />
                 <Setter Property="VerticalOptions" Value="End" />
@@ -126,14 +112,12 @@
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="Margin" Value="15,0,0,15" />
             </Style>
-            
-            <!-- Images in Cards -->
+            <!-- Card Icon -->
             <Style x:Key="cardImage" TargetType="Image">
                 <Setter Property="HeightRequest" Value="130" />
                 <Setter Property="VerticalOptions" Value="EndAndExpand" />
                 <Setter Property="HorizontalOptions" Value="End" />
             </Style>
-            
             <!-- Accordion -->
             <Style x:Key="accordion" TargetType="Frame">
                 <!-- <Setter Property="Padding" Value="10,15" /> -->
@@ -144,7 +128,6 @@
                 <Setter Property="Margin" Value="0,0,0,15" />
                 <Setter Property="Padding" Value="10,0" />
             </Style>
-            
             <!-- Accordion Heading -->
             <Style x:Key="accordionHeading" TargetType="accordion:AccordionItemView">
                 <Setter Property="Padding" Value="0" />
@@ -159,14 +142,12 @@
                 <Setter Property="RotateImages" Value="true" />
                 <Setter Property="FontSize" Value="18" />
             </Style>
-            
             <!-- Accordion Content -->
             <Style x:Key="accordionContent" TargetType="Label">
                 <Setter Property="Margin" Value="0,0,0,10" />
                 <Setter Property="TextColor" Value="{StaticResource bodyText}" />
             </Style>
-            
-            <!-- Basic List Buttons -->
+            <!-- Basic List Button -->
             <Style x:Key="basicListFrame" TargetType="Frame">
                 <Setter Property="BorderColor" Value="{StaticResource borderColor}" />
                 <Setter Property="CornerRadius" Value="10" />
@@ -175,14 +156,20 @@
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
                 <Setter Property="HasShadow" Value="false" />
             </Style>
-            
-            <!-- Text in List Button -->
+            <!-- Basic List Button Text -->
             <Style x:Key="basicListFrameBodyText" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource bodyText}" />
                 <Setter Property="FontSize" Value="13" />
                 <Setter Property="VerticalOptions" Value="StartAndExpand" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
                 <Setter Property="Margin" Value="0,0,10,0" />
+            </Style>
+            <!-- Navigation Item Text -->
+            <Style x:Key="navItemText" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource purple}" />
+                <Setter Property="FontSize" Value="13" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

@@ -15,12 +15,12 @@ namespace fysapp.Pages
 
         async void GoToAbout(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new Pages.AboutPage());
+            await Navigation.PushAsync(new AboutPage());
         }
 
         async void GoToGeneralInfo(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new Pages.GeneralInfo());
+            await Navigation.PushAsync(new GeneralInfo());
         }
     }
 }

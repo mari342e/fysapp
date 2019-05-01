@@ -14,6 +14,7 @@ namespace fysapp.Pages
 	public partial class ExerciseOverview : ContentPage
 	{
         Data data = new Data();
+
         public ExerciseOverview ()
 		{
             
@@ -22,6 +23,7 @@ namespace fysapp.Pages
             listExerciseOverview.ItemsSource = data.GetExercises();
             
         }
+
         private async void ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var selectedExercise = listExerciseOverview.SelectedItem;
@@ -34,6 +36,7 @@ namespace fysapp.Pages
             //this.listExerciseOverview.selec.Clear();
             
         }
+
         async void GoBack(object sender, System.EventArgs e)
         {
             await Navigation.PopAsync();

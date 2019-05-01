@@ -32,12 +32,15 @@ namespace fysapp.Pages
             }
             Timer.Text = timerText;
         }
+
         async void GoBack(object sender, System.EventArgs e)
         {
             await Navigation.PopAsync();
         }
+
         bool timerStarted = false;
         Timer myTimer = new Timer();
+
         private void UpdateTraining(object sender, EventArgs e)
         {            
             myTimer.Elapsed += new ElapsedEventHandler(SetTimer);
@@ -48,22 +51,22 @@ namespace fysapp.Pages
                 timerStarted = true;
                 UpdateTrainingImage.Source = "Square.png";
             }
-            else {
+            else 
+            {
                 myTimer.Stop();
                 timerStarted = false;
                 UpdateTrainingImage.Source = "Play.png";
             }       
         }
         
-        private void SetTimer(Object source, EventArgs e) {
+        private void SetTimer(Object source, EventArgs e) 
+        {
             DateTime time = DateTime.ParseExact(Timer.Text, "mm:ss:ff", null);
             var newTime = time.AddMilliseconds(30);
             var timerText = String.Format("{0:mm:ss:ff}", newTime); 
             Device.BeginInvokeOnMainThread(() =>
             Timer.Text = timerText
-            );
-            
-            
+            );  
         }
     }
 }

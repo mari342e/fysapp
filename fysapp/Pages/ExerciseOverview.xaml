@@ -2,17 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="fysapp.NavigationBar" x:Class="fysapp.Pages.ExerciseOverview">
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource bgColor}">
-            <Frame Style="{StaticResource backBtn}">
-
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="GoBack" NumberOfTapsRequired="1" />
-                </Frame.GestureRecognizers>
-
-                <Image Source="Back" Style="{StaticResource backIcon}" />
-            </Frame>
             <ScrollView VerticalOptions="FillAndExpand">
                 <StackLayout Margin="20,0">
-                    <Label Text="Øvelser" Style="{StaticResource h1Scroll}"  />
+                    <Label Text="Øvelser" Style="{StaticResource h1Scroll}" />
                     <ListView ItemSelected="ItemSelected" x:Name="listExerciseOverview" RowHeight="110" SeparatorVisibility="None" BackgroundColor="{StaticResource bgColor}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
@@ -32,11 +24,10 @@
                                                     <Image Source="{Binding ImageLinks[0]}" Aspect="AspectFill" Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" />
                                                     <Label Style="{StaticResource h2}" Grid.Row="0" Grid.Column="1" Text="{Binding ExerciseID, StringFormat='Øvelse {0}'}" />
                                                     <Label Style="{StaticResource basicListFrameBodyText}" Grid.Row="1" Grid.Column="1" Text="{Binding Title}" />
-                                                </Grid> 
-                                            </Frame>                                            
+                                                </Grid>
+                                            </Frame>
                                         </StackLayout>
                                     </ViewCell.View>
-                                    
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>

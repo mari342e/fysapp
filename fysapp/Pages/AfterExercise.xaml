@@ -2,18 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="fysapp.NavigationBar" x:Class="fysapp.Pages.AfterExercise">
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource bgColor}" VerticalOptions="FillAndExpand">
-            <ScrollView  VerticalOptions="FillAndExpand">
+            <ScrollView VerticalOptions="FillAndExpand">
                 <StackLayout Margin="20,0">
-                    <Frame Style="{StaticResource backBtn}">                   
+                    <Frame Style="{StaticResource backBtn}">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="GoBack" NumberOfTapsRequired="1" />
                         </Frame.GestureRecognizers>
-                    
                         <Image Source="Back" Style="{StaticResource backIcon}" />
                     </Frame>
-                    
                     <Label Text="Efter øvelse" Style="{StaticResource h1Back}" />
-                    
                     <Label Text="Tid" Style="{StaticResource h2}" XAlign="Center" />
                     <Label Text="Denne træning tog:" XAlign="Center" Style="{StaticResource h3}" />
                     <Entry Margin="0,0,0,20" />
