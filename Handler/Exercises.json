@@ -4,20 +4,35 @@
     "ExerciseID": "1",
     "Title": "Sideliggende udadrotation i skulderen",
     "ImageLinks": [ "img.jpeg", "img.jpeg" ],
-    "Description": [ "Liggende på siden med bøjet hofte og knæ.", "- Nederste arm ligger og støtter på underlaget, hovedet hviler på en pude", "- Øverste arm (træningsarmen) er med albuen bøjet 90 grader", "- Trænings kile/pude ligger mellem overarm og overkrop - Håndvægt holdes i hånden", "- Hånden hvilende på maven - Sæt skulderbladet på plads ved at løfte skulderrundingen let op mod øret, imens skulderen føres let nedad/bagud mod rygsøjlen", "- Drej armen opad/udad mens overarmen holdes ind til kroppen", "- Sænk hånden/armen langsomt" ],
-    "Repetition": "Lav 3 sæt á 10 gentagelser",
-    "Breaks": "Hold ca. 30 sekunders pause mellem hvert sæt",
-    "Focus": "Undgå at skulderbladet vandrer op mod øret eller frem/tilbage"
+    "Description": [ 
+      "- Liggende på siden med bøjet hofte og knæ.", 
+      "- Nederste arm ligger og støtter på underlaget, hovedet hviler på en pude.", 
+      "- Øverste arm (træningsarmen) er med albuen bøjet 90 grader.", 
+      "- Trænings kile/pude ligger mellem overarm og overkrop.",
+      "- Håndvægt holdes i hånden.", 
+      "- Hånden hvilende på maven.",
+      "- Sæt skulderbladet på plads ved at løfte skulderrundingen let op mod øret, imens skulderen føres let nedad/bagud mod rygsøjlen.", 
+      "- Drej armen opad/udad mens overarmen holdes ind til kroppen.", 
+      "- Sænk hånden/armen langsomt." ],
+    "Repetition": "Lav 3 sæt á 10 gentagelser.",
+    "Breaks": "Hold ca. 30 sekunders pause mellem hvert sæt.",
+    "Focus": "Undgå at skulderbladet vandrer op mod øret eller frem/tilbage."
   },
   {
     "UserGroupID": "1",
     "ExerciseID": "2",
     "Title": "Maveliggende løft med udadrotation",
     "ImageLinks": [ "img.jpeg", "img.jpeg" ],
-    "Description": [ "- Lig på maven på en briks/et bord med armen hængende ned mod gulvet og skulderen hvilende i 90 graders fremadbøjning ", "- Håndvægt holdes i hånden", "- Sæt skulderbladet på plads ved at løfte skulderrundingen let op mod øret, imens skulderen føres let nedad/bagud mod rygsøjlen", "- Løft armen med strakt albue op til vandret mens du drejer armen/hånden udad", "- Når du når vandret armstilling, roterer du hånden yderligere udad", "- Sænk armen langsomt mens den drejes indad til udgangspositionen" ],
-    "Repetition": "Lav 3 sæt á 10 gentagelser",
-    "Breaks": "Hold ca. 30 sekunders pause mellem hvert sæt",
-    "Focus": "Undgå at skulderbladet vandrer op mod øret eller frem/tilbage"
+    "Description": [ 
+      "- Lig på maven på en briks/et bord med armen hængende ned mod gulvet og skulderen hvilende i 90 graders fremadbøjning.", 
+      "- Håndvægt holdes i hånden", 
+      "- Sæt skulderbladet på plads ved at løfte skulderrundingen let op mod øret, imens skulderen føres let nedad/bagud mod rygsøjlen.", 
+      "- Løft armen med strakt albue op til vandret mens du drejer armen/hånden udad.", 
+      "- Når du når vandret armstilling, roterer du hånden yderligere udad.", 
+      "- Sænk armen langsomt mens den drejes indad til udgangspositionen." ],
+    "Repetition": "Lav 3 sæt á 10 gentagelser.",
+    "Breaks": "Hold ca. 30 sekunders pause mellem hvert sæt.",
+    "Focus": "Undgå at skulderbladet vandrer op mod øret eller frem/tilbage."
   },
   {
     "UserGroupID": "1",
@@ -25,36 +40,52 @@
     "Title": "Siddende løft af armen skråt fremad",
     "ImageLinks": [ "img.jpeg", "img.jpeg" ],
     "Description": [
-      "-Sid på en stol uden ryglæn, med ret ryg og en hoftebreddes afstand mellem fødderne",
-      "-Tag fat om håndvægten og drej i skulderen så tommelfingeren peger skråt ud til siden.",
-      "-Sæt skulderbladet på plads ved sætte modsatte hånds pegefinger og langfinger på skulderpladen (acromion) og derefter flytte knoglepunktet bagud og væk fra fingrene",
-      "-Aktiver de dybe stabiliserende rygmuskler ved at lave en udånding med munden lukket (og tænderne bidt sammen). ",
-      "-Løft armen skråt frem og op mod vandret",
-      "-Sænk armen langsomt"
+      "- Sid på en stol uden ryglæn, med ret ryg og en hoftebreddes afstand mellem fødderne.",
+      "- Tag fat om håndvægten og drej i skulderen så tommelfingeren peger skråt ud til siden.",
+      "- Sæt skulderbladet på plads ved sætte modsatte hånds pegefinger og langfinger på skulderpladen (acromion) og derefter flytte knoglepunktet bagud og væk fra fingrene.",
+      "- Aktiver de dybe stabiliserende rygmuskler ved at lave en udånding med munden lukket (og tænderne bidt sammen).",
+      "- Løft armen skråt frem og op mod vandret.",
+      "- Sænk armen langsomt."
     ],
-    "Repetition": "Lav 3 sæt á 10 gentagelser",
-    "Breaks": "Hold ca. 30 sekunders pause mellem hvert sæt",
-    "Focus": "Kontroller bevægelsen ved at placere modsatte hånd bag på ryggen nedenunder skulderbladet. Fornem at skulderbladet hele tiden flugter med brystkassen’"
+    "Repetition": "Lav 3 sæt á 10 gentagelser.",
+    "Breaks": "Hold ca. 30 sekunders pause mellem hvert sæt.",
+    "Focus": "Kontroller bevægelsen ved at placere modsatte hånd bag på ryggen nedenunder skulderbladet. Fornem at skulderbladet hele tiden flugter med brystkassen."
   },
   {
     "UserGroupID": "1",
     "ExerciseID": "4",
     "Title": "Maveliggende udadrotation med armed løftet 90˚ og albuen bøjet 90˚",
     "ImageLinks": [ "img.jpeg", "img.jpeg" ],
-    "Description": [ "-Liggende på maven på en briks", "-Træningsarmen i 90 graders abduktion, overarmen understøttet af briksen", "-Arm/træningsarm er bøjet 90 grader i albueleddet og underarmen hænger lodret ned.", "- Håndvægt holdes i hånden", "- Hovedet hviler på den modsatte arm eller ligger drejet til siden", "- Sæt skulderbladet på plads ved at løfte skulderrundingen let op mod øret, imens skulderen føres let nedad/indad mod rygsøjlen", "- Drej underarmen op mod lofte", "- Sænk den langsomt igen" ],
-    "Repetition": "Lav 3 sæt á 10 gentagelser",
-    "Breaks": "Hold ca. 30 sekunders pause mellem hvert sæt",
-    "Focus": "Kontroller bevægelsen ved at placere modsatte hånd bag på ryggen nedenunder skulderbladet. Fornem at skulderbladet nærmer sig fingerspidserne"
+    "Description": [ 
+      "- Liggende på maven på en briks.", 
+      "- Træningsarmen i 90 graders abduktion, overarmen understøttet af briksen.", 
+      "- Arm/træningsarm er bøjet 90 grader i albueleddet og underarmen hænger lodret ned.", 
+      "- Håndvægt holdes i hånden.", 
+      "- Hovedet hviler på den modsatte arm eller ligger drejet til siden.", 
+      "- Sæt skulderbladet på plads ved at løfte skulderrundingen let op mod øret, imens skulderen føres let nedad/indad mod rygsøjlen.", 
+      "- Drej underarmen op mod lofte.", 
+      "- Sænk den langsomt igen." ],
+    "Repetition": "Lav 3 sæt á 10 gentagelser.",
+    "Breaks": "Hold ca. 30 sekunders pause mellem hvert sæt.",
+    "Focus": "Kontroller bevægelsen ved at placere modsatte hånd bag på ryggen nedenunder skulderbladet. Fornem at skulderbladet nærmer sig fingerspidserne."
   },
   {
     "UserGroupID": "1",
     "ExerciseID": "5",
     "Title": "Rygliggende skub med armen",
     "ImageLinks": [ "img.jpeg", "img.jpeg" ],
-    "Description": [ "- Rygliggende på gulvet eller en briks", "- 90 grades fleksion/bøjninng i skulderen, med hånden pegende op mod loftet", "- Håndvægt holdes i hånden", "- Hovedet hviler på underlaget", "- Hold hovedet og ryggen i underlaget", "- Pres den strakte arm op mod loftet, således at armen forlænges og skulderen slipper underlaget", "- Sænk langsomt skulderen igen så den kommer ned at røre underlaget", "- Vær opmærksom på at skulderen ikke trækkes op mod øret samt at armen presses lige op mod loftet" ],
-    "Repetition": "Lav 3 sæt á 10 gentagelser",
-    "Breaks": "Hold ca. 30 sekunders pause mellem hvert sæt",
-    "Focus": ": Læg hånden fra modsatte arm afslappet på skulderen og mærk at skulderen ikke trækker op mod øret."
+    "Description": [ 
+      "- Rygliggende på gulvet eller en briks.", 
+      "- 90 grades fleksion/bøjninng i skulderen, med hånden pegende op mod loftet.", 
+      "- Håndvægt holdes i hånden.", 
+      "- Hovedet hviler på underlaget.", 
+      "- Hold hovedet og ryggen i underlaget.", 
+      "- Pres den strakte arm op mod loftet, således at armen forlænges og skulderen slipper underlaget.", 
+      "- Sænk langsomt skulderen igen så den kommer ned at røre underlaget.", 
+      "- Vær opmærksom på at skulderen ikke trækkes op mod øret samt at armen presses lige op mod loftet." ],
+    "Repetition": "Lav 3 sæt á 10 gentagelser.",
+    "Breaks": "Hold ca. 30 sekunders pause mellem hvert sæt.",
+    "Focus": "Læg hånden fra modsatte arm afslappet på skulderen og mærk at skulderen ikke trækker op mod øret."
   }
 ]
 
