@@ -19,9 +19,19 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Row="0" Grid.Column="0" Text="Ja" XAlign="Center" TextColor="{StaticResource bodyText}" />
-                        <Label Grid.Row="0" Grid.Column="1" Text="Nej" XAlign="Center" TextColor="{StaticResource bodyText}" />
+                        </Grid.ColumnDefinitions>                        
+                        <Frame  Grid.Row="0" Grid.Column="0" CornerRadius="50" VerticalOptions="Center" HorizontalOptions="Center" x:Name="YesPhysiotherapist" Padding="15" BackgroundColor="Transparent">
+                            <Label x:Name="YesPhysiotherapistLabel" Grid.Row="0" Grid.Column="0" Text="Ja" XAlign="Center" TextColor="{StaticResource bodyText}" />
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="HasPhysiotherapist" NumberOfTapsRequired="1" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                        <Frame Grid.Row="0" Grid.Column="1" CornerRadius="50" VerticalOptions="Center" HorizontalOptions="Center" x:Name="NoPhysiotherapist" Padding="15" BackgroundColor="Transparent">
+                            <Label x:Name="NoPhysiotherapistLabel" Grid.Row="0" Grid.Column="1" Text="Nej" XAlign="Center" TextColor="{StaticResource bodyText}" />
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="NotHasPhysiotherapist" NumberOfTapsRequired="1" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
                     </Grid>
                     <Label Grid.Row="0" Grid.Column="0" Text="Smerte før træning (NRS)" XAlign="Center" Style="{StaticResource h3}" />
                     <Label x:Name="displayNr" Text="{Binding Source={x:Reference slider},Path=Value,StringFormat='{0:F0}'}" XAlign="Center" TextColor="{StaticResource bodyText}" />
@@ -46,13 +56,29 @@
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Row="0" Grid.Column="0" Text="Ja" XAlign="Center" TextColor="{StaticResource bodyText}" />
-                        <Label Grid.Row="0" Grid.Column="1" Text="Nej" XAlign="Center" TextColor="{StaticResource bodyText}" />
+                        <Frame  Grid.Row="0" Grid.Column="0" CornerRadius="50" VerticalOptions="Center" HorizontalOptions="Center" x:Name="YesPainkillers" Padding="15" BackgroundColor="Transparent">
+                            <Label x:Name="YesPainkillersLabel" Text="Ja" XAlign="Center"   TextColor="{StaticResource bodyText}" >
+
+                            </Label>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TakenPainkillers" NumberOfTapsRequired="1" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                        <Frame Grid.Row="0" Grid.Column="1" CornerRadius="50" VerticalOptions="Center" HorizontalOptions="Center" x:Name="NoPainkillers" Padding="15" BackgroundColor="Transparent">
+                            <Label x:Name="NoPainkillersLabel" Text="Nej" XAlign="Center"  TextColor="{StaticResource bodyText}" >
+                                
+                            </Label>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="NotTakenPainkillers" NumberOfTapsRequired="1" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
                     </Grid>
-                    <Label Text="Hvilken type smertestillende?" XAlign="Center" Style="{StaticResource h3}" />
-                    <Entry Margin="0,0,0,20" />
-                    <Label Text="Mængde:" XAlign="Center" Style="{StaticResource h3}" />
-                    <Entry Margin="0,0,0,20" />
+                    <StackLayout x:Name="PainKillersFurtherQuestions" IsVisible="False">
+                        <Label Text="Hvilken type smertestillende?" XAlign="Center" Style="{StaticResource h3}" />
+                        <Entry Margin="0,0,0,20" />
+                        <Label Text="Mængde:" XAlign="Center" Style="{StaticResource h3}" />
+                        <Entry Margin="0,0,0,20" />
+                    </StackLayout>
                     <Label Grid.Row="0" Grid.Column="0" Text="Har du oplevet bivirkninger grundet træningen?" XAlign="Center" Style="{StaticResource h3}" />
                     <Grid Padding="0" ColumnSpacing="20" Margin="0,0,0,20">
                         <Grid.RowDefinitions>
@@ -62,12 +88,29 @@
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Row="0" Grid.Column="0" Text="Ja" XAlign="Center" TextColor="{StaticResource bodyText}" />
-                        <Label Grid.Row="0" Grid.Column="1" Text="Nej" XAlign="Center" TextColor="{StaticResource bodyText}" />
+                       
+                        <Frame  Grid.Row="0" Grid.Column="0" CornerRadius="50" VerticalOptions="Center" HorizontalOptions="Center" x:Name="YesSideEffects" Padding="15" BackgroundColor="Transparent">
+                            <Label x:Name="YesSideEffectsLabel" Grid.Row="0" Grid.Column="0" Text="Ja" XAlign="Center" TextColor="{StaticResource bodyText}" />
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="HasSideEffects" NumberOfTapsRequired="1" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                        <Frame Grid.Row="0" Grid.Column="1" CornerRadius="50" VerticalOptions="Center" HorizontalOptions="Center" x:Name="NoSideEffects" Padding="15" BackgroundColor="Transparent">
+                            <Label x:Name="NoSideEffectsLabel" Grid.Row="0" Grid.Column="1" Text="Nej" XAlign="Center" TextColor="{StaticResource bodyText}" />
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="NotHasSideEffects" NumberOfTapsRequired="1" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                        
                     </Grid>
+                    <StackLayout IsVisible="False" x:Name="SideEffectsFurtherQuestions">
                     <Label Text="Giv en kort beskrivelse af bivirkningerne:" XAlign="Center" Style="{StaticResource h3}" />
                     <Entry Margin="0,0,0,20" />
-                    <Button Text="Gem" Style="{StaticResource btn}" Margin="0,20" />
+                    </StackLayout>
+                    <Label x:Name="MissingInfoLabel" IsVisible="False" Text="Du mangler at udfylde nogle informationer" XAlign="Center" TextColor="{StaticResource bodyText}" Margin="0,20" >  
+                    </Label>
+                    <Button x:Name="Save" Text="Gem" Style="{StaticResource btn}" Pressed="SaveBeforeTraining" Margin="0,20" >                       
+                    </Button>
                 </StackLayout>
             </ScrollView>
             <views:NavigationBar />

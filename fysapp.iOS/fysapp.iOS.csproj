@@ -210,12 +210,24 @@
     <ImageAsset Include="Assets.xcassets\Cross.imageset\cross-1.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\Play.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Play.imageset\Play.png" />
-    <ImageAsset Include="Assets.xcassets\Play.imageset\Play-1.png" />
-    <ImageAsset Include="Assets.xcassets\Square.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Square.imageset\Square.png" />
-    <ImageAsset Include="Assets.xcassets\Square.imageset\Square-1.png" />
+    <ImageAsset Include="Assets.xcassets\Play.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Play.imageset\Play.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Play.imageset\Play-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Square.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Square.imageset\Square.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Square.imageset\Square-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
