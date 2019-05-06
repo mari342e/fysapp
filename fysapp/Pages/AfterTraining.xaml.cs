@@ -20,12 +20,6 @@ namespace fysapp.Pages
             await Navigation.PopAsync();
         }
 
-        void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
-        {
-            double value = args.NewValue;
-            displayNr.Text = String.Format("{0}", value);
-        }
-
         private void HasSideEffects(object sender, EventArgs e)
         {
             sideEffectsAnswered = true;
@@ -35,6 +29,7 @@ namespace fysapp.Pages
             YesSideEffectsLabel.TextColor = Color.White;
             NoSideEffectsLabel.TextColor = Color.FromHex("#707070");
         }
+
         private void NotHasSideEffects(object sender, EventArgs e)
         {
             sideEffectsAnswered = true;
@@ -45,6 +40,7 @@ namespace fysapp.Pages
             NoSideEffectsLabel.TextColor = Color.White;
             YesSideEffectsLabel.TextColor = Color.FromHex("#707070");
         }
+
         private void Tired(object sender, EventArgs e)
         {
             tiredAnswered = true;
@@ -61,6 +57,7 @@ namespace fysapp.Pages
             NoTiredLabel.TextColor = Color.White;
             YesTiredLabel.TextColor = Color.FromHex("#707070");
         }
+
         private void SaveAfterTraining(object sender, EventArgs e)
         {
             if (sideEffectsAnswered && tiredAnswered)

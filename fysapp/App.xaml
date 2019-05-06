@@ -171,6 +171,15 @@
                 <Setter Property="BackgroundColor" Value="Transparent" />
                 <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
+            <!-- Questionnaire Yes/No "Button" -->
+            <Style x:Key="answerBtn" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="25" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="Padding" Value="15" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="HasShadow" Value="False" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

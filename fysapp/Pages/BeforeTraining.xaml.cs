@@ -23,7 +23,6 @@ namespace fysapp.Pages
             await Navigation.PopAsync();
         }
 
-        void OnSliderValueChanged(object sender, ValueChangedEventArgs args)         {             double value = args.NewValue;             displayNr.Text = String.Format("{0}", value);         }
         private void HasPhysiotherapist(object sender, EventArgs e)
         {
             physiotherapistAnswered = true;
@@ -32,6 +31,7 @@ namespace fysapp.Pages
             YesPhysiotherapistLabel.TextColor = Color.White;
             NoPhysiotherapistLabel.TextColor = Color.FromHex("#707070");
         }
+
         private void NotHasPhysiotherapist(object sender, EventArgs e)
         {
             physiotherapistAnswered = true;
@@ -50,6 +50,7 @@ namespace fysapp.Pages
             YesPainkillersLabel.TextColor = Color.White;
             NoPainkillersLabel.TextColor = Color.FromHex("#707070");
         }
+
         private void NotTakenPainkillers(object sender, EventArgs e)
         {
             painkillersAnswered = true;
@@ -59,6 +60,7 @@ namespace fysapp.Pages
             NoPainkillersLabel.TextColor = Color.White;
             YesPainkillersLabel.TextColor = Color.FromHex("#707070");
         }
+
         private void HasSideEffects(object sender, EventArgs e)
         {
             sideEffectsAnswered = true;
@@ -68,6 +70,7 @@ namespace fysapp.Pages
             YesSideEffectsLabel.TextColor = Color.White;
             NoSideEffectsLabel.TextColor = Color.FromHex("#707070");
         }
+
         private void NotHasSideEffects(object sender, EventArgs e)
         {
             sideEffectsAnswered = true;

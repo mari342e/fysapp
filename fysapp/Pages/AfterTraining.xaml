@@ -13,7 +13,7 @@
                     <Label Text="Efter træning" Style="{StaticResource h1Back}" />
                     <Label Grid.Row="0" Grid.Column="0" Text="Smerte efter træning (NRS)" XAlign="Center" Style="{StaticResource h3}" />
                     <Label x:Name="displayNr" Text="{Binding Source={x:Reference slider},Path=Value,StringFormat='{0:F0}'}" XAlign="Center" TextColor="{StaticResource bodyText}" />
-                    <Slider x:Name="slider" Maximum="10" ValueChanged="OnSliderValueChanged" />
+                    <Slider x:Name="slider" Maximum="10" />
                     <Grid Padding="0" ColumnSpacing="20" Margin="0,0,0,20">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*" />
@@ -34,13 +34,13 @@
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Frame  Grid.Row="0" Grid.Column="0" CornerRadius="50" VerticalOptions="Center" HorizontalOptions="Center" x:Name="YesSideEffects" Padding="15" BackgroundColor="Transparent">
+                        <Frame Grid.Row="0" Grid.Column="0" x:Name="YesSideEffects" Style="{StaticResource answerBtn}">
                             <Label x:Name="YesSideEffectsLabel" Grid.Row="0" Grid.Column="0" Text="Ja" XAlign="Center" TextColor="{StaticResource bodyText}" />
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="HasSideEffects" NumberOfTapsRequired="1" />
                             </Frame.GestureRecognizers>
                         </Frame>
-                        <Frame Grid.Row="0" Grid.Column="1" CornerRadius="50" VerticalOptions="Center" HorizontalOptions="Center" x:Name="NoSideEffects" Padding="15" BackgroundColor="Transparent">
+                        <Frame Grid.Row="0" Grid.Column="1" x:Name="NoSideEffects" Style="{StaticResource answerBtn}">
                             <Label x:Name="NoSideEffectsLabel" Grid.Row="0" Grid.Column="1" Text="Nej" XAlign="Center" TextColor="{StaticResource bodyText}" />
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="NotHasSideEffects" NumberOfTapsRequired="1" />
@@ -48,10 +48,10 @@
                         </Frame>
                     </Grid>
                     <StackLayout x:Name="SideEffectsFurtherQuestions">
-                    <Label Text="Hvilken type smertestillende?" XAlign="Center" Style="{StaticResource h3}" />
-                    <Entry Margin="0,0,0,20" />
-                    <Label Text="Mængde:" XAlign="Center" Style="{StaticResource h3}" />
-                    <Entry Margin="0,0,0,20" />
+                        <Label Text="Hvilken type smertestillende?" XAlign="Center" Style="{StaticResource h3}" />
+                        <Entry Margin="0,0,0,20" />
+                        <Label Text="Mængde:" XAlign="Center" Style="{StaticResource h3}" />
+                        <Entry Margin="0,0,0,20" />
                     </StackLayout>
                     <Label Grid.Row="0" Grid.Column="0" Text="Blev du udtrættet efter træningen?" XAlign="Center" Style="{StaticResource h3}" />
                     <Grid Padding="0" ColumnSpacing="20" Margin="0,0,0,20">
@@ -62,22 +62,22 @@
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Frame  Grid.Row="0" Grid.Column="0" CornerRadius="50" VerticalOptions="Center" HorizontalOptions="Center" x:Name="YesTired" Padding="15" BackgroundColor="Transparent">
+                        <Frame Grid.Row="0" Grid.Column="0" x:Name="YesTired" Style="{StaticResource answerBtn}">
                             <Label x:Name="YesTiredLabel" Grid.Row="0" Grid.Column="0" Text="Ja" XAlign="Center" TextColor="{StaticResource bodyText}" />
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="Tired" NumberOfTapsRequired="1" />
                             </Frame.GestureRecognizers>
                         </Frame>
-                        <Frame Grid.Row="0" Grid.Column="1" CornerRadius="50" VerticalOptions="Center" HorizontalOptions="Center" x:Name="NoTired" Padding="15" BackgroundColor="Transparent">
+                        <Frame Grid.Row="0" Grid.Column="1" x:Name="NoTired" Style="{StaticResource answerBtn}">
                             <Label x:Name="NoTiredLabel" Grid.Row="0" Grid.Column="1" Text="Nej" XAlign="Center" TextColor="{StaticResource bodyText}" />
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="NotTired" NumberOfTapsRequired="1" />
                             </Frame.GestureRecognizers>
-                        </Frame>                     
+                        </Frame>
                     </Grid>
                     <Label Text="Kommentarer til træningen:" XAlign="Center" Style="{StaticResource h3}" />
                     <Entry Margin="0,0,0,20" />
-                    <Label x:Name="MissingInfoLabel" IsVisible="False" Text="Du mangler at udfylde nogle informationer" XAlign="Center" TextColor="{StaticResource bodyText}" Margin="0,20" >
+                    <Label x:Name="MissingInfoLabel" IsVisible="False" Text="Du mangler at udfylde nogle informationer" XAlign="Center" TextColor="{StaticResource bodyText}" Margin="0,20">
                     </Label>
                     <Button Pressed="SaveAfterTraining" Text="Gem" Style="{StaticResource btn}" Margin="0,20" />
                 </StackLayout>
