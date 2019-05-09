@@ -15,6 +15,7 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.0.1" />
     <PackageReference Include="Xamd.Plugins.Forms.ImageCarousel" Version="1.0.2" />
     <PackageReference Include="Xamarin.CustomControls.AccordionView" Version="1.1.6" />
+    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
