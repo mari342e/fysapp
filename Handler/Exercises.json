@@ -41,6 +41,7 @@
   {
     "UserGroupID": "1",
     "ExerciseID": "3",
+    "ApiExerciseID": "5cd3583bb24b450017911d1c",
     "Title": "Siddende løft af armen skråt fremad",
     "ImageLinks": [ "img.jpeg", "img.jpeg" ],
     "Description": [
@@ -58,17 +59,19 @@
   {
     "UserGroupID": "1",
     "ExerciseID": "4",
+    "ApiExerciseID": "5cd3583bb24b450017911d1c",
     "Title": "Maveliggende udadrotation med armed løftet 90˚ og albuen bøjet 90˚",
     "ImageLinks": [ "img.jpeg", "img.jpeg" ],
-    "Description": [ 
-      "- Liggende på maven på en briks.", 
-      "- Træningsarmen i 90 graders abduktion, overarmen understøttet af briksen.", 
-      "- Arm/træningsarm er bøjet 90 grader i albueleddet og underarmen hænger lodret ned.", 
-      "- Håndvægt holdes i hånden.", 
-      "- Hovedet hviler på den modsatte arm eller ligger drejet til siden.", 
-      "- Sæt skulderbladet på plads ved at løfte skulderrundingen let op mod øret, imens skulderen føres let nedad/indad mod rygsøjlen.", 
-      "- Drej underarmen op mod lofte.", 
-      "- Sænk den langsomt igen." ],
+    "Description": [
+      "- Liggende på maven på en briks.",
+      "- Træningsarmen i 90 graders abduktion, overarmen understøttet af briksen.",
+      "- Arm/træningsarm er bøjet 90 grader i albueleddet og underarmen hænger lodret ned.",
+      "- Håndvægt holdes i hånden.",
+      "- Hovedet hviler på den modsatte arm eller ligger drejet til siden.",
+      "- Sæt skulderbladet på plads ved at løfte skulderrundingen let op mod øret, imens skulderen føres let nedad/indad mod rygsøjlen.",
+      "- Drej underarmen op mod lofte.",
+      "- Sænk den langsomt igen."
+    ],
     "Repetition": "Lav 3 sæt á 10 gentagelser.",
     "Breaks": "Hold ca. 30 sekunders pause mellem hvert sæt.",
     "Focus": "Kontroller bevægelsen ved at placere modsatte hånd bag på ryggen nedenunder skulderbladet. Fornem at skulderbladet nærmer sig fingerspidserne."
@@ -76,17 +79,19 @@
   {
     "UserGroupID": "1",
     "ExerciseID": "5",
+    "ApiExerciseID": "5cd3583bb24b450017911d1c",
     "Title": "Rygliggende skub med armen",
     "ImageLinks": [ "img.jpeg", "img.jpeg" ],
-    "Description": [ 
-      "- Rygliggende på gulvet eller en briks.", 
-      "- 90 grades fleksion/bøjninng i skulderen, med hånden pegende op mod loftet.", 
-      "- Håndvægt holdes i hånden.", 
-      "- Hovedet hviler på underlaget.", 
-      "- Hold hovedet og ryggen i underlaget.", 
-      "- Pres den strakte arm op mod loftet, således at armen forlænges og skulderen slipper underlaget.", 
-      "- Sænk langsomt skulderen igen så den kommer ned at røre underlaget.", 
-      "- Vær opmærksom på at skulderen ikke trækkes op mod øret samt at armen presses lige op mod loftet." ],
+    "Description": [
+      "- Rygliggende på gulvet eller en briks.",
+      "- 90 grades fleksion/bøjninng i skulderen, med hånden pegende op mod loftet.",
+      "- Håndvægt holdes i hånden.",
+      "- Hovedet hviler på underlaget.",
+      "- Hold hovedet og ryggen i underlaget.",
+      "- Pres den strakte arm op mod loftet, således at armen forlænges og skulderen slipper underlaget.",
+      "- Sænk langsomt skulderen igen så den kommer ned at røre underlaget.",
+      "- Vær opmærksom på at skulderen ikke trækkes op mod øret samt at armen presses lige op mod loftet."
+    ],
     "Repetition": "Lav 3 sæt á 10 gentagelser.",
     "Breaks": "Hold ca. 30 sekunders pause mellem hvert sæt.",
     "Focus": "Læg hånden fra modsatte arm afslappet på skulderen og mærk at skulderen ikke trækker op mod øret."

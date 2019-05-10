@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Handler;
-
+using Handler.Handlers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace fysapp.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ExerciseOverview : ContentPage
 	{
         ExerciseHandler data = new ExerciseHandler();

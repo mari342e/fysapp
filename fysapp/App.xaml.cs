@@ -1,5 +1,5 @@
 ﻿using fysapp.Pages;
-using Handler;
+using Handler.Handlers;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,8 +11,8 @@ namespace fysapp
         public App()
         {
             InitializeComponent();
-            var data = new ExerciseHandler();
-            var exercises = data.GetExercises();
+           var data = new SessionHandler();
+            var exercises = data.GetAllSessions();
 
             MainPage = new NavigationPage(new Login());
         }

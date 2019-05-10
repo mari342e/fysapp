@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Handler;
-
+using Handler.Handlers;
 using Xamarin.Forms;
 
 namespace fysapp.Pages
