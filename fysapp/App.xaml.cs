@@ -11,7 +11,7 @@ namespace fysapp
         public App()
         {
             InitializeComponent();
-            var data = new Data();
+            var data = new ExerciseHandler();
             var exercises = data.GetExercises();
 
             MainPage = new NavigationPage(new Login());

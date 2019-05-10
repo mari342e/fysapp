@@ -13,7 +13,7 @@ namespace fysapp.Pages
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ExerciseOverview : ContentPage
 	{
-        Data data = new Data();
+        ExerciseHandler data = new ExerciseHandler();
 
         public ExerciseOverview ()
 		{

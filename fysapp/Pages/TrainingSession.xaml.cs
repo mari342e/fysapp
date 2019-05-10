@@ -10,7 +10,7 @@ namespace fysapp.Pages
     {
         public TrainingSession()
         {
-            var data = new Data();
+            var data = new ExerciseHandler();
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             listExerciseOverview.ItemsSource = data.GetExercises();

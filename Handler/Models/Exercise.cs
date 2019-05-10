@@ -7,6 +7,7 @@ namespace Handler
     {       
         public int UserGroupID { get; set; }
         public int ExerciseID { get; set; }
+        public string ApiExerciseID { get; set; }
         public string Title { get; set; }
         public List<string> ImageLinks { get; set; }
         public List<string> Description { get; set; }
@@ -14,10 +15,11 @@ namespace Handler
         public string Breaks { get; set; }
         public string Focus { get; set; }
 
-        public Exercise(int userGroupID, int exerciseID, string title, List<string> imageLinks, List<string> description, string repetition, string breaks, string focus)
+        public Exercise(int userGroupID, int exerciseID, string apiExerciseID, string title, List<string> imageLinks, List<string> description, string repetition, string breaks, string focus)
         {
             UserGroupID = userGroupID;
             ExerciseID = exerciseID;
+            ApiExerciseID = apiExerciseID;
             Title = title;
             ImageLinks = imageLinks;
             Description = description;

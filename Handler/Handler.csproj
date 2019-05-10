@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="LocalData\**" />
+    <EmbeddedResource Remove="LocalData\**" />
+    <None Remove="LocalData\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Exercises.json" />
   </ItemGroup>
 
@@ -14,10 +20,6 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="LocalData\" />
   </ItemGroup>
 
 </Project>
