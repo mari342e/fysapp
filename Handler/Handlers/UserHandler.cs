@@ -7,14 +7,18 @@ using System.Threading.Tasks;
 
 namespace Handler.Handlers
 {
-    class UserHandler
+    public class UserHandler
     {
         private readonly string uri = "users";
         public async Task<User> GetUserByAssignedID(string assignedID)
         {
-            var json = await ClientHttp.client.GetStringAsync(uri + "/assignedid/" + assignedID);
-            User user = JsonConvert.DeserializeObject<User>(json);
-
+            var response = await ClientHttp.client.GetAsync(uri + "/assignedid/" + assignedID);
+            User user = null;
+            if (response.IsSuccessStatusCode)
+            {
+                user = JsonConvert.DeserializeObject<User>(await response.Content.ReadAsStringAsync());
+            }
+           
             return user;
         }
         public async Task<User> GetUserByID(string ID)

@@ -8,6 +8,7 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -46,6 +47,19 @@
                         </Grid.ColumnDefinitions>
                         <Label Text="Spørgeskema" Style="{StaticResource cardLabel}" Grid.Column="0" />
                         <Image Source="SurveyCard" Style="{StaticResource cardImage}" Grid.Column="1" />
+                    </Grid>
+                </Frame>
+                <Frame Style="{StaticResource card}" BackgroundColor="{StaticResource red}" Grid.Row="3" Grid.Column="0">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="LogOut" NumberOfTapsRequired="1" />
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Log ud" Style="{StaticResource cardLabel}" Grid.Column="0" />
+                        <Image Source="Logout" Style="{StaticResource cardImage}" Grid.Column="1" />
                     </Grid>
                 </Frame>
             </Grid>

@@ -117,6 +117,9 @@
     <ImageAsset Include="Assets.xcassets\HomeIcon.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Images.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\TrainingIcon.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
