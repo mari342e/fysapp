@@ -14,21 +14,21 @@ namespace Handler.Handlers
 
         public async Task<List<Training>> GetTrainingsByUserID(string userID)
         {
-            var json = await ClientHttp.client.GetStringAsync(uri + "/user/" + userID);
+            var json = await LoginInfo.client.GetStringAsync(uri + "/user/" + userID);
             List<Training> training = JsonConvert.DeserializeObject<List<Training>>(json);
 
             return training;
         }
         public async Task<Training> GetTrainingByID(string ID)
         {
-            var json = await ClientHttp.client.GetStringAsync(uri + "/" + ID);
+            var json = await LoginInfo.client.GetStringAsync(uri + "/" + ID);
             Training training = JsonConvert.DeserializeObject<Training>(json);
 
             return training;
         }
         public async Task<List<Training>> GetTrainingsByUserAndSessionID(string userID, string sessionID)
         {
-            var json = await ClientHttp.client.GetStringAsync(uri + "/usersession/" + userID +"/" + sessionID);
+            var json = await LoginInfo.client.GetStringAsync(uri + "/usersession/" + userID +"/" + sessionID);
             List<Training> training = JsonConvert.DeserializeObject<List<Training>>(json);
 
             return training;
@@ -39,7 +39,7 @@ namespace Handler.Handlers
 
             var postJson = JsonConvert.SerializeObject(newTraining);
             StringContent queryString = new StringContent(postJson);
-            var response = await ClientHttp.client.PostAsync(uri, queryString);
+            var response = await LoginInfo.client.PostAsync(uri, queryString);
             response.EnsureSuccessStatusCode();
             Training training = JsonConvert.DeserializeObject<Training>(await response.Content.ReadAsStringAsync());
 
@@ -50,7 +50,7 @@ namespace Handler.Handlers
         {
             var postJson = JsonConvert.SerializeObject(newTraining);
             StringContent queryString = new StringContent(postJson);
-            var response = await ClientHttp.client.PutAsync(uri +"/" + trainingID, queryString);
+            var response = await LoginInfo.client.PutAsync(uri +"/" + trainingID, queryString);
             response.EnsureSuccessStatusCode();
             Training training = JsonConvert.DeserializeObject<Training>(await response.Content.ReadAsStringAsync());
 
@@ -60,7 +60,7 @@ namespace Handler.Handlers
         {
             var postJson = JsonConvert.SerializeObject(newTrainingExercise);
             StringContent queryString = new StringContent(postJson);
-            var response = await ClientHttp.client.PutAsync(uri + "/addexercise/" + trainingID, queryString);
+            var response = await LoginInfo.client.PutAsync(uri + "/addexercise/" + trainingID, queryString);
             response.EnsureSuccessStatusCode();
             TrainingExercise trainingExercise = JsonConvert.DeserializeObject<TrainingExercise>(await response.Content.ReadAsStringAsync());
 

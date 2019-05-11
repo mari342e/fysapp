@@ -16,9 +16,6 @@ namespace Handler.Models
             public double set1Weights { get; set; }
             public double set2Weights { get; set; }
             public double set3Weights { get; set; }
-
-
-
         }
     }
 }

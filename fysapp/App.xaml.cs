@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Plugin.Settings;
 using Plugin.Settings.Abstractions;
+using System.Threading.Tasks;
 
 namespace fysapp
 {
@@ -14,32 +15,21 @@ namespace fysapp
         public App()
         {
             InitializeComponent();
-           var data = new SessionHandler();
-            var exercises = data.GetAllSessions();
-            
-
-            var text = AppSettings.GetValueOrDefault("LoginID", string.Empty);           
+            var text = AppSettings.GetValueOrDefault("UserID", string.Empty);
 
             if (text != null && text != "")
             {
-
-                UserHandler userHandler = new UserHandler();
-                var user = userHandler.GetUserByID(text);
-
-                if (user != null)
-                {
-                    MainPage = new NavigationPage(new Home());
-                }
-                else {
-                    MainPage = new NavigationPage(new Login());
-                }
+                LoginInfo.SetLoginInfo(text);
+                MainPage = new NavigationPage(new Home());
             }
-            else {
+            else
+            {
                 MainPage = new NavigationPage(new Login());
             }
 
-           
+
         }
+
 
         protected override void OnStart()
         {

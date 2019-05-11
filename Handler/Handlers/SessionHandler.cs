@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,9 +12,15 @@ namespace Handler.Handlers
     {
         private readonly string uri = "sessions";
 
-        private List<Session> addExercises(List<Session> list) {
+        private async Task<List<Session>> addExercises(List<Session> list) {
             ExerciseHandler exerciseHandler = new ExerciseHandler();
-            var exercises = exerciseHandler.GetExercises();
+
+            List<Exercise> exercises;
+
+            //Tjekker om der er nogle exercises ellers venter den til de er hentet
+          
+            exercises = LoginInfo.AllExercises;
+            
             foreach (var item in list)
             {
                 foreach (var exerciseID in item.ExerciseIDs)
@@ -25,21 +32,24 @@ namespace Handler.Handlers
                     }
                 }
             }
-            return list;
+
+            var orderedList = list.OrderBy(i => i.OrderNo).ToList();
+
+            return orderedList;
         }
         public async Task<List<Session>> GetAllSessions()
         {
-            var json = await ClientHttp.client.GetStringAsync(uri);
+            var json = await LoginInfo.client.GetStringAsync(uri);
             List<Session> list = JsonConvert.DeserializeObject<List<Session>>(json);
-            var listNew = addExercises(list);
+            var listNew = await addExercises(list);
             return listNew;
         }
-        public async Task<List<Session>> GetGroupSessions(string groupID)
+        public async Task<List<Session>> GetGroupSessions(int groupID)
         {
-            var json = await ClientHttp.client.GetStringAsync(uri + "/group/" + groupID);
-            List<Session> list = JsonConvert.DeserializeObject<List<Session>>(json);
+            var json = await LoginInfo.client.GetStringAsync(uri + "/group/" + groupID.ToString());
+            List<Session> list = JsonConvert.DeserializeObject<List<Session>>(json);          
 
-            var listNew = addExercises(list);
+            var listNew = await addExercises(list);
             return listNew;
         }
     }

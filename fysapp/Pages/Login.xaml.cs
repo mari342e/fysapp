@@ -25,7 +25,8 @@ namespace fysapp.Pages
             var user = await userHandler.GetUserByAssignedID(text);
             if (user != null)
             {
-                AppSettings.AddOrUpdateValue("LoginID", user._id);
+                AppSettings.AddOrUpdateValue("UserID", user._id);
+                LoginInfo.LoggedInUser = user;
                 await Navigation.PushAsync(new Home());
             }
             else {

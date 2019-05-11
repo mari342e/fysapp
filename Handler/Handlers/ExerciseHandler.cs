@@ -5,12 +5,13 @@ using Newtonsoft.Json;
 
 using System.IO;
 using System.Reflection;
+using System.Threading.Tasks;
 
 namespace Handler.Handlers
 {
     public class ExerciseHandler
     {
-        public List<Exercise> GetExercises()
+        public async Task<List<Exercise>> GetExercisesByGroupID(int groupID)
         {
             var list = new List<Exercise>();
             string jsonName = "Exercises.json";
@@ -23,6 +24,8 @@ namespace Handler.Handlers
 
                 list = JsonConvert.DeserializeObject<List<Exercise>>(jsonString);
             }
+            var orderedList = list.FindAll(i => i.UserGroupID == groupID);
+
             return list;
         }
 

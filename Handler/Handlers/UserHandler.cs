@@ -12,7 +12,7 @@ namespace Handler.Handlers
         private readonly string uri = "users";
         public async Task<User> GetUserByAssignedID(string assignedID)
         {
-            var response = await ClientHttp.client.GetAsync(uri + "/assignedid/" + assignedID);
+            var response = await LoginInfo.client.GetAsync(uri + "/assignedid/" + assignedID);
             User user = null;
             if (response.IsSuccessStatusCode)
             {
@@ -23,9 +23,13 @@ namespace Handler.Handlers
         }
         public async Task<User> GetUserByID(string ID)
         {
-            var json = await ClientHttp.client.GetStringAsync(uri + "/" + ID);
-            User user = JsonConvert.DeserializeObject<User>(json);
-
+            var response = await LoginInfo.client.GetAsync(uri + "/" + ID);
+            User user = null;
+            if (response.IsSuccessStatusCode)
+            {
+                user = JsonConvert.DeserializeObject<User>(await response.Content.ReadAsStringAsync());
+                LoginInfo.LoggedInUser = user;
+            }
             return user;
         }
     }

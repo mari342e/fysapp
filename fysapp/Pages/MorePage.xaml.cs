@@ -30,7 +30,7 @@ namespace fysapp.Pages
         async void LogOut(object sender, EventArgs e)
         {
 
-            AppSettings.AddOrUpdateValue("LoginID","");
+            AppSettings.AddOrUpdateValue("UserID","");
             await Navigation.PushAsync(new Login());
         }
     }

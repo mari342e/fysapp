@@ -1,4 +1,5 @@
-﻿using Plugin.Settings;
+﻿using Handler.Handlers;
+using Plugin.Settings;
 using Plugin.Settings.Abstractions;
 using System;
 using System.Collections.Generic;
@@ -15,19 +16,24 @@ namespace fysapp.Pages
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
 
-           
-            if (AppSettings.GetValueOrDefault("VisitedFrontpage", string.Empty) == "")
+           var visitedFrontpage = AppSettings.GetValueOrDefault("VisitedFrontpage", string.Empty);
+
+            if (visitedFrontpage == "")
             {
-                AppSettings.AddOrUpdateValue("VisitedFrontpage", "1");
+                AppSettings.AddOrUpdateValue("VisitedFrontpage", LoginInfo.LoggedInUser._id);
             }
-            else {
+            else if(visitedFrontpage != LoginInfo.LoggedInUser._id)
+            {
+                AppSettings.AddOrUpdateValue("VisitedFrontpage", LoginInfo.LoggedInUser._id);    
+            }
+            else
+            {
                 ImportantInfo.IsVisible = false;
             }
         }
 
         async void ReadMore(object sender, System.EventArgs e)
         {
-
             await Navigation.PushAsync(new GeneralInfo());
         }
 
