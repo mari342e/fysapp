@@ -228,12 +228,24 @@
     <ImageAsset Include="Assets.xcassets\Square.imageset\Square-1.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\Logo.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Logo.imageset\logo.png" />
-    <ImageAsset Include="Assets.xcassets\Logo.imageset\logo-1.png" />
-    <ImageAsset Include="Assets.xcassets\Logout.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Logout.imageset\logout-2.png" />
-    <ImageAsset Include="Assets.xcassets\Logout.imageset\logout.png" />
+    <ImageAsset Include="Assets.xcassets\Logo.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Logo.imageset\logo.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Logo.imageset\logo-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Logout.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Logout.imageset\logout-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Logout.imageset\logout.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

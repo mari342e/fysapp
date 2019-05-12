@@ -23,6 +23,7 @@ namespace Handler.Handlers
             
             foreach (var item in list)
             {
+                item.ExerciseList = new List<Exercise>();
                 foreach (var exerciseID in item.ExerciseIDs)
                 {
                     var exercise = exercises.Find(e => e.ApiExerciseID == exerciseID);

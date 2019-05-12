@@ -18,9 +18,8 @@ namespace fysapp
             var text = AppSettings.GetValueOrDefault("UserID", string.Empty);
 
             if (text != null && text != "")
-            {
-                LoginInfo.SetLoginInfo(text);
-                MainPage = new NavigationPage(new Home());
+            {               
+                MainPage = new NavigationPage(new LoadingPage());
             }
             else
             {
@@ -34,6 +33,7 @@ namespace fysapp
         protected override void OnStart()
         {
             // Handle when your app starts
+           
         }
 
         protected override void OnSleep()
