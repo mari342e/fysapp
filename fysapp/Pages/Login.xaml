@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="fysapp.Pages.Login">
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center" Margin="50,0">
-            <BoxView Color="Silver" CornerRadius="10" WidthRequest="120" HeightRequest="120" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,0,50" />
+            <Image Source="Logo" WidthRequest="120" HeightRequest="120" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,0,50" />
             <Label Text="Indtast dit unikke ID, du har fået udleveret af din fysioterapeut for at komme i gang med forløbet!" TextColor="{StaticResource bodyText}" HorizontalOptions="Center" XAlign="Center" />
             <Label Text="Indtast ID" TextColor="{StaticResource purple}" FontAttributes="Bold" Margin="0,50,0,0" />
             <Entry x:Name="LoginID" BackgroundColor="{StaticResource white}" HeightRequest="40" />

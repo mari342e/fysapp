@@ -5,7 +5,7 @@
             <StackLayout VerticalOptions="FillAndExpand">
                 <ScrollView VerticalOptions="FillAndExpand">
                     <StackLayout>
-                        <BoxView Color="Silver" CornerRadius="10" WidthRequest="120" HeightRequest="120" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,25,0,50" />
+                        <Image Source="Logo" WidthRequest="120" HeightRequest="120" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,25,0,25" />
                         <StackLayout x:Name="ImportantInfo">
                         <Label Text="Vigtig information" Style="{StaticResource h2}" Margin="20,0" />
                         <Label Margin="20,5" TextColor="{StaticResource bodyText}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin fermentum arcu quis egestas. Morbi gravida non dolor eget feugiat. Sed nec ipsum vel lacus ultricies gravida. Vestibulum et lacus mi. Fusce ac massa ipsum. Cras at est dapibus, lacinia elit sit amet, dictum nisl. Pellentesque molestie elementum ante sed fringilla. Vestibulum et malesuada ex. Sed elit velit, luctus sit amet commodo sed, dictum eu ligula. </Label>

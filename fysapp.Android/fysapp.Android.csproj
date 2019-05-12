@@ -104,6 +104,7 @@
     <AndroidResource Include="Resources\drawable\CalendarCard.png" />
     <AndroidResource Include="Resources\drawable\CogsCard.png" />
     <AndroidResource Include="Resources\drawable\InfoCard.png" />
+    <AndroidResource Include="Resources\drawable\Logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />

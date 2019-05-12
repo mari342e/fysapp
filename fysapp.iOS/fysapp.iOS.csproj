@@ -117,9 +117,6 @@
     <ImageAsset Include="Assets.xcassets\HomeIcon.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\Images.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\TrainingIcon.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
@@ -231,6 +228,12 @@
     <ImageAsset Include="Assets.xcassets\Square.imageset\Square-1.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Logo.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Logo.imageset\logo.png" />
+    <ImageAsset Include="Assets.xcassets\Logo.imageset\logo-1.png" />
+    <ImageAsset Include="Assets.xcassets\Logout.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Logout.imageset\logout-2.png" />
+    <ImageAsset Include="Assets.xcassets\Logout.imageset\logout.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -273,5 +276,7 @@
     <Folder Include="Assets.xcassets\SurveyCard.imageset\" />
     <Folder Include="Assets.xcassets\TrainingCard.imageset\" />
     <Folder Include="Assets.xcassets\TrainingIcon.imageset\" />
+    <Folder Include="Assets.xcassets\Logo.imageset\" />
+    <Folder Include="Assets.xcassets\Logout.imageset\" />
   </ItemGroup>
 </Project>
