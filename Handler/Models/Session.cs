@@ -10,6 +10,10 @@ namespace Handler.Models
         public int GroupID { get; set; }
         public int OrderNo { get; set; }
         public int DurationWeeks { get; set; }
+        public DateTime UserStartDate { get; set; }
+        public DateTime UserEndDate { get; set; }
+        public List<int> UserWeekNo { get; set; }
+        public int UserSelectedWeekNo { get; set; }
         public DateTime CreateDate { get; set; }
         public List<string> ExerciseIDs { get; set; }
         public List<Exercise> ExerciseList { get; set; }

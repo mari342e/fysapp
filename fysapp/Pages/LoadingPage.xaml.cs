@@ -19,6 +19,7 @@ namespace fysapp.Pages
         public LoadingPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         protected override void OnAppearing()

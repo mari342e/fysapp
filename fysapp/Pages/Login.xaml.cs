@@ -10,10 +10,14 @@ namespace fysapp.Pages
     public partial class Login : ContentPage
     {
         private static ISettings AppSettings => CrossSettings.Current;
-        public Login()
+        public Login(bool wrongId = false)
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+
+            if (wrongId == true) {
+                WrongID.IsVisible = true;
+            }
         }
 
         async void GoToHomePage(object sender, System.EventArgs e)
@@ -30,7 +34,7 @@ namespace fysapp.Pages
                 await Navigation.PushAsync(new Home());
             }
             else {
-                await Navigation.PushAsync(new Login());
+                await Navigation.PushAsync(new Login(true));
             }
 
 

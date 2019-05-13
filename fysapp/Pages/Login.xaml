@@ -4,6 +4,7 @@
         <StackLayout VerticalOptions="Center" Margin="50,0">
             <Image Source="Logo" WidthRequest="120" HeightRequest="120" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,0,50" />
             <Label Text="Indtast dit unikke ID, du har fået udleveret af din fysioterapeut for at komme i gang med forløbet!" TextColor="{StaticResource bodyText}" HorizontalOptions="Center" XAlign="Center" />
+            <Label IsVisible="False" x:Name="WrongID" Text="Du har indtastet et forkert id, prøv igen" TextColor="{StaticResource red}" FontAttributes="Italic" HorizontalOptions="Center" XAlign="Center" />
             <Label Text="Indtast ID" TextColor="{StaticResource purple}" FontAttributes="Bold" Margin="0,50,0,0" />
             <Entry x:Name="LoginID" BackgroundColor="{StaticResource white}" HeightRequest="40" />
             <Button Text="Login" Style="{StaticResource btn}" Margin="0,10,0,0" HorizontalOptions="Fill" Clicked="GoToHomePage" />
