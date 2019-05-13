@@ -13,7 +13,7 @@ namespace fysapp.Pages
             var data = new ExerciseHandler();
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-            listExerciseOverview.ItemsSource = data.GetExercises();
+            listExerciseOverview.ItemsSource = LoginInfo.AllTrainings;
         }
 
         async void GoBack(object sender, System.EventArgs e)

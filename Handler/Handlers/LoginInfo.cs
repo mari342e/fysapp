@@ -18,19 +18,26 @@ namespace Handler.Handlers
         public static List<Training> AllTrainings = new List<Training>();
         public static List<Exercise> AllExercises = new List<Exercise>();
 
-        public static async void SetLoginInfo(string userID) {
+        public static async Task<string> SetLoginInfo(string userID) {
             UserHandler userHandler = new UserHandler();
-            LoggedInUser = await userHandler.GetUserByID(userID);
+            var user = await userHandler.GetUserByID(userID);
+           
+            LoggedInUser = user;
             
-            await SetExercises();           
-            await SetTrainings();
+               
+            await SetExercises();
+           await SetTrainings();
             await SetUserSessions();
+            return "completed";
         }
+       
+
         private static async Task<string> SetUserSessions()
         {
             SessionHandler sessionHandler = new SessionHandler();
             UserSessions = await sessionHandler.GetGroupSessions(LoggedInUser.GroupID);
 
+            
             return "completed";
         }
         private static async Task<string> SetTrainings()
@@ -44,7 +51,7 @@ namespace Handler.Handlers
         {
             ExerciseHandler trainingHandler = new ExerciseHandler();
             AllExercises = await trainingHandler.GetExercisesByGroupID(LoggedInUser.GroupID);
-
+            
             return "completed";
         }
 

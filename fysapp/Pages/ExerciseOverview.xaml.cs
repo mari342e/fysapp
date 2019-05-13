@@ -21,8 +21,7 @@ namespace fysapp.Pages
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, false);
             var exerciseList = LoginInfo.AllExercises;
-            var sortedList = exerciseList.FindAll(i => i.UserGroupID == LoginInfo.LoggedInUser.GroupID);
-            listExerciseOverview.ItemsSource = sortedList;
+            listExerciseOverview.ItemsSource = exerciseList;
             
         }
 
