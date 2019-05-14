@@ -10,6 +10,7 @@ namespace fysapp.Pages
     {
 
         DateTime dateWeek = new DateTime();
+        Session selectedSession = new Session();
         public TrainingLog(DateTime? date = null)
         {
             dateWeek = date ?? DateTime.Now;
@@ -17,7 +18,7 @@ namespace fysapp.Pages
             NavigationPage.SetHasNavigationBar(this, false);
 
             var session = GetSessionByDate(dateWeek);
-
+            selectedSession = session;
 
             //Skjuler tilbage og giver den korrekt uge nr.
             if (session.UserSelectedWeekNo == 1)
@@ -38,31 +39,79 @@ namespace fysapp.Pages
             }
             CurrentWeekText.Text = "Du er igang med uge " + session.UserSelectedWeekNo.ToString();
 
-            //var trainings = GetTrainingsByDate(dateWeek);
-            //int i = 0;
+            var trainings = GetTrainingsByDate(dateWeek);
+           
+            var command = new Command<Training>(GoToTrainingSession);
+            trainingPas1Tap.Command = command;
+            trainingPas2Tap.Command = command;
+            trainingPas3Tap.Command = command;
+            if (trainings.Count > 0) {
+               
+                trainingPas1Tap.CommandParameter = trainings[0];
+                if (trainings[0].Completed)
+                {
+                    //Is completed
+                    var frame = PositiveFrame();
 
-            //if (trainings[0] != null)
-            //    if (trainings[0].TakenPainkillerAfter != null)
-            //    {
-            //        //Is completed
-                    
+                    trainingPas1.Children.Add(frame);
+                }
+                else
+                {
+                    var frame = NegativeFrame();
 
-            //    }
-            //    else {
-            //        //Is started but not completed
-            //    }
-            //else {
-            //    //Is not completed
-            //}
+                    trainingPas1.Children.Add(frame);
+                    //Is started but not completed
+                }
+            }
+            if (trainings.Count > 1) {             
+                trainingPas2Tap.CommandParameter = trainings[1];
+                if (trainings[1].Completed)
+                {
+                    //Is completed
+                    var frame = PositiveFrame();
+
+                    trainingPas2.Children.Add(frame);
+                }
+                else
+                {
+                    var frame = NegativeFrame();
+
+                    trainingPas2.Children.Add(frame);
+                    //Is started but not completed
+                }
+            }
+            if (trainings.Count > 2)
+            {               
+                trainingPas3Tap.CommandParameter = trainings[2];
+                if (trainings[2].Completed)
+                {
+                    //Is completed
+                    var frame = PositiveFrame();
+
+                    trainingPas3.Children.Add(frame);
+                }
+                else
+                {
+                    var frame = NegativeFrame();
+
+                    trainingPas3.Children.Add(frame);
+                    //Is started but not completed
+                }
+            }
+            else
+            {
+                //No trainings completed
+            }
 
 
 
-            //this.Resources["NavigationBackButtonNormalStyle"] as Style;
+           
         }
 
-        async void GoToTrainingSession(object sender, System.EventArgs e)
+        async void GoToTrainingSession(Training training = null)
         {
-            await Navigation.PushAsync(new TrainingSession());
+           
+            await Navigation.PushAsync(new TrainingSession(selectedSession, training));
         }
         async void NextWeek(object sender, System.EventArgs e)
         {
@@ -96,7 +145,25 @@ namespace fysapp.Pages
 
             return session;
         }
-
+        private Frame PositiveFrame() {
+            var frame = new Frame();
+            var image = new Image();
+            frame.Style = Application.Current.Resources["checkmark"] as Style;     
+            image.Source = "Checkmark";
+            image.Style = Application.Current.Resources["checkmarkIcon"] as Style;
+            frame.Content = image;
+            return frame;
+        }
+        private Frame NegativeFrame()
+        {
+            var frame = new Frame();
+            var image = new Image();
+            frame.Style = Application.Current.Resources["cross"] as Style;
+            image.Source = "Cross";
+            image.Style = Application.Current.Resources["crossIcon"] as Style;
+            frame.Content = image;
+            return frame;
+        }
         private List<Training> GetTrainingsByDate(DateTime date) {
 
             var dayOfWeek = (int)date.DayOfWeek;
@@ -104,11 +171,14 @@ namespace fysapp.Pages
             {
                 dayOfWeek = 7;
             }
-            var fromDate = date.AddDays(-dayOfWeek);
+            var fromDate = date.Date.AddDays(-dayOfWeek +1);
             var toDate = fromDate.AddDays(7);
             var trainings = LoginInfo.AllTrainings.FindAll(i => i.Date > fromDate & i.Date < toDate);
 
             return trainings;
         }
+    }
+    public class TrainingEventArgs : EventArgs {
+        public Training Training {get; set;}
     }
 }

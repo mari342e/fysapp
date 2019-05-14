@@ -1,5 +1,6 @@
 ﻿using Handler.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -36,9 +37,17 @@ namespace Handler.Handlers
 
         public async Task<Training> CreateTraining(Training newTraining)
         {
+            DefaultContractResolver contractResolver = new DefaultContractResolver
+            {
+                NamingStrategy = new CamelCaseNamingStrategy()
+            };
 
-            var postJson = JsonConvert.SerializeObject(newTraining);
-            StringContent queryString = new StringContent(postJson);
+            var postJson = JsonConvert.SerializeObject(newTraining, new JsonSerializerSettings
+            {
+                ContractResolver = contractResolver,
+                Formatting = Formatting.Indented
+            });
+            StringContent queryString = new StringContent(postJson, Encoding.UTF8, "application/json");
             var response = await LoginInfo.client.PostAsync(uri, queryString);
             response.EnsureSuccessStatusCode();
             Training training = JsonConvert.DeserializeObject<Training>(await response.Content.ReadAsStringAsync());
@@ -46,11 +55,21 @@ namespace Handler.Handlers
             return training;
         }
 
-        public async Task<Training> UpdateTraining(Training newTraining, string trainingID)
+        public async Task<Training> UpdateTraining(Training newTraining)
         {
-            var postJson = JsonConvert.SerializeObject(newTraining);
-            StringContent queryString = new StringContent(postJson);
-            var response = await LoginInfo.client.PutAsync(uri +"/" + trainingID, queryString);
+            DefaultContractResolver contractResolver = new DefaultContractResolver
+            {
+                NamingStrategy = new CamelCaseNamingStrategy()
+            };
+
+            var postJson = JsonConvert.SerializeObject(newTraining, new JsonSerializerSettings
+            {
+                ContractResolver = contractResolver,
+                Formatting = Formatting.Indented
+            });
+            StringContent queryString = new StringContent(postJson, Encoding.UTF8, "application/json");
+            
+            var response = await LoginInfo.client.PutAsync(uri +"/" + newTraining._id, queryString);
             response.EnsureSuccessStatusCode();
             Training training = JsonConvert.DeserializeObject<Training>(await response.Content.ReadAsStringAsync());
 
@@ -58,8 +77,17 @@ namespace Handler.Handlers
         }
         public async Task<TrainingExercise> AddTrainingExercise(TrainingExercise newTrainingExercise, string trainingID)
         {
-            var postJson = JsonConvert.SerializeObject(newTrainingExercise);
-            StringContent queryString = new StringContent(postJson);
+            //Denne virker ikke :(
+            DefaultContractResolver contractResolver = new DefaultContractResolver
+            {
+                NamingStrategy = new CamelCaseNamingStrategy()
+            };
+            var postJson = JsonConvert.SerializeObject(newTrainingExercise, new JsonSerializerSettings
+            {
+                ContractResolver = contractResolver,
+                Formatting = Formatting.Indented
+            });
+            StringContent queryString = new StringContent(postJson, Encoding.UTF8, "application/json");
             var response = await LoginInfo.client.PutAsync(uri + "/addexercise/" + trainingID, queryString);
             response.EnsureSuccessStatusCode();
             TrainingExercise trainingExercise = JsonConvert.DeserializeObject<TrainingExercise>(await response.Content.ReadAsStringAsync());

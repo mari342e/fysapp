@@ -23,6 +23,8 @@
                         <StackLayout>
                             <Label Style="{StaticResource h2}" Text="{Binding ExerciseID, StringFormat='Øvelse {0}'}" />
                             <Label Style="{StaticResource h1}" Text="{Binding Title}" Margin="0" />
+                            <Button IsVisible="False" Pressed="ResultFinishExercise" x:Name="FinishedButton" HorizontalOptions="Center" WidthRequest="200" Margin="30, 10" VerticalOptions="Center" TextColor="White" BackgroundColor="{StaticResource green}" Text="Færdig med øvelsen?" CornerRadius="10"/>
+                            <Button IsVisible="False" Pressed="ResultTrainingExercise" x:Name="ResultButton" CornerRadius="10" TextColor="White" HorizontalOptions="Center" WidthRequest="200" Margin="30, 10" VerticalOptions="Center" BackgroundColor="{StaticResource green}" Text="Vis resultatet"/>
                             <Label Style="{StaticResource h2}" Text="Udførelse" />
                             <StackLayout x:Name="Description" Margin="0" Padding="0" />
                             <Label Style="{StaticResource h2}" Text="Gentagelser" />
@@ -36,7 +38,7 @@
                             </Label>
                         </StackLayout>
                     </Frame>
-                    <Grid x:Name="Training" Grid.Row="1" Margin="0, -85, 0, 0">
+                    <Grid VerticalOptions="Start" x:Name="Training" Grid.Row="1" Margin="0, -85, 0, 0">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="100" />
                         </Grid.RowDefinitions>

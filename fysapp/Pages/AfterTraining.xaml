@@ -49,9 +49,9 @@
                     </Grid>
                     <StackLayout x:Name="SideEffectsFurtherQuestions">
                         <Label Text="Hvilken type smertestillende?" XAlign="Center" Style="{StaticResource h3}" />
-                        <Entry Margin="0,0,0,20" />
+                        <Entry x:Name="TypePainkiller" Margin="0,0,0,20" />
                         <Label Text="Mængde:" XAlign="Center" Style="{StaticResource h3}" />
-                        <Entry Margin="0,0,0,20" />
+                        <Entry x:Name="AmountPainkiller" Margin="0,0,0,20" />
                     </StackLayout>
                     <Label Grid.Row="0" Grid.Column="0" Text="Blev du udtrættet efter træningen?" XAlign="Center" Style="{StaticResource h3}" />
                     <Grid Padding="0" ColumnSpacing="20" Margin="0,0,0,20">
@@ -76,10 +76,10 @@
                         </Frame>
                     </Grid>
                     <Label Text="Kommentarer til træningen:" XAlign="Center" Style="{StaticResource h3}" />
-                    <Entry Margin="0,0,0,20" />
-                    <Label x:Name="MissingInfoLabel" IsVisible="False" Text="Du mangler at udfylde nogle informationer" XAlign="Center" TextColor="{StaticResource bodyText}" Margin="0,20">
+                    <Entry x:Name="EntryComments" Margin="0,0,0,20" />
+                    <Label x:Name="MissingInfoLabel" IsVisible="False" Text="Du mangler at udfylde nogle informationer" XAlign="Center" TextColor="{StaticResource red}" Margin="0,20">
                     </Label>
-                    <Button Pressed="SaveAfterTraining" Text="Gem" Style="{StaticResource btn}" Margin="0,20" />
+                    <Button IsVisible="False" x:Name="SaveButton" Pressed="SaveAfterTraining" Text="Gem" Style="{StaticResource btn}" Margin="0,20" />
                 </StackLayout>
             </ScrollView>
             <views:NavigationBar />

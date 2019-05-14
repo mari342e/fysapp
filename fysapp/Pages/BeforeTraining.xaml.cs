@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Handler.Handlers;
+using Handler.Models;
+using System;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
@@ -11,11 +13,51 @@ namespace fysapp.Pages
         bool painkillersAnswered = false;
         bool sideEffectsAnswered = false;
         bool physiotherapistAnswered = false;
+        bool hasPhysiotherapist = false;
+        bool takenPainkillers = false;
+        bool hasSideEffects = false;
 
-        public BeforeTraining()
+        Training selectedTraining = null;
+        Session selectedSession = null;
+        public BeforeTraining(Training training = null, Session session = null)
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+
+            selectedSession = session;
+
+            //Fills before training information
+            if (training != null) {
+                selectedTraining = training;
+                if (training.TrainingFysioToday)
+                {
+                    HasPhysiotherapist(new object(), new EventArgs());
+                }
+                else {
+                    NotHasPhysiotherapist(new object(), new EventArgs());
+                }
+                slider.Value = training.PainsBefore;
+                if (training.TakenPainkillerBefore)
+                {
+                    TakenPainkillers(new object(), new EventArgs());
+                    EntryTypePainkiller.Text = training.TypePainkillerBefore;
+                    EntryAmountPainkiller.Text = training.AmountPainkillerBefore;
+                }
+                else
+                {
+                    NotTakenPainkillers(new object(), new EventArgs());
+                }
+                if (training.SideEffectsBefore)
+                {
+                    HasSideEffects(new object(), new EventArgs());
+                    EntrySideEffectsFurtherQuestions.Text = training.SideEffectsDescriptionBefore;
+                }
+                else
+                {
+                    NotHasSideEffects(new object(), new EventArgs());
+                }
+            }
+
         }
 
         async void GoBack(object sender, System.EventArgs e)
@@ -25,6 +67,7 @@ namespace fysapp.Pages
 
         private void HasPhysiotherapist(object sender, EventArgs e)
         {
+            hasPhysiotherapist = true;
             physiotherapistAnswered = true;
             YesPhysiotherapist.BackgroundColor = Color.FromHex("#b95b5b");
             NoPhysiotherapist.BackgroundColor = Color.Transparent;
@@ -34,6 +77,7 @@ namespace fysapp.Pages
 
         private void NotHasPhysiotherapist(object sender, EventArgs e)
         {
+            hasPhysiotherapist = false;
             physiotherapistAnswered = true;
             NoPhysiotherapist.BackgroundColor = Color.FromHex("#b95b5b");
             YesPhysiotherapist.BackgroundColor = Color.Transparent;
@@ -43,6 +87,7 @@ namespace fysapp.Pages
 
         private void TakenPainkillers(object sender, EventArgs e)
         {
+            takenPainkillers = true;
             painkillersAnswered = true;
             PainKillersFurtherQuestions.IsVisible = true;
             YesPainkillers.BackgroundColor = Color.FromHex("#b95b5b");
@@ -53,6 +98,7 @@ namespace fysapp.Pages
 
         private void NotTakenPainkillers(object sender, EventArgs e)
         {
+            takenPainkillers = false;
             painkillersAnswered = true;
             PainKillersFurtherQuestions.IsVisible = false;
             NoPainkillers.BackgroundColor = Color.FromHex("#b95b5b");
@@ -63,6 +109,7 @@ namespace fysapp.Pages
 
         private void HasSideEffects(object sender, EventArgs e)
         {
+            hasSideEffects = true;
             sideEffectsAnswered = true;
             SideEffectsFurtherQuestions.IsVisible = true;
             YesSideEffects.BackgroundColor = Color.FromHex("#b95b5b");
@@ -73,8 +120,8 @@ namespace fysapp.Pages
 
         private void NotHasSideEffects(object sender, EventArgs e)
         {
+            hasSideEffects = false;
             sideEffectsAnswered = true;
-
             SideEffectsFurtherQuestions.IsVisible = false;
             NoSideEffects.BackgroundColor = Color.FromHex("#b95b5b");
             YesSideEffects.BackgroundColor = Color.Transparent;
@@ -82,11 +129,41 @@ namespace fysapp.Pages
             YesSideEffectsLabel.TextColor = Color.FromHex("#707070");
         }
 
-        private void SaveBeforeTraining(object sender, EventArgs e)
+        private async void SaveBeforeTraining(object sender, EventArgs e)
         {
             if (sideEffectsAnswered && painkillersAnswered && physiotherapistAnswered)
             {
-                GoBack(new object(), new EventArgs());
+                TrainingHandler trainingHandler = new TrainingHandler();
+                if (selectedTraining == null) {    
+                    Training training = new Training();
+                    training.TrainingFysioToday = hasPhysiotherapist;
+                    training.PainsBefore = slider.Value;
+                    training.TakenPainkillerBefore = takenPainkillers;
+                    training.TypePainkillerBefore = EntryTypePainkiller.Text;
+                    training.AmountPainkillerBefore = EntryAmountPainkiller.Text;                   
+                    training.SideEffectsBefore = hasSideEffects;
+                    training.SideEffectsDescriptionBefore = EntrySideEffectsFurtherQuestions.Text;
+                    training.UserID = LoginInfo.LoggedInUser._id;
+                    training.SessionID = selectedSession._id;
+                    training.TrainingExercises = new List<TrainingExercise>();
+                    training.Date = DateTime.Today;
+                    await trainingHandler.CreateTraining(training);
+                }
+               else 
+                {
+                    Training training = new Training(selectedTraining);
+                    training.TrainingFysioToday = hasPhysiotherapist;
+                    training.PainsBefore = slider.Value;
+                    training.TakenPainkillerBefore = takenPainkillers;
+                    training.TypePainkillerBefore = EntryTypePainkiller.Text;
+                    training.AmountPainkillerBefore = EntryAmountPainkiller.Text;
+                    training.SideEffectsBefore = hasSideEffects;
+                    training.SideEffectsDescriptionBefore = EntrySideEffectsFurtherQuestions.Text;
+                    
+                    await trainingHandler.UpdateTraining(training);
+                }
+                await LoginInfo.SetLoginInfo(LoginInfo.LoggedInUser._id);
+                await Navigation.PopAsync();             
             }
             else {
                 MissingInfoLabel.IsVisible = true;

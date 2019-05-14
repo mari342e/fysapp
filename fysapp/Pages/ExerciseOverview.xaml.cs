@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Handler;
 using Handler.Handlers;
+using Handler.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

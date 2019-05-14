@@ -1,4 +1,5 @@
 ﻿using Handler;
+using Handler.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,16 +14,45 @@ namespace fysapp.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ExerciseDescription : ContentPage
     {
-        
-        public ExerciseDescription(Exercise exercise, bool trainingExercise = false, string timerText = "00:00:00")
-        {           
+        Exercise selectedExercise = null;
+        Training selectedTraining = null;
 
+        public ExerciseDescription(Exercise exercise, Training training = null, bool trainingExerciseBool = false)
+        {
+
+            selectedExercise = exercise;
             BindingContext = exercise;
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            TrainingExercise trainingExercise = null;
+
+            if (training != null) {
+                selectedTraining = training;
+                trainingExercise = training.TrainingExercises.Find(i => i.ExerciseID == exercise.ApiExerciseID);
+                if (trainingExercise != null)
+                {
+                    //var tap = new TapGestureRecognizer();
+                    //var command = new Command<Training>(ResultTrainingExercise);
+                    //tap.Command = command;
+                    //tap.CommandParameter = training;
+                    //ResultButton.GestureRecognizers.Add(tap);
+                    //ResultButton.Pressed += ResultTrainingExercise;
+                    ResultButton.IsVisible = true;
+
+                }
+                else if(trainingExerciseBool && trainingExercise == null) {
+                    //var tap = new TapGestureRecognizer();
+                    //var command = new Command<Training>(ResultTrainingExercise);
+                    //tap.Command = command;
+                    //tap.CommandParameter = training;
+                    //ResultButton.GestureRecognizers.Add(tap);
+                    //FinishedButton.Pressed += ResultFinishedExercise;
+                    FinishedButton.IsVisible = true;
+                }
+            }
 
             //Skjuler timer og start hvis ikke aktiv øvelse
-            Training.IsVisible = trainingExercise;
+            Training.IsVisible = trainingExerciseBool;
 
             var descriptionTexts = exercise.Description;
             foreach (var item in descriptionTexts)
@@ -30,7 +60,7 @@ namespace fysapp.Pages
                 Label label = new Label { Text = item, TextColor = Color.FromHex("#707070") };
                 Description.Children.Add(label);
             }
-            Timer.Text = timerText;
+            Timer.Text = "00:00:00";
         }
 
         async void GoBack(object sender, System.EventArgs e)
@@ -40,6 +70,19 @@ namespace fysapp.Pages
 
         bool timerStarted = false;
         Timer myTimer = new Timer();
+
+       
+        private async void ResultTrainingExercise(object sender, EventArgs e)
+        {
+            var afterExercisePage = new AfterExercise(selectedExercise, selectedTraining);
+            await Navigation.PushAsync(afterExercisePage);
+        }
+        private async void ResultFinishExercise(object sender, EventArgs e)
+        {
+            var time = Timer.Text;
+            var afterExercisePage = new AfterExercise(selectedExercise, selectedTraining, time);
+            await Navigation.PushAsync(afterExercisePage);
+        }
 
         private void UpdateTraining(object sender, EventArgs e)
         {            
