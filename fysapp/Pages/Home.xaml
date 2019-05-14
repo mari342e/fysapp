@@ -16,9 +16,9 @@
                     </StackLayout>
                     <Grid Padding="0" Margin="20,0,20,20" RowSpacing="20" ColumnSpacing="0" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="150" />
-                            <RowDefinition Height="150" />
-                            <RowDefinition Height="150" />
+                            <RowDefinition Height="145" />
+                            <RowDefinition Height="145" />
+                            <RowDefinition Height="145" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
