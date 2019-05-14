@@ -29,7 +29,7 @@ namespace fysapp.Pages
             else
             {
                 ImportantInfo.IsVisible = false;
-            }
+            }            
         }
 
         async void ReadMore(object sender, System.EventArgs e)

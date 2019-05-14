@@ -14,17 +14,8 @@ namespace fysapp.Pages
         Session selectedSession = new Session();
         public TrainingSession(Session session, Training training = null)
         {
-
-
-            selectedSession = session;
-            selectedTraining = training;
-            InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
-
-        }
-        protected override void OnAppearing()
-        {
-            if (selectedTraining != null) {
+            if (selectedTraining != null)
+            {
                 selectedTraining = LoginInfo.AllTrainings.Find(i => i._id == selectedTraining._id);
                 beforeTrainingBox.Children.Add(PositiveFrame());
                 if (selectedTraining.Completed == true)
@@ -42,6 +33,16 @@ namespace fysapp.Pages
                     }
                 }
             }
+
+            selectedSession = session;
+            selectedTraining = training;
+            InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+
+        }
+        protected override void OnAppearing()
+        {
+            
             base.OnAppearing();
         }
 

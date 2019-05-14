@@ -163,7 +163,7 @@ namespace fysapp.Pages
                     await trainingHandler.UpdateTraining(training);
                 }
                 await LoginInfo.SetLoginInfo(LoginInfo.LoggedInUser._id);
-                await Navigation.PopAsync();             
+                await Navigation.PopAsync();          
             }
             else {
                 MissingInfoLabel.IsVisible = true;
