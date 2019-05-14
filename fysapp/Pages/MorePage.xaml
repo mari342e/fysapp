@@ -49,7 +49,7 @@
                         <Image Source="SurveyCard" Style="{StaticResource cardImage}" Grid.Column="1" />
                     </Grid>
                 </Frame>
-                <Frame Style="{StaticResource card}" BackgroundColor="{StaticResource red}" Grid.Row="3" Grid.Column="0">
+                <Frame Style="{StaticResource card}" BackgroundColor="{StaticResource borderColor}" Grid.Row="3" Grid.Column="0">
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer Tapped="LogOut" NumberOfTapsRequired="1" />
                     </Frame.GestureRecognizers>
