@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="fysapp.NavigationBar">
     <ContentView.Content>
-        <StackLayout VerticalOptions="End">
+        <StackLayout VerticalOptions="End" Spacing="0">
         <BoxView HeightRequest="1" HorizontalOptions="Fill" VerticalOptions="End" BackgroundColor="{StaticResource borderColor}" Margin="0"/>
         <Frame Padding="0,15,0,15" CornerRadius="0" VerticalOptions="End" HasShadow="false" Margin="0">
             <Grid BackgroundColor="{StaticResource white}" RowSpacing="4" Margin="0">

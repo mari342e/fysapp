@@ -115,7 +115,7 @@
   <ItemGroup>
     <ProjectReference Include="..\fysapp\fysapp.csproj">
       <Project>{19B951B4-9CCF-4E0F-8943-1CF11DEFC0BB}</Project>
-      <Name>FysApp</Name>
+      <Name>fysapp</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

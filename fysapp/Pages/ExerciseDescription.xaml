@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="fysapp.NavigationBar" x:Class="fysapp.Pages.ExerciseDescription" Title="{Binding ExerciseID, StringFormat='Øvelse {0}'}">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="fysapp.NavigationBar" x:Class="fysapp.Pages.ExerciseDescription" xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" ios:Page.UseSafeArea="true" Title="{Binding ExerciseID, StringFormat='Øvelse {0}'}">
     <ContentPage.Content>
         <StackLayout>
             <ScrollView VerticalOptions="FillAndExpand" BackgroundColor="White">
@@ -23,8 +23,10 @@
                         <StackLayout>
                             <Label Style="{StaticResource h2}" Text="{Binding ExerciseID, StringFormat='Øvelse {0}'}" />
                             <Label Style="{StaticResource h1}" Text="{Binding Title}" Margin="0" />
-                            <Button IsVisible="False" Pressed="ResultFinishExercise" x:Name="FinishedButton" HorizontalOptions="Center" WidthRequest="200" Margin="30, 10" VerticalOptions="Center" TextColor="White" BackgroundColor="{StaticResource green}" Text="Færdig med øvelsen?" CornerRadius="10"/>
-                            <Button IsVisible="False" Pressed="ResultTrainingExercise" x:Name="ResultButton" CornerRadius="10" TextColor="White" HorizontalOptions="Center" WidthRequest="200" Margin="30, 10" VerticalOptions="Center" BackgroundColor="{StaticResource green}" Text="Vis resultatet"/>
+                            <Button IsVisible="False" Pressed="ResultFinishExercise" x:Name="FinishedButton" HorizontalOptions="Center" WidthRequest="200" Margin="30, 10" VerticalOptions="Center" TextColor="White" BackgroundColor="{StaticResource green}" Text="Færdig med øvelsen?"
+                                CornerRadius="10" />
+                            <Button IsVisible="False" Pressed="ResultTrainingExercise" x:Name="ResultButton" CornerRadius="10" TextColor="White" HorizontalOptions="Center" WidthRequest="200" Margin="30, 10" VerticalOptions="Center" BackgroundColor="{StaticResource green}"
+                                Text="Vis resultatet" />
                             <Label Style="{StaticResource h2}" Text="Udførelse" />
                             <StackLayout x:Name="Description" Margin="0" Padding="0" />
                             <Label Style="{StaticResource h2}" Text="Gentagelser" />

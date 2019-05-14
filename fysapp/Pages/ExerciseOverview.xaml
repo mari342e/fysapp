@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="fysapp.NavigationBar" x:Class="fysapp.Pages.ExerciseOverview">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="fysapp.NavigationBar" x:Class="fysapp.Pages.ExerciseOverview" xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" ios:Page.UseSafeArea="true">
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource bgColor}">
             <ScrollView VerticalOptions="FillAndExpand">
-                <StackLayout Margin="20,0">
-                    <Label Text="Øvelser" Style="{StaticResource h1Scroll}" />
+                <StackLayout Margin="20,0" VerticalOptions="StartAndExpand">
+                    <Label Text="Øvelser" Style="{StaticResource h1}" />
                     <ListView ItemSelected="ItemSelected" x:Name="listExerciseOverview" RowHeight="110" SeparatorVisibility="None" BackgroundColor="{StaticResource bgColor}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
