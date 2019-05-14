@@ -19,7 +19,7 @@
                         </Frame.GestureRecognizers>
                         <Image Source="Back" Style="{StaticResource backIcon}" />
                     </Frame>
-                    <Frame Grid.Row="1" Style="{StaticResource basicListFrame}" Margin="0, -35, 0, -150" Padding="20,10,20,70" CornerRadius="30">
+                    <Frame Grid.Row="1" Style="{StaticResource basicListFrame}" Margin="0, -35, 0, -50" Padding="20,10,20,70" CornerRadius="30">
                         <StackLayout>
                             <Label Style="{StaticResource h2}" Text="{Binding ExerciseID, StringFormat='Øvelse {0}'}" />
                             <Label Style="{StaticResource h1}" Text="{Binding Title}" Margin="0" />
