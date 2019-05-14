@@ -46,5 +46,10 @@ namespace fysapp.Pages
         {
             await Navigation.PushAsync(new ExerciseOverview());
         }
+
+        async void GoToSurvey(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new Survey());
+        }
     }
 }

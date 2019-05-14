@@ -27,6 +27,11 @@ namespace fysapp.Pages
             await Navigation.PushAsync(new GeneralInfo());
         }
 
+        async void GoToSurvey(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new Survey());
+        }
+
         async void LogOut(object sender, EventArgs e)
         {
 
