@@ -9,13 +9,13 @@ namespace Handler.Models
         public int ExerciseID { get; set; }
         public string ApiExerciseID { get; set; }
         public string Title { get; set; }
-        public List<string> ImageLinks { get; set; }
-        public List<string> Description { get; set; }
+        public string ImageLinks { get; set; }
+        public string Description { get; set; }
         public string Repetition { get; set; }
         public string Breaks { get; set; }
         public string Focus { get; set; }
 
-        public Exercise(int userGroupID, int exerciseID, string apiExerciseID, string title, List<string> imageLinks, List<string> description, string repetition, string breaks, string focus)
+        public Exercise(int userGroupID, int exerciseID, string apiExerciseID, string title, string imageLinks, string description, string repetition, string breaks, string focus)
         {
             UserGroupID = userGroupID;
             ExerciseID = exerciseID;

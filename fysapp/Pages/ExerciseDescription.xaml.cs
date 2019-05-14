@@ -26,7 +26,8 @@ namespace fysapp.Pages
             NavigationPage.SetHasNavigationBar(this, false);
             TrainingExercise trainingExercise = null;
 
-            if (training != null) {
+            if (training != null)
+            {
                 selectedTraining = training;
                 trainingExercise = training.TrainingExercises.Find(i => i.ExerciseID == exercise.ApiExerciseID);
                 if (trainingExercise != null)
@@ -40,7 +41,8 @@ namespace fysapp.Pages
                     ResultButton.IsVisible = true;
 
                 }
-                else if(trainingExerciseBool && trainingExercise == null) {
+                else if (trainingExerciseBool && trainingExercise == null)
+                {
                     //var tap = new TapGestureRecognizer();
                     //var command = new Command<Training>(ResultTrainingExercise);
                     //tap.Command = command;
@@ -53,13 +55,9 @@ namespace fysapp.Pages
 
             //Skjuler timer og start hvis ikke aktiv øvelse
             Training.IsVisible = trainingExerciseBool;
+            Label label = new Label { Text = exercise.Description, TextColor = Color.FromHex("#707070") };
+            Description.Children.Add(label);
 
-            var descriptionTexts = exercise.Description;
-            foreach (var item in descriptionTexts)
-            {
-                Label label = new Label { Text = item, TextColor = Color.FromHex("#707070") };
-                Description.Children.Add(label);
-            }
             Timer.Text = "00:00:00";
         }
 
@@ -71,7 +69,7 @@ namespace fysapp.Pages
         bool timerStarted = false;
         Timer myTimer = new Timer();
 
-       
+
         private async void ResultTrainingExercise(object sender, EventArgs e)
         {
             var afterExercisePage = new AfterExercise(selectedExercise, selectedTraining);
@@ -85,31 +83,31 @@ namespace fysapp.Pages
         }
 
         private void UpdateTraining(object sender, EventArgs e)
-        {            
+        {
             myTimer.Elapsed += new ElapsedEventHandler(SetTimer);
             myTimer.Interval = 30;
             if (!timerStarted)
-            {                
+            {
                 myTimer.Start();
                 timerStarted = true;
                 UpdateTrainingImage.Source = "Square.png";
             }
-            else 
+            else
             {
                 myTimer.Stop();
                 timerStarted = false;
                 UpdateTrainingImage.Source = "Play.png";
-            }       
+            }
         }
-        
-        private void SetTimer(Object source, EventArgs e) 
+
+        private void SetTimer(Object source, EventArgs e)
         {
             DateTime time = DateTime.ParseExact(Timer.Text, "mm:ss:ff", null);
             var newTime = time.AddMilliseconds(30);
-            var timerText = String.Format("{0:mm:ss:ff}", newTime); 
+            var timerText = String.Format("{0:mm:ss:ff}", newTime);
             Device.BeginInvokeOnMainThread(() =>
             Timer.Text = timerText
-            );  
+            );
         }
     }
 }

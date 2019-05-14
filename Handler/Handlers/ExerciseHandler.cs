@@ -7,6 +7,7 @@ using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
 using Handler.Models;
+using System.Net.Http;
 
 namespace Handler.Handlers
 {
@@ -27,12 +28,14 @@ namespace Handler.Handlers
             }
             var orderedList = list.FindAll(i => i.UserGroupID == groupID);
 
-            return list;
+
             //HttpClient client = new HttpClient();
             //var json = await client.GetStringAsync("https://fysapp-umbraco.azurewebsites.net/umbraco/api/Api/GetAllExercises");
             //List<Exercise> exerciseList = JsonConvert.DeserializeObject<List<Exercise>>(json);
 
             //var orderedList = exerciseList.FindAll(i => i.UserGroupID == groupID);
+
+            return orderedList;
         }
 
     }

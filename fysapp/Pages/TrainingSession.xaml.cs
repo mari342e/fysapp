@@ -14,10 +14,15 @@ namespace fysapp.Pages
         Session selectedSession = new Session();
         public TrainingSession(Session session, Training training = null)
         {
+            selectedTraining = training;
+            selectedSession = session;
+            
+            InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             if (selectedTraining != null)
             {
-                selectedTraining = LoginInfo.AllTrainings.Find(i => i._id == selectedTraining._id);
-                beforeTrainingBox.Children.Add(PositiveFrame());
+
+                BeforeTrainingBox.Children.Add(PositiveFrame());
                 if (selectedTraining.Completed == true)
                 {
                     afterTrainingBox.Children.Add(PositiveFrame());
@@ -33,11 +38,6 @@ namespace fysapp.Pages
                     }
                 }
             }
-
-            selectedSession = session;
-            selectedTraining = training;
-            InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
 
         }
         protected override void OnAppearing()
@@ -107,7 +107,7 @@ namespace fysapp.Pages
 
             //Image
             var image = new Image();
-            image.Source = exercise.ImageLinks[0];
+            image.Source = exercise.ImageLinks;
             image.Aspect = Aspect.AspectFill;
             Grid.SetRowSpan(image, 2);
             Grid.SetRow(image, 0);

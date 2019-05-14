@@ -11,7 +11,7 @@
                         <Image Source="Back" Style="{StaticResource backIcon}" />
                     </Frame>
                     <Label Text="Træningspas" Style="{StaticResource h1Back}" />
-                    <StackLayout x:Name="beforeTrainingBox">
+                    <StackLayout x:Name="BeforeTrainingBox">
                         <Frame Style="{StaticResource basicListFrame}" HeightRequest="70" Padding="10,0,10,10" Margin="0,0,0,0">
                             <StackLayout>
                                 <Label Text="Før træning" Style="{StaticResource h2}" />
