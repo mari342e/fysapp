@@ -24,11 +24,12 @@ namespace fysapp.Pages
 
         protected override void OnAppearing()
         {
-            var x= loadFromApi();
+            var x = loadFromApi();
             base.OnAppearing();
         }
 
-        private async Task<string> loadFromApi() {
+        private async Task<string> loadFromApi()
+        {
             var text = AppSettings.GetValueOrDefault("UserID", string.Empty);
 
             var text2 = await LoginInfo.SetLoginInfo(text);

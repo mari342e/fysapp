@@ -37,7 +37,7 @@ namespace fysapp.Pages
             {
                 FutureWeekText.Text = "uge " + (session.UserSelectedWeekNo + 1).ToString();
             }
-            CurrentWeekText.Text = "Du er igang med uge " + session.UserSelectedWeekNo.ToString();
+            CurrentWeekText.Text = "Du er i gang med uge " + session.UserSelectedWeekNo.ToString();
 
             var trainings = GetTrainingsByDate(dateWeek);
            

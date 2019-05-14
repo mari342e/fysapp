@@ -24,7 +24,7 @@
                     </StackLayout>
                 </StackLayout>
                 <Label HorizontalOptions="Center" Text="Træningslog" Margin="10" Style="{StaticResource h1}" />
-                <Label x:Name="CurrentWeekText" HorizontalOptions="Center" Text="Du er igang med uge 2" Margin="10,0,10,20" Style="{StaticResource h3}" />
+                <Label x:Name="CurrentWeekText" HorizontalOptions="Center" Text="Du er i gang med uge 2" Margin="10,0,10,20" Style="{StaticResource h3}" />
                 <ScrollView>
                     <StackLayout>
                         <StackLayout x:Name="trainingPas1">
