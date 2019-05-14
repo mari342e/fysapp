@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Handler.Models;
 using System.Net.Http;
+using System.Linq;
 
 namespace Handler.Handlers
 {
@@ -34,8 +35,8 @@ namespace Handler.Handlers
             List<Exercise> exerciseList = JsonConvert.DeserializeObject<List<Exercise>>(json);
 
             var orderedList = exerciseList.FindAll(i => i.UserGroupID == groupID);
-
-            return orderedList;
+            var newOrderedList = orderedList.OrderBy(i => i.ExerciseID).ToList();
+            return newOrderedList;
         }
 
     }
