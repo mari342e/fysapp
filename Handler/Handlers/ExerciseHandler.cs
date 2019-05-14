@@ -15,25 +15,25 @@ namespace Handler.Handlers
     {
         public async Task<List<Exercise>> GetExercisesByGroupID(int groupID)
         {
-            var list = new List<Exercise>();
-            string jsonName = "Exercises.json";
-            var assembly = typeof(ExerciseHandler).GetTypeInfo().Assembly;
-            Stream stream = assembly.GetManifestResourceStream($"{assembly.GetName().Name}.{jsonName}");
+            //var list = new List<Exercise>();
+            //string jsonName = "Exercises.json";
+            //var assembly = typeof(ExerciseHandler).GetTypeInfo().Assembly;
+            //Stream stream = assembly.GetManifestResourceStream($"{assembly.GetName().Name}.{jsonName}");
 
-            using (var reader = new StreamReader(stream))
-            {
-                var jsonString = reader.ReadToEnd();
+            //using (var reader = new StreamReader(stream))
+            //{
+            //    var jsonString = reader.ReadToEnd();
 
-                list = JsonConvert.DeserializeObject<List<Exercise>>(jsonString);
-            }
-            var orderedList = list.FindAll(i => i.UserGroupID == groupID);
+            //    list = JsonConvert.DeserializeObject<List<Exercise>>(jsonString);
+            //}
+            //var orderedList = list.FindAll(i => i.UserGroupID == groupID);
 
 
-            //HttpClient client = new HttpClient();
-            //var json = await client.GetStringAsync("https://fysapp-umbraco.azurewebsites.net/umbraco/api/Api/GetAllExercises");
-            //List<Exercise> exerciseList = JsonConvert.DeserializeObject<List<Exercise>>(json);
+            HttpClient client = new HttpClient();
+            var json = await client.GetStringAsync("https://fysapp-umbraco.azurewebsites.net/umbraco/api/Api/GetAllExercises");
+            List<Exercise> exerciseList = JsonConvert.DeserializeObject<List<Exercise>>(json);
 
-            //var orderedList = exerciseList.FindAll(i => i.UserGroupID == groupID);
+            var orderedList = exerciseList.FindAll(i => i.UserGroupID == groupID);
 
             return orderedList;
         }

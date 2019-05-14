@@ -5,13 +5,13 @@
             <ScrollView VerticalOptions="FillAndExpand" BackgroundColor="White">
                 <Grid x:Name="StackBox" VerticalOptions="StartAndExpand" BackgroundColor="White">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="280" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <Image Grid.Row="0" Aspect="AspectFill" x:Name="Image" Source="{Binding ImageLinks}">
+                    <Image Grid.Row="0" Aspect="AspectFit" x:Name="Image" Source="{Binding ImageLinks}">
                     </Image>
                     <Frame VerticalOptions="Start" Grid.Row="0" Margin="10,10,0,0" Style="{StaticResource backBtn}">
                         <Frame.GestureRecognizers>
