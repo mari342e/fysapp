@@ -22,9 +22,7 @@ namespace fysapp.Pages
 
         async void GoToHomePage(object sender, System.EventArgs e)
         {
-
-
-           var text = LoginID.Text;
+            var text = LoginID.Text;
             UserHandler userHandler = new UserHandler();
             var user = await userHandler.GetUserByAssignedID(text);
             if (user != null)
@@ -36,10 +34,6 @@ namespace fysapp.Pages
             else {
                 await Navigation.PushAsync(new Login(true));
             }
-
-
-
-            
         }
     }
 }

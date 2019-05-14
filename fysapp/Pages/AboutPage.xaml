@@ -14,7 +14,7 @@
                         Har du spørgsmål om app’en eller projektet generelt kan du kontakte projektansvarlig Benham Liaghat
                     </Label>
                 <Label Style="{StaticResource h2}">Projektansvarlig</Label>
-                <Label Text="Benham Liaghat" TextColor="{StaticResource bodyText}" />
+                <Label Text="Behnam Liaghat" TextColor="{StaticResource bodyText}" />
                 <Label Text="Fysioterapeut, specialist, MSc. PhD-studerende" TextColor="{StaticResource bodyText}" />
                 <Label TextColor="{StaticResource bodyText}" Margin="0,10">
                         Forskningsenheden for muskuloskeletal funktion og fysioterapi, institut for idræt og biomekanik, Syddansk Universitet
