@@ -45,7 +45,7 @@ namespace fysapp.Pages
                     NotTired(new object(), new EventArgs());
                 }
                 EntryComments.Text = training.Comments;
-                if (selectedSession.ExerciseList.Count == training.TrainingExercises.Count)
+                if (selectedSession.ExerciseList.Count >= training.TrainingExercises.Count)
                 {
                     SaveButton.IsVisible = true;
                 }
