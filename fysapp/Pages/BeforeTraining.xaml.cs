@@ -149,7 +149,7 @@ namespace fysapp.Pages
                     training.Date = DateTime.Today;
                     await trainingHandler.CreateTraining(training);
                 }
-               else 
+               else if(LoginInfo.AllTrainings.FindAll(i => i.SessionID == selectedSession._id).Count <= 3)
                 {
                     Training training = new Training(selectedTraining);
                     training.TrainingFysioToday = hasPhysiotherapist;
