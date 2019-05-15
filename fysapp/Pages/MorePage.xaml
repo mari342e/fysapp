@@ -42,6 +42,9 @@
                             </Grid>
                         </Frame>
                         <Frame Style="{StaticResource card}" BackgroundColor="{StaticResource red}" Grid.Row="2" Grid.Column="0">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="GoToSurvey" NumberOfTapsRequired="1" />
+                            </Frame.GestureRecognizers>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="2*" />
